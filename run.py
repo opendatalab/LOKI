@@ -16,7 +16,7 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
 """
     TODO: Set verbosity -- DONE
     TODO: Allow multi-gpu inference
-    TODO: More intricate evaluation results, i.e., we should print a pretty table at the end.
+    TODO: More intricate evaluation results, i.e., we should print a pretty table at the end. -- DONE
     TODO: Add more metrics for synthbench. We need to calculate which generate model the LMM can predict correctly the most. -- DONE
     TODO: Add LLaVA-NeXT-Video -- DONE
     TODO: Add XComposer-2.5 -- DONE

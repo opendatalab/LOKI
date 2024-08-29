@@ -17,8 +17,8 @@ class LMM(ABC):
             2. Generate texts based on provided visuals and contexts.
         """
         self._model = None
-        self._rank = None
-        self._world_size = None
+        self._rank = None # For MultiGPU Inference
+        self._world_size = None # For MultiGPU Inference
     
     @abstractmethod
     def prepare_model(self) -> Union[str, PreTrainedModel]:

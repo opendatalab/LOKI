@@ -313,11 +313,10 @@ TRUE_OR_FALSE_POST_PROMPT = "Answer with yes or no."
 MULTI_CHOICE_POST_PROMPT = "Answer with the option letter."
 
 
-@register_task("synthbench-video")
-class SynthBenchVideo(Task):
-    task_name = "fake-video-detection"
-    dataset_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/synthbench_video.json"
-    task_modality = ["video-text"]
+@register_task("synthbench-visual")
+class SynthBenchVisual(Task):
+    task_name = "fake-visual-detection"
+    task_modality = ["video-text", "image-text"]
     def doc_to_visual(self, doc):
         """
         Example:

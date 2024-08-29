@@ -19,6 +19,7 @@ class Task(ABC):
     """
         Abstract implementation of LMM's Task.
     """
+    supported_modalities = []
     def __init__(
         self,
         task_name: str,
@@ -27,7 +28,6 @@ class Task(ABC):
         split: str = 'test',
         num_shot: int = 0,
         batch_size: int = 1,
-        text_only: bool = False,
     ):
         """
         Args:
@@ -45,7 +45,6 @@ class Task(ABC):
         self.split = split
         self.num_shot = num_shot
         self.batch_size = batch_size
-        self.text_only = text_only
         
         self.dataset = self.load_dataset()
     

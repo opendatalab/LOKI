@@ -1,1 +1,2 @@
 model_version: HuggingFaceM4/idefics2-8b
+max_num_frames: 1
