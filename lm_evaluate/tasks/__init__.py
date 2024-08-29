@@ -1,1 +1,1 @@
-from lm_evaluate.tasks.synthbench import SynthBenchVideo
+from lm_evaluate.tasks.synthbench import SynthBenchVisual
