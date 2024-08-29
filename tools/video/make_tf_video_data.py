@@ -22,6 +22,8 @@ def generate_questions(data, num_questions=200):
     questions_real = []
     questions_fake = []
     
+    questions_for_human = []
+    
     sampled_real_videos = random.sample(real_videos, num_questions)
     sampled_fake_videos = random.sample(fake_videos, num_questions)
 
@@ -29,20 +31,24 @@ def generate_questions(data, num_questions=200):
         real_sample = sampled_real_videos[i]
         fake_sample = sampled_fake_videos[i]
 
-        questions_real.append({'video_path': real_sample['video_path'], 'question': QUESTION, 'answer': 'No', 'modality': 'video-text', 'metric': 'open-ended', 'question_type': 'fake_or_real_open_ended', 'choices': []})
-        questions_fake.append({'video_path': fake_sample['video_path'], 'question': QUESTION, 'answer': 'Yes', 'modality': 'video-text', 'metric': 'open-ended', 'question_type': 'fake_or_real_open_ended', 'choices': []})
+        questions_real.append({'video_path': real_sample['video_path'], 'question': QUESTION, 'answer': 'No', 'modality': 'video-text', 'metric': 'open-ended', 'question_type': 'video_fake_or_real_open_ended', 'choices': []})
+        questions_fake.append({'video_path': fake_sample['video_path'], 'question': QUESTION, 'answer': 'Yes', 'modality': 'video-text', 'metric': 'open-ended', 'question_type': 'video_fake_or_real_open_ended', 'choices': []})
+        
+        questions_for_human.append({'video_path': real_sample['video_path'], 'question_type': "single", "type_sec": "video", "answer": "real"})
+        questions_for_human.append({'video_path': fake_sample['video_path'], 'question_type': "single", "type_sec": "video", "answer": "fake"})
 
-    return questions_real, questions_fake
+    return questions_real, questions_fake, questions_for_human
 
 # 示例路径
 json_file_path = '/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/synthbench_video_meta.json'
 data = load_data(json_file_path)
-questions_real, questions_fake = generate_questions(data)
+questions_real, questions_fake, questions_for_human = generate_questions(data, len(data) // 2)
 
 data_list = questions_real + questions_fake
 
 json.dump(data_list, open(os.path.join('/mnt/petrelfs/zhoubaichuan/projects/synthbench/data', 'synthbench_video_true_or_false.json'), 'w'), indent=4)
+json.dump(questions_for_human, open(os.path.join('/mnt/petrelfs/zhoubaichuan/projects/synthbench/data', 'video_true_or_false_for_human.json'), 'w'), indent=4)
 
 # 打印一些生成的问题
-print("Sample real video question:", questions_real[:3])
-print("Sample fake video question:", questions_fake[:3])
+print(len(data_list))
+print(len(questions_for_human))

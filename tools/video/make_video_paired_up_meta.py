@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 META_DATA_PATH = '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc/video_inf_new_new.csv'
-DST_DATA_PATH = '/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/synthbench_video_meta.json'
+DST_DATA_PATH = '/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/synthbench_video_paired_up_meta.json'
 
 VIDEO_DATA_PATH = '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc/'
 
@@ -21,8 +21,7 @@ model_column = "Method"
 
 
 for i in range(len(df)):
-    fake_sample = {}
-    real_sample = {}
+    sample = {}
     
     model = df.loc[i, model_column]
     fake_video_name = df.loc[i, FAKE_COLUMN]
@@ -39,20 +38,12 @@ for i in range(len(df)):
         continue
         
     
-    fake_sample['video_path'] = fake_video_path
-    fake_sample['paired_up_path'] = real_video_path
+    sample['real_video_path'] = real_video_path
+    sample['fake_video_path'] = fake_video_path
     
-    real_sample['video_path'] = real_video_path
-    real_sample['paired_up_path'] = fake_video_path
+    sample['type'] = model
     
-    fake_sample['model'] = model
-    real_sample['model'] = model
-    
-    fake_sample['is_fake'] = True
-    real_sample['is_fake'] = False
-    
-    data_list.append(fake_sample)
-    data_list.append(real_sample)
+    data_list.append(sample)
     
 
 json.dump(data_list, open(DST_DATA_PATH, 'w'), indent=4)

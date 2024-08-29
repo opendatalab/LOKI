@@ -438,6 +438,9 @@ class SynthBenchVisual(Task):
         per_metric_accuracy = defaultdict(list)
         per_question_type_accuracy = defaultdict(list)
         
+        per_image_type_accuracy = defaultdict(list)
+        per_video_model_accuracy = defaultdict(list)
+        
         accuracy = []
         
         for result in results:
