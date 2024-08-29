@@ -4,6 +4,7 @@ import pandas as pd
 
 sys.path.append("/mnt/petrelfs/zhoubaichuan/projects/synthbench")
 
+os.environ["OPENAI_API_KEY"] = "sk-nNyMfWpt7kwWhLaFBdDc5a1eEbF441239bB03d846d84E4Ea"
 from tqdm import tqdm
 
 from lm_evaluate.models import GPT

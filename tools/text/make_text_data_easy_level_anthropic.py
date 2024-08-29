@@ -2,7 +2,7 @@ import sys
 import json
 import pandas as pd
 import os
-os.environ["OPENAI_API_KEY"] = "sk-UOYmBm3WjUTecnJiA4F04a225aC44eBa9eCaAbA914472f12"
+os.environ["OPENAI_API_KEY"] = "sk-nNyMfWpt7kwWhLaFBdDc5a1eEbF441239bB03d846d84E4Ea"
 
 sys.path.append("/mnt/petrelfs/zhoubaichuan/projects/synthbench")
 
@@ -15,7 +15,7 @@ from lm_evaluate.models import GPT
 DATA_PATH = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/text_data/GPT-4o-with-summary.csv"
 SAVE_PATH = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/text_data/Claude-3-5-generated.csv"
 
-model = GPT(model_version="claude-3-5-sonnet-20240620", api_url="https://openkey.cloud/v1/chat/completions")
+model = GPT(model_version="claude-3-5-sonnet-20240620")
 
 model.prepare_model()
 

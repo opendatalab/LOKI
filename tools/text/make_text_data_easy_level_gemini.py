@@ -2,7 +2,7 @@ import sys
 import json
 import pandas as pd
 import os
-os.environ["OPENAI_API_KEY"] = "sk-UOYmBm3WjUTecnJiA4F04a225aC44eBa9eCaAbA914472f12"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyAHD3BSbQZW9Y4I-fvkJN7QIp3eUlgrajA"
 
 sys.path.append("/mnt/petrelfs/zhoubaichuan/projects/synthbench")
 
