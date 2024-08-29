@@ -1,0 +1,3 @@
+model_version: mPLUG/mPLUG-Owl3-7B-240728
+max_num_frames: 8
+attn_implementation: sdpa
