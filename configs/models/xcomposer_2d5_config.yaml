@@ -1,0 +1,10 @@
+model_type: xcomposer-2d5
+
+init_kwargs:
+  model_version: internlm/internlm-xcomposer2d5-7b
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

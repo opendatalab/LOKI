@@ -1,4 +1,0 @@
-model_version: lmms-lab/llava-onevision-qwen2-7b-ov
-conv_template: qwen_2
-model_name: llava_qwen
-max_num_frames: 8

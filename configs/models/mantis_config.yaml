@@ -1,0 +1,11 @@
+model_type: mantis
+
+init_kwargs:
+  model_version: TIGER-Lab/Mantis-8B-siglip-llama3
+  max_num_frames: 1
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

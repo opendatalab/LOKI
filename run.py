@@ -25,6 +25,7 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
     TODO: Add MPlug-Owl3 -- DONE
     TODO: Add datetime to log file -- DONE
     TODO: Add generation config for each model
+    TODO: Rewrite config logic
 """
 
 
@@ -36,26 +37,39 @@ def main(args):
     eval_logger.info(f"Verbosity set to {args.verbosity}")
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     
-    if args.model_name not in MODEL_REGISTRY:
+    if not os.path.exists(args.model_config_path):
+        eval_logger.error(f"Model config path: {args.model_config_path} does not exist.")
+    
+    if not os.path.exists(args.task_config_path):
+        eval_logger.error(f"Model config path: {args.task_config_path} does not exist.")
+    
+    model_config = yaml.load(open(args.model_config_path), Loader=yaml.SafeLoader)
+    task_config = yaml.load(open(args.task_config_path), Loader=yaml.SafeLoader)
+    
+    model_type = model_config["model_type"]
+    task_type = task_config["task_type"]
+    
+    if model_type not in MODEL_REGISTRY:
         eval_logger.error(f"No model named {args.model_name} is found. Supported models: {MODEL_REGISTRY.keys()}")
         sys.exit(-1)
     
-    if args.task_name not in TASK_REGISTRY:
+    if task_type not in TASK_REGISTRY:
         eval_logger.error(f"No task named {args.task_name} is found. Supported tasks: {TASK_REGISTRY.keys()}")
         sys.exit(-1)
-    
-    model_config = yaml.load(open(f"configs/models/{args.model_name}.yaml"), Loader=yaml.FullLoader)
-    task_config = yaml.load(open(f"configs/tasks/{args.task_name}.yaml"), Loader=yaml.FullLoader)
-    
+        
+    model_init_kwargs = model_config["init_kwargs"]
+    print(model_init_kwargs)
+    task_init_kwargs = task_config["init_kwargs"]
 
-    model = MODEL_REGISTRY[args.model_name](**model_config)
-    task = TASK_REGISTRY[args.task_name](**task_config)
-    
+    model = MODEL_REGISTRY[model_type](**model_init_kwargs)
+    task = TASK_REGISTRY[task_type](**task_init_kwargs)
     
     
     model.prepare_model()
     
-    results, accuracies = task.evaluate(model)
+    model_generate_kwargs = model_config["generate_kwargs"]
+    
+    results, accuracies = task.evaluate(model, **model_generate_kwargs)
     
     accuracies['model_config'] = model_config
     accuracies['task_config'] = task_config
@@ -83,14 +97,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     
     parser.add_argument(
-        "--task_name",
-        required=True,
-        type=str
+        "--model_config_path",
+        type=str,
+        required=True
     )
     parser.add_argument(
-        "--model_name",
-        required=True,
-        type=str
+        "--task_config_path",
+        type=str,
+        required=True
     )
     parser.add_argument(
         "--log_dir",

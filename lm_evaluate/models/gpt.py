@@ -58,7 +58,7 @@ class GPT(LMM):
         self,
         model_version: str = "gpt-4o",
         api_url: str = API_URL,
-        max_frame_num: int = 10,
+        max_num_frames: int = 10,
         timeout: int = 120
     ) -> None:
     
@@ -66,7 +66,7 @@ class GPT(LMM):
         self.api_url = api_url
         
         self.timeout = timeout
-        self.max_frame_num = max_frame_num
+        self.max_num_frames = max_num_frames
     
 
     def encode_image(self, image: Image.Image) -> str:
@@ -94,13 +94,28 @@ class GPT(LMM):
     def prepare_model(self):
         self.prepared = True
         eval_logger.info(f"GPT activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")
+    
+    
+    def _prepare_generate_kwargs(self, payload, generate_kwargs):
+        if "max_new_tokens" in generate_kwargs:
+            payload["max_tokens"] = generate_kwargs["max_new_tokens"]
+        if "temperature" in generate_kwargs:
+            payload["temperature"] = generate_kwargs["temperature"]
+        if "top_p" in generate_kwargs:
+            payload["top_p"] = generate_kwargs["top_p"]
+        if "num_beams" in generate_kwargs:
+            payload["num_beams"] = generate_kwargs["num_beams"]
+        if "response_format" in generate_kwargs.keys() and generate_kwargs["response_format"] is not None:
+            payload["response_format"] = generate_kwargs["response_format"]
+        
+        return payload
 
     
     def generate(
         self, 
         visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
         contexts: str,
-        **kwargs
+        **generate_kwargs
     ) -> str:
         """
             Call gpt for response with visuals and contexts. Visuals can be a list of strings(representing video paths), or a list of PIL.Image.Image or a combination of both. Returns a piece of response text.
@@ -108,7 +123,7 @@ class GPT(LMM):
             Args:
                 visuals: Media objects. Visuals can be one image, one video path, or a list of them. 
                 contexts: Prompt text.
-                kwargs: Generation kwargs. Currently we only support greedy decoding. # TODO: Support diverse decoding strategy.
+                generate_kwargs: Generation kwargs. Currently we only support greedy decoding. # TODO: Support diverse decoding strategy.
             Return:
                 A piece of response text
         """
@@ -117,14 +132,14 @@ class GPT(LMM):
         if isinstance(visuals, list):
             for visual in visuals:
                 if isinstance(visual, str):
-                    imgs.extend(self.encode_video(visual, self.max_frame_num))
+                    imgs.extend(self.encode_video(visual, self.max_num_frames))
                 elif isinstance(visual, Image.Image):
                     imgs.append(self.encode_image(visual))
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
-            imgs.extend(self.encode_video(visuals, self.max_frame_num))
+            imgs.extend(self.encode_video(visuals, self.max_num_frames))
         
         elif isinstance(visuals, Image.Image):
             imgs.append(self.encode_image(visuals))
@@ -132,7 +147,7 @@ class GPT(LMM):
         # Construct messages for request
         
         # First, convert video place holders to image place holders according to max_num_frames
-        contexts = contexts.replace(VIDEO_TOKEN, f"{IMAGE_TOKEN} " * self.max_frame_num)
+        contexts = contexts.replace(VIDEO_TOKEN, f"{IMAGE_TOKEN} " * self.max_num_frames)
         
         payload = {"messages": []}
         
@@ -159,10 +174,8 @@ class GPT(LMM):
         # Manually add it into the payload
         if not all(s == " " or s == '\n' for s in contexts[-1]):
             payload["messages"][0]["content"].append({"type": "text", "text": contexts[-1]})
-            
         
-        if "response_format" in kwargs.keys():
-            payload["response_format"] = kwargs["response_format"]
+        payload = self._prepare_generate_kwargs(payload, generate_kwargs)
         
         for attempt in range(5):
             try:
