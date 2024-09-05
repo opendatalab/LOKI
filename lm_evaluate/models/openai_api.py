@@ -31,18 +31,10 @@ API_TYPE = os.getenv("API_TYPE", "openai")
 
 if API_TYPE == "openai":
     API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
-    API_KEY = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json",
-    }
+    
 elif API_TYPE == "azure":
     API_URL = os.getenv("AZURE_ENDPOINT", "https://api.cognitive.microsoft.com/sts/v1.0/issueToken")
-    API_KEY = os.getenv("AZURE_API_KEY", "YOUR_API_KEY")
-    headers = {
-        "api-key": API_KEY,
-        "Content-Type": "application/json",
-    }
+    
 
 
 IMAGE_TOKEN = "<image>"
@@ -51,15 +43,16 @@ VIDEO_TOKEN = "<video>"
 NUM_SECONDS_TO_SLEEP = 30
 
 
-@register_model("gpt", "gpt-4o", "gpt-4v")
-class GPT(LMM):
+@register_model("gpt-4o", "gpt-4v", "qwen")
+class OpenAI(LMM):
     supported_modalities = ["video-text", "image-text", "text-only"]
     def __init__(
         self,
         model_version: str = "gpt-4o",
         api_url: str = API_URL,
         max_num_frames: int = 10,
-        timeout: int = 120
+        timeout: int = 120,
+        api_type: str = "openai"
     ) -> None:
     
         self.model_version = model_version
@@ -67,6 +60,7 @@ class GPT(LMM):
         
         self.timeout = timeout
         self.max_num_frames = max_num_frames
+        self.api_type = api_type
     
 
     def encode_image(self, image: Image.Image) -> str:
@@ -92,6 +86,11 @@ class GPT(LMM):
         return base64_frames
     
     def prepare_model(self):
+        if "qwen" in self.model_version and "vl" not in self.model_version:
+            self.supported_modalities = ["text_only"]
+        
+        self._set_headers()
+            
         self.prepared = True
         eval_logger.info(f"GPT activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")
     
@@ -110,11 +109,31 @@ class GPT(LMM):
         
         return payload
 
+    def _set_headers(self):
+        if self.api_type == "openai" and ('gpt' in self.model_version or 'claude' in self.model_version or 'llama' in self.model_version):
+            api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
+            self.headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            }
+        elif self.api_type == "azure" and 'gpt' in self.model_version:
+            api_key = os.getenv("AZURE_API_KEY", "YOUR_API_KEY")
+            self.headers = {
+                "api-key": api_key,
+                "Content-Type": "application/json",
+            }
+        elif self.api_type == "openai" and 'qwen' in self.model_version:
+            api_key = os.getenv("DASHSCOPE_API_KEY", None)
+            self.headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            }
+
     
     def generate(
         self, 
-        visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
-        contexts: str,
+        visuals: Union[Image.Image, str, List[Union[Image.Image, str]]] = None,
+        contexts: str = None,
         **generate_kwargs
     ) -> str:
         """
@@ -164,6 +183,7 @@ class GPT(LMM):
         response_json = {"role": "user", "content": []}
         
         payload["messages"].append(deepcopy(response_json))
+        
         for idx, img in enumerate(imgs):
             if not all(s == " " or s == '\n' for s in contexts[idx]):
                 payload["messages"][0]["content"].append({"type": "text", "text": contexts[idx]})
@@ -179,10 +199,9 @@ class GPT(LMM):
         
         for attempt in range(5):
             try:
-                response = url_requests.post(self.api_url, headers=headers, json=payload, timeout=self.timeout)
+                response = url_requests.post(self.api_url, headers=self.headers, json=payload, timeout=self.timeout)
                 eval_logger.debug(response)
                 response_data = response.json()
-
                 response_text = response_data["choices"][0]["message"]["content"].strip()
                 break  # If successful, break out of the loop
 
@@ -198,7 +217,7 @@ class GPT(LMM):
                 if attempt < 4:
                     time.sleep(NUM_SECONDS_TO_SLEEP)
                 else:  # If this was the last attempt, log and return empty string
-                    eval_logger.error(f"All 5 attempts failed. Last error message: {str(e)}.\nResponse: {response.json()}")
+                    eval_logger.error(f"All 5 attempts failed. Last error message: {str(e)}.\nResponse: {error_msg}")
                     response_text = ""
         
         return response_text

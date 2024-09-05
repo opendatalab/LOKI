@@ -141,14 +141,14 @@ class XComposer2D5(LMM):
                 if isinstance(visual, str):
                     images.append(visual)
                 elif isinstance(visual, Image.Image):
-                    images.append(self.vis_processor(visual))
+                    images.append(visual)
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
             images.append(visuals)
         elif isinstance(visuals, Image.Image):
-            images.append(self.vis_processor(visuals))
+            images.append(visuals)
         
         # Segment the text according to video and image token
         prompt = contexts.replace("<video>", "<ImageHere>").replace("<image>", "<ImageHere>")

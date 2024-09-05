@@ -233,11 +233,17 @@ def parse_multi_choice_response(response, all_choices, index2ans):
 
     index_ans = True
     ans_with_brack = False
+    ans_with_star = False
     candidates = []
     for choice in all_choices:  # e.g., (A) (B) (C) (D)
         if f"({choice})" in response:
             candidates.append(choice)
             ans_with_brack = True
+    
+    for choice in all_choices: # e.g., **A**, **B**, **C**, **D**
+        if f"**{choice}**" in response:
+            candidates.append(choice)
+            ans_with_star = True
 
     if len(candidates) == 0:
         for choice in all_choices:  # e.g., A B C D
@@ -257,7 +263,7 @@ def parse_multi_choice_response(response, all_choices, index2ans):
                 index_ans = False  # it's content ans.
 
     if len(candidates) == 0:  # still not get answer, randomly choose one.
-        print(all_choices)
+        print(all_choices, response)
         pred_index = random.choice(all_choices)
     elif len(candidates) > 1:
         start_indexes = []
@@ -267,6 +273,10 @@ def parse_multi_choice_response(response, all_choices, index2ans):
                     index = response.rfind(f"({can})")
                     start_indexes.append(index)  # -1 will be ignored anyway
                 # start_indexes = [generated_response.index(f'({can})') for can in candidates]
+            elif ans_with_star:
+                for can in candidates:
+                    index = response.rfind(f"**{can}**")
+                    start_indexes.append(index)
             else:
                 for can in candidates:
                     index = response.rfind(f" {can} ")
@@ -315,8 +325,8 @@ MULTI_CHOICE_POST_PROMPT = "Answer with the option letter."
 
 @register_task("synthbench-visual")
 class SynthBenchVisual(Task):
-    task_name = "fake-visual-detection"
-    task_modality = ["video-text", "image-text"]
+    task_name = "fake-detection"
+    task_modality = ["video-text", "image-text", "text-only"]
     def doc_to_visual(self, doc):
         """
         Example:
@@ -425,7 +435,9 @@ class SynthBenchVisual(Task):
                 "parsed_response": parsed_response, "accuracy": accuracy, "contexts": self.doc_to_text(doc),
                 "response": response, "metric": doc["metric"], "target": target, "question_type": doc["question_type"]
             }
-            result["media_path"] = doc["image_path"] if doc["modality"] == "image-text" else doc["video_path"]
+            
+            if doc["modality"] != 'text-only':
+                result["media_path"] = doc["image_path"] if doc["modality"] == "image-text" else doc["video_path"]
             results.append(result)
             
         return results

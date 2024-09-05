@@ -209,7 +209,7 @@ class MiniCPM(LMM):
             if context == "<video>":
                 messages[0]["content"] += videos[video_idx]
             elif context == "<image>":
-                messages[0]["content"] += images[image_idx]
+                messages[0]["content"] += [images[image_idx]]
             else:
                 messages[0]["content"] += [context]
         messages.append({"role": "assistant", "content": ""})

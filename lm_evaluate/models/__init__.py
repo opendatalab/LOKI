@@ -1,5 +1,5 @@
 from lm_evaluate.models.llava_next_video_hf import LLaVANeXTVideoHF
-from lm_evaluate.models.gpt import GPT
+from lm_evaluate.models.openai_api import OpenAI
 from lm_evaluate.models.xcomposer2d5 import XComposer2D5
 from lm_evaluate.models.internvl2 import InternVL2
 from lm_evaluate.models.mplug_owl import MPlugOwl
@@ -11,3 +11,5 @@ from lm_evaluate.models.phi3_5_vision import Phi3_5Vision
 from lm_evaluate.models.llava_next import LLaVANeXT
 from lm_evaluate.models.mantis import Mantis
 from lm_evaluate.models.idefics import Idefics
+from lm_evaluate.models.qwen_vl_api import QwenVLAPI
+from lm_evaluate.models.mistral_api import Mistral

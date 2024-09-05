@@ -2,6 +2,7 @@ import os
 import json
 import sys
 import itertools
+import chardet
 
 import lm_evaluate.utils as utils
 
@@ -81,7 +82,11 @@ class Task(ABC):
         Currently only supported loading from a json file. # TODO: Add support for huggingface loading.
         """
         
-        with open(self.dataset_path, 'r') as f:
+        with open(self.dataset_path, 'rb') as f:
+            raw_data = f.read()
+        result = chardet.detect(raw_data)  # 自动检测文件编码
+        encoding = result['encoding']  # 检测到的编码
+        with open(self.dataset_path, 'r', encoding=encoding) as f:
             dataset = json.load(f)
         
         return dataset
@@ -184,9 +189,11 @@ class Task(ABC):
             
             # res_doc = {}
             # try:
+            if "text-only" in model.supported_modalities and len(model.supported_modalities) == 1:
+                visuals = []
             response = model.generate(
-                visuals,
-                contexts,
+                visuals=visuals,
+                contexts=contexts,
                 **model_kwargs
             )
             # except Exception as e:

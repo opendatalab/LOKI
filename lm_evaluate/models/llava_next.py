@@ -317,7 +317,7 @@ class LLaVANeXT(LMM):
         
         attention_masks = input_ids.ne(pad_token_ids).long().cuda()
         
-        gen_kwargs = {}
+        gen_kwargs = kwargs
         
         if "max_new_tokens" not in kwargs:
             gen_kwargs["max_new_tokens"] = 1024
