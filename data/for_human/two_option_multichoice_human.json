@@ -1,0 +1,3152 @@
+[
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0054_0010.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_38.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_176.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_07_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0003_0019.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9565685.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_03_0059.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6385584.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0048_0008.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_51.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0051.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8440542.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_61.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0052_0007.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_69.jpg",
+            "fakebench_doc/paper/true/en/0501_0018_0007.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0029_0028.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_37.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_41.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0003_0038.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_66.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021120104.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7578242.jpg",
+            "fakebench_doc/magazine/true/en/0301_0204_0055.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9017663.jpg",
+            "fakebench_doc/magazine/true/en/0301_0168_0020.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_29.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020091208.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_81.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0045_0011.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_171.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_09_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6364696.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0008.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_49.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021102010.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_3.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0030_0021.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_5.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0034_0036.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_16.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0026_0000.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_20.jpg",
+            "fakebench_doc/paper/true/en/0501_0052_0001.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_74.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021111013.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0007_0016.jpg",
+            "fakebench_doc/restructure/fake/1724509425_5431962.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_48.jpg",
+            "fakebench_doc/paper/true/en/0501_0138_0012.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_07_0084.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7657382.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_60.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0059.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0235_0039.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8701525.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0213_0012.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8154452.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8971465.jpg",
+            "fakebench_doc/magazine/true/en/0301_0097_0086.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0088_0001.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_223.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0036_0005.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_63.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021040614.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_8.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_6.jpg",
+            "fakebench_doc/paper/true/en/0501_0219_0003.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_30.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021112708.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021112311.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_16.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_68.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0051_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0054_0029.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_23.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0014_0017.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_4.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9330592.jpg",
+            "fakebench_doc/magazine/true/en/0301_0175_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0032_0034.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_18.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6052508.jpg",
+            "fakebench_doc/magazine/true/en/0301_0007_0042.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_61.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020090802.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_16.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0026_0000.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021010305.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_5.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021111013.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_74.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0064_0004.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_62.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0000_0005.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_82.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0011_0007.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_67.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0000_0005.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_82.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0032_0034.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_18.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_93318.jpg",
+            "fakebench_doc/magazine/true/en/0301_0110_0092.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_03_0059.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6385584.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0000_0021.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_307.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8462396.jpg",
+            "fakebench_doc/magazine/true/en/0301_0088_0002.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_146.jpg",
+            "fakebench_doc/magazine/true/en/0301_0220_0043.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0091_0036.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7964294.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0052.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7588518.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0051_0008.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_41.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0066_0017.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_28.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_05_0057.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_35.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_32.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020092202.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9330592.jpg",
+            "fakebench_doc/magazine/true/en/0301_0175_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8821526.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021120104.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_66.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0047.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8725157.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8971465.jpg",
+            "fakebench_doc/magazine/true/en/0301_0097_0086.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0021.jpg",
+            "fakebench_doc/restructure/fake/1724509425_782543.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0109_0031.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8618283.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021102010.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_49.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_28.jpg",
+            "fakebench_doc/paper/true/en/0501_0158_0003.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_65.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_05_0051.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0062_0033.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_32.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0220_0028.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9181275.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0021.jpg",
+            "fakebench_doc/restructure/fake/1724509425_782543.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0034_0036.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_5.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_07_0022.jpg",
+            "fakebench_doc/restructure/fake/1724509425_5972028.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_283.jpg",
+            "fakebench_doc/magazine/true/en/0301_0002_0021.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_50.jpg",
+            "fakebench_doc/paper/true/en/0501_0076_0013.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_77.jpg",
+            "fakebench_doc/paper/true/en/0501_0132_0009.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_16.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_06_0175.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0213_0006.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8954735.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_06_0175.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_16.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020081416.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_21.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0029_0012.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_74.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_11.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020091118.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_41.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0051_0008.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_37.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0029_0028.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0220_0028.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9181275.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0004_0035.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8455458.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0000_0001.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9130547.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0001_0017.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_156.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_38.jpg",
+            "fakebench_doc/paper/true/en/0501_0054_0010.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0087.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_112.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0167.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9711537.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0129.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_55.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8462396.jpg",
+            "fakebench_doc/magazine/true/en/0301_0088_0002.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0052.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_70.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8618283.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0031.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7588518.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0052.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0206_0056.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8528461.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_07_0022.jpg",
+            "fakebench_doc/restructure/fake/1724509425_5972028.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0109_0044.jpg",
+            "fakebench_doc/restructure/fake/1724509426_0144494.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0064_0003.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_15.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0031.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_89.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020090802.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_61.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_23.jpg",
+            "fakebench_doc/paper/true/en/0501_0006_0010.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_42.jpg",
+            "fakebench_doc/paper/true/en/0501_0118_0009.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_32.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0062_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0000_0018.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_191.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_05_0040.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9829984.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0079_0008.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_73.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_76.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0024_0024.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_33.jpg",
+            "fakebench_doc/magazine/true/en/0301_0213_0023.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_24.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021120204.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8706465.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_03_0014.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_347.jpg",
+            "fakebench_doc/magazine/true/en/0301_0000_0057.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8592544.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0000_0051.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_192.jpg",
+            "fakebench_doc/magazine/true/en/0301_0091_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_99.jpg",
+            "fakebench_doc/magazine/true/en/0301_0168_0022.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0021.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_162.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0097_0008.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_30.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021010305.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_5.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_22.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0030_0018.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_97.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_27.jpg",
+            "fakebench_doc/magazine/true/en/0301_0073_0030.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_63.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020092303.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_29.jpg",
+            "fakebench_doc/paper/true/en/0501_0042_0069.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0036_0005.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_63.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0140_0000.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_34.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9031544.jpg",
+            "fakebench_doc/magazine/true/en/0301_0055_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_156.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0001_0017.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_51.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0048_0008.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_61.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0052_0007.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_73.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0008_0041.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0165_0017.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9067564.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_3.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0030_0021.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0000_0021.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_307.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0054_0029.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_23.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0042_0002.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_71.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_19.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020082205.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_319.jpg",
+            "fakebench_doc/magazine/true/en/0301_0095_0075.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8440542.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0051.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0078.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_140.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_42.jpg",
+            "fakebench_doc/paper/true/en/0501_0118_0009.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_912165.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0019.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_347.jpg",
+            "fakebench_doc/magazine/true/en/0301_0000_0057.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_265.jpg",
+            "fakebench_doc/magazine/true/en/0301_0095_0034.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9711537.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0167.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_4.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020092703.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_13.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021120201.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_112.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0087.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8701525.jpg",
+            "fakebench_doc/magazine/true/en/0301_0235_0039.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_05_0040.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9829984.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_9.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020091804.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020123102.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_6.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0008.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6364696.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020082205.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_19.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0037_0003.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_64.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0007_0016.jpg",
+            "fakebench_doc/restructure/fake/1724509425_5431962.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7592216.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_176.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_07_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0064_0004.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_62.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_943529.jpg",
+            "fakebench_doc/magazine/true/en/0301_0005_0060.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0018.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_33.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8779995.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_07_0094.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8718176.jpg",
+            "fakebench_doc/magazine/true/en/0301_0097_0023.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0071_0035.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_4.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021041320.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_3.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8821526.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0007_0022.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_264.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_48.jpg",
+            "fakebench_doc/paper/true/en/0501_0138_0012.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_57.jpg",
+            "fakebench_doc/paper/true/en/0501_0043_0015.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0021.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_162.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020092703.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_4.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0095_0075.jpg",
+            "fakebench_doc/restructure/fake/1724509425_957859.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0003_0024.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_13.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_16.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021112311.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0095_0083.jpg",
+            "fakebench_doc/restructure/fake/1724509425_98047.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_4.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0014_0017.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0002_0021.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_283.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7711325.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_03_0056.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_65.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_05_0051.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0085_0017.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_341.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0000_0051.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8592544.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_68.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0051_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_05_0017.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7954535.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021040207.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_73.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0045_0011.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_81.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_1.jpg",
+            "fakebench_doc/paper/true/en/0501_0153_0006.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021010306.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_2.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_29.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020091208.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0004_0010.jpg",
+            "fakebench_doc/restructure/fake/1724509425_791265.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_62.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021010705.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0165_0017.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9067564.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_31.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0024.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_07_0023.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6687307.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_15.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020092907.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0009_0027.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_56.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_27.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0008_0053.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0008_0008.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_39.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0048_0006.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_54.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_55.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_04_0129.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0071_0035.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_4.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0048_0016.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_40.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0228_0050.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_61.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0003_0024.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_13.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0210_0009.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8245704.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0009_0027.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_56.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_912165.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0019.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7527907.jpg",
+            "fakebench_doc/magazine/true/en/0301_0216_0049.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0216_0040.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_68.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020091404.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_14.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0091_0035.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_192.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6787002.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0004_0005.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_99.jpg",
+            "fakebench_doc/magazine/true/en/0301_0168_0022.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_30.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021112708.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_57.jpg",
+            "fakebench_doc/magazine/true/en/0301_0005_0036.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_50.jpg",
+            "fakebench_doc/paper/true/en/0501_0076_0013.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8245704.jpg",
+            "fakebench_doc/magazine/true/en/0301_0210_0009.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_340.jpg",
+            "fakebench_doc/magazine/true/en/0301_0204_0049.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_109.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0003_0041.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0073_0030.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_27.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_957859.jpg",
+            "fakebench_doc/magazine/true/en/0301_0095_0075.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0088_0001.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_223.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0097_0008.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_30.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_57.jpg",
+            "fakebench_doc/magazine/true/en/0301_0005_0036.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0205_0055.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8801079.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021040614.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_8.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_24.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021120204.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0095_0034.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_265.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_171.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_09_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0040.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_107.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020092907.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_15.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_191.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0000_0018.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0024_0024.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_76.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0006_0012.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_22.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0205_0043.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6811092.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_119.jpg",
+            "fakebench_doc/magazine/true/en/0301_0201_0014.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_25.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020080414.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_1.jpg",
+            "fakebench_doc/paper/true/en/0501_0153_0006.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021102904.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_75.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9130547.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0000_0001.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_6.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020123102.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_66.jpg",
+            "fakebench_doc/paper/true/en/0501_0113_0011.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0201_0014.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_119.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_1.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0026_0017.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_140.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0078.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8154452.jpg",
+            "fakebench_doc/magazine/true/en/0301_0213_0012.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_64.jpg",
+            "fakebench_doc/paper/true/en/0501_0037_0003.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_72.jpg",
+            "fakebench_doc/paper/true/en/0501_0141_0010.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_9031544.jpg",
+            "fakebench_doc/magazine/true/en/0301_0055_0033.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0205_0043.jpg",
+            "fakebench_doc/restructure/fake/1724509425_6811092.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8801079.jpg",
+            "fakebench_doc/magazine/true/en/0301_0205_0055.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_20.jpg",
+            "fakebench_doc/paper/true/en/0501_0052_0001.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0007_0022.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_264.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0228_0050.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_61.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_129.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_04_0024.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0216_0040.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_68.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0048_0006.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_54.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_22.jpg",
+            "fakebench_doc/paper/true/en/0501_0006_0012.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021010306.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_2.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0004_0010.jpg",
+            "fakebench_doc/restructure/fake/1724509425_791265.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0018_0007.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_69.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0003_0019.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9565685.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_28.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0066_0017.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0079_0008.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_73.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0222_0002.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_60.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7711325.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_03_0056.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_71.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0042_0002.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8528461.jpg",
+            "fakebench_doc/magazine/true/en/0301_0206_0056.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0140_0000.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_34.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_08_0040.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_107.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_23.jpg",
+            "fakebench_doc/paper/true/en/0501_0006_0010.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020091118.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_11.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0097_0023.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8718176.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0141_0010.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_72.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7954535.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_05_0017.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_31.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020092307.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_97.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0040.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020092303.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_63.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_62.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021010705.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8779995.jpg",
+            "fakebench_doc/magazine/true/ch/0302_04_2021_07_0094.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0043_0015.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_57.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0204_0055.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7578242.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_319.jpg",
+            "fakebench_doc/magazine/true/en/0301_0095_0075.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0030_0018.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_22.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0085_0017.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_341.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0008_0053.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_27.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020090506.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_12.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_67.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0011_0007.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_13.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021120201.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0046_0014.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_50.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509426_0144494.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0044.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0064_0003.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_15.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020090506.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_12.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0008_0008.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_39.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_02_0052.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_70.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_35.jpg",
+            "fakebench_doc/magazine/true/ch/0302_03_2020_05_0057.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0033.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7592216.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_21.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020081416.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6052508.jpg",
+            "fakebench_doc/magazine/true/en/0301_0007_0042.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_60.jpg",
+            "fakebench_doc/paper/true/en/0501_0222_0002.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_57.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020100508.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_31.jpg",
+            "fakebench_doc/magazine/true/en/0301_0109_0024.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0008_0041.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_73.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020091804.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_9.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0132_0009.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_77.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_14.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020091404.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_98047.jpg",
+            "fakebench_doc/magazine/true/en/0301_0095_0083.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_943529.jpg",
+            "fakebench_doc/magazine/true/en/0301_0005_0060.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0048_0016.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_40.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0059.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_60.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0047.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8725157.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_6.jpg",
+            "fakebench_doc/paper/true/en/0501_0219_0003.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7527907.jpg",
+            "fakebench_doc/magazine/true/en/0301_0216_0049.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_73.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2021040207.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_74.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0029_0012.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0003_0038.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_41.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0110_0092.jpg",
+            "fakebench_doc/restructure/fake/1724509425_93318.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0213_0023.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_33.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0113_0011.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_66.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_0003_0041.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_109.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8455458.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0004_0035.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021041320.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_3.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/true/en/0501_0042_0069.jpg",
+            "fakebench_doc/paper/fake/en/paper_En_29.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_03_2020_04_0024.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_129.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0168_0020.jpg",
+            "fakebench_doc/restructure/fake/1724509425_9017663.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2021102904.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_75.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0008_0039.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_91.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0020.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_9.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6687307.jpg",
+            "fakebench_doc/magazine/true/ch/0302_02_2021_07_0023.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_91.jpg",
+            "fakebench_doc/newspaper/true/en/0202_0008_0039.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_07_0084.jpg",
+            "fakebench_doc/restructure/fake/1724509425_7657382.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_9.jpg",
+            "fakebench_doc/magazine/true/ch/0302_01_2022_03_0020.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0018.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_33.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_57.jpg",
+            "fakebench_doc/newspaper/true/ch/0201_2020100508.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/paper/fake/en/paper_En_28.jpg",
+            "fakebench_doc/paper/true/en/0501_0158_0003.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_paper",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_02_2021_06_0031.jpg",
+            "fakebench_doc/magazine/fake/ch/magazine_Ch_89.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_6787002.jpg",
+            "fakebench_doc/magazine/true/ch/0302_0004_0005.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/ch/0302_04_2021_03_0014.jpg",
+            "fakebench_doc/restructure/fake/1724509425_8706465.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0046_0014.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_50.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/fake/en/magazine_En_146.jpg",
+            "fakebench_doc/magazine/true/en/0301_0220_0043.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020092202.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_32.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_8954735.jpg",
+            "fakebench_doc/magazine/true/en/0301_0213_0006.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/magazine/true/en/0301_0204_0049.jpg",
+            "fakebench_doc/magazine/fake/en/magazine_En_340.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_magazine",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020092307.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_31.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/ch/0201_2020080414.jpg",
+            "fakebench_doc/newspaper/fake/ch/newspaper_Ch_2034*2877_25.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/newspaper/true/en/0202_0026_0017.jpg",
+            "fakebench_doc/newspaper/fake/en/newspaper_En_2034*2877_1.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_newspaper",
+        "answer": "B"
+    },
+    {
+        "*_path": [
+            "fakebench_doc/restructure/fake/1724509425_7964294.jpg",
+            "fakebench_doc/magazine/true/en/0301_0091_0036.jpg"
+        ],
+        "question_type": "multi",
+        "type_sec": "doc_restructure",
+        "answer": "A"
+    }
+]

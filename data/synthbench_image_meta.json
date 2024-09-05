@@ -5985,6 +5985,1406 @@
         "generation_method": null
     },
     {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000024_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000096_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000142_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000173_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000186_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000503_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0004110_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0005187_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0008524_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009800_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009921_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009966_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010105_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010249_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000021_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000114_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000379_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000506_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0002453_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009758_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009873_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010057_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010371_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011114_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000032_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000058_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000080_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000190_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000218_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000300_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000331_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000383_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0001140_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0001148_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0002647_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0006940_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009860_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009912_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010069_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011140_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011383_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000215_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0002975_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0008029_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0008294_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009884_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010102_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010246_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010334_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010367_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010462_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010497_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010593_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011085_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011215_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000031_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000143_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000344_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000361_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000412_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009919_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010025_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010104_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010581_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010850_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011097_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011121_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011166_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000028_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000426_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000513_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000522_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0007788_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009976_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010323_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011341_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000059_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000081_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000123_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000185_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000199_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000219_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000324_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000396_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0001191_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010060_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010170_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010457_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011324_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000079_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000214_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000477_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0000542_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0001372_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0009899_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010225_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010335_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0010567_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011387_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine/fake/GAN/ISIC_0011393_fake_B.png",
+        "is_fake": true,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": "GAN"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_985_slide0180.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_182_slide0069.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1277_slide0058.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_737_slide0118.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_574_slide0186.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_213_slide0085.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_430_slide0193.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_985_slide0183.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_47_slide0042.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_842_slide0227.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_213_slide0083.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1277_slide0058.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_737_slide0120.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1529_slide0064.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_196_slide0061.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_842_slide0214.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_296_slide0131.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_207_slide0056.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_362_slide0050.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_182_slide0066.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1277_slide0056.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_430_slide0197.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_623_slide0094.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_613_slide0141.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1529_slide0061.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1620_slide0313.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_499_slide0155.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_213_slide0087.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_574_slide0187.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1529_slide0060.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_182_slide0069.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_574_slide0185.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_623_slide0091.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_499_slide0153.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_574_slide0190.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1620_slide0314.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_47_slide0044.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1529_slide0065.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_785_slide0059.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_500_slide0154.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_207_slide0056.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_430_slide0194.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_196_slide0062.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1642_slide0029.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_2088_slide0094.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_613_slide0142.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_842_slide0215.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_500_slide0154.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_296_slide0130.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_955_slide0097.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_623_slide0090.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_613_slide0152.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_296_slide0129.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_955_slide0097.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_196_slide0063.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_574_slide0188.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_207_slide0058.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1529_slide0062.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_500_slide0155.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_574_slide0193.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_955_slide0100.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_213_slide0084.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_955_slide0098.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_737_slide0116.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_623_slide0093.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_430_slide0194.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1529_slide0057.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_499_slide0153.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_213_slide0086.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_623_slide0094.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_1045_slide0149.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_574_slide0191.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1307_slide0159.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_2088_slide0095.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_680_slide0105.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_47_slide0048.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1105_slide0122.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_735_slide0048.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_47_slide0045.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_362_slide0047.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_613_slide0153.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_1277_slide0056.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_362_slide0055.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_47_slide0046.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1620_slide0313.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_737_slide0109.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_201_slide0061.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_122_slide0047.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_1045_slide0148.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_153_slide0065.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_842_slide0226.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_680_slide0110.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1307_slide0161.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_499_slide0149.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_196_slide0062.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_1045_slide0145.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_inj_122_slide0047.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_inj_1307_slide0160.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_diffusion_rem_213_slide0083.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/medicine_new/real/real_pix2pix_rem_47_slide0043.png",
+        "is_fake": false,
+        "image_type": "medicine",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
         "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite/fake/CUT/CUT_0.png",
         "is_fake": true,
         "image_type": "satellite",
@@ -7155,6 +8555,1077 @@
     },
     {
         "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite/fake/Ours/Ours_9.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_100.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_100.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_101.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_101.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_102.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_102.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_103.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_103.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_104.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_104.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_105.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_105.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_106.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_106.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_56.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_56.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_57.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_57.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_58.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_58.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_59.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_59.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_60.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_60.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_61.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_61.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_62.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_62.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_63.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_63.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_64.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_64.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_65.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_65.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_66.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_66.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_67.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_67.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_68.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_68.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_69.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_69.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_70.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_70.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_71.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_71.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_72.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_72.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_73.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_73.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_74.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_74.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_75.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_75.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_76.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_76.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_77.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_77.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_78.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_78.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_79.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_79.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_80.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_80.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_81.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_81.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_82.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_82.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_83.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_83.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_84.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_84.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_85.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_85.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_86.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_86.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_87.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_87.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_88.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_88.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_89.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_89.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_90.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_90.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_91.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_91.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_92.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_92.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_93.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_93.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_94.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_94.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_95.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_95.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_96.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_96.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_97.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_97.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_98.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_98.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/CUT/CUT_99.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "CUT"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/real/Real_99.png",
+        "is_fake": false,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": null
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_100.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_101.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_102.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_103.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_104.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_105.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_106.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_56.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_57.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_58.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_59.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_60.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_61.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_62.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_63.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_64.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_65.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_66.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_67.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_68.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_69.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_70.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_71.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_72.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_73.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_74.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_75.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_76.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_77.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_78.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_79.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_80.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_81.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_82.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_83.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_84.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_85.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_86.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_87.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_88.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_89.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_90.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_91.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_92.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_93.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_94.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_95.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_96.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_97.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_98.png",
+        "is_fake": true,
+        "image_type": "satellite",
+        "image_subtype": null,
+        "generation_method": "Ours"
+    },
+    {
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset/satellite_new/fake/Ours/Ours_99.png",
         "is_fake": true,
         "image_type": "satellite",
         "image_subtype": null,
