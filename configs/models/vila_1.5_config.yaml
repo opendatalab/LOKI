@@ -1,9 +1,9 @@
-model_type: mplug-owl
+model_type: vila
 
 init_kwargs:
-  model_version: mPLUG/mPLUG-Owl3-7B-240728
+  model_version: Efficient-Large-Model/Efficient-Large-Model/VILA1.5-13b
   max_num_frames: 8
-  attn_implementation: sdpa
+  conv_template: v1
 
 generate_kwargs:
   top_p: 1

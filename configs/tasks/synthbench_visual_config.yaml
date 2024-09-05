@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/synthbench_image_detection.json
-  task_name: fake-visual-detection

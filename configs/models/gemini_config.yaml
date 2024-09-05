@@ -1,8 +1,7 @@
 model_type: gemini
 
 init_kwargs:
-  model_version: gemini-1.5-flash
-  max_num_frames: 8
+  model_version: gemini-1.5-pro
 
 generate_kwargs:
   top_p: 1

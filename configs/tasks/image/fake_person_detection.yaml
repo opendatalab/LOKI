@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/image/person_new_detection.json
+  task_name: fake-person-detection

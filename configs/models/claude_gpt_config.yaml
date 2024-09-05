@@ -1,9 +1,9 @@
 model_type: gpt-4o
 
 init_kwargs:
-  model_version: gpt-4o
+  model_version: claude-3-5-sonnet-20240620
   max_num_frames: 8
-  # api_url: https://api.claudeshop.top/v1/chat/completions 
+  api_url: https://api.claudeshop.top/v1/chat/completions 
 
 generate_kwargs:
   top_p: 1

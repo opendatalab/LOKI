@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/image/image_detection_0904.json
+  task_name: image-detection
