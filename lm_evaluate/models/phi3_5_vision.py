@@ -162,7 +162,7 @@ class Phi3_5Vision(LMM):
         videos = []
         
         num_videos = 0
-        
+        num_images = 0
         # four scenarios:
         # visuals is a list of string or PIL image
         # visuals is a string
@@ -176,24 +176,27 @@ class Phi3_5Vision(LMM):
                     videos.append(frames)
                 elif isinstance(visual, Image.Image):
                     images.append(visual)
+                    num_images += 1
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
-            images.extend(self.encode_video(visuals))
+            frames = self.encode_video(visuals)
+            images.extend(frames)
             videos.append(frames)
         elif isinstance(visuals, Image.Image):
             images.append(visuals)
+            num_images += 1
         
         # Segment the text according to video and image token
         
         
-        if len(images) > contexts.count('<image>'):
-            eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
-            contexts = "<image> " * (len(images) - contexts.count("<image>")) + contexts
+        if num_images > contexts.count('<image>'):
+            eval_logger.warning(f"<image> tokens num is less than actual number of images. Appending {num_images - contexts.count('<image>')} <image> at the front.")
+            contexts = "<image> " * (num_images - contexts.count("<image>")) + contexts
 
         if num_videos > contexts.count("<video>"):
-            eval_logger.warning("<video> tokens num is less than actual number of images. Appending <video> at the front.")
+            eval_logger.warning(f"<video> tokens num is less than actual number of images. Appending {num_videos - contexts.count('video')} <video> at the front.")
             contexts = "<video> " * (num_videos - contexts.count("<video>")) + contexts
         
         # First replace <video> token with <image> * num_frames
@@ -229,7 +232,10 @@ class Phi3_5Vision(LMM):
         
         eval_logger.debug(f"Prompt: {prompt}")
         
-        inputs = self.processor(prompt, images, return_tensors="pt").to(self._device) 
+        if len(images) > 0:
+            inputs = self.processor(prompt, images, return_tensors="pt").to(self._device)
+        else:
+            inputs =  self.processor(prompt, return_tensors="pt").to(self._device)
         
         generation_args = { 
             "max_new_tokens": 1000, 
