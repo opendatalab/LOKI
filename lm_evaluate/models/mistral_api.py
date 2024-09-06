@@ -5,19 +5,10 @@ import time
 import requests as url_requests
 
 from loguru import logger as eval_logger
-
-try:
-    import openai
-except Exception as e:
-    eval_logger.debug(f"Please install openai packages to use GPT and other models compatible with openai's api protocols\n{e}")
     
 
 import PIL
 import numpy as np
-try:
-    import dashscope
-except:
-    eval_logger.debug("Can not import Dashscope")
 
 from io import BytesIO
 from typing import List, Union
@@ -25,7 +16,10 @@ from copy import deepcopy
 
 from decord import VideoReader, cpu
 from PIL import Image
-from mistralai import Mistral
+try:
+    from mistralai import Mistral
+except Exception as e:
+    eval_logger.debug(f"Please install mistralai packages to use GPT\n{e}")
 
 from lm_evaluate.api.model import LMM
 from lm_evaluate.api.registry import register_model

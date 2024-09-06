@@ -23,9 +23,10 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
     TODO: Add VILA -- DONE
     TODO: Add internvl2 -- DONE
     TODO: Add MPlug-Owl3 -- DONE
+    TODO: Add mistral api
     TODO: Add datetime to log file -- DONE
     TODO: Add generation config for each model
-    TODO: Rewrite config logic
+    TODO: Rewrite config logic -- DONE
 """
 
 
@@ -50,15 +51,14 @@ def main(args):
     task_type = task_config["task_type"]
     
     if model_type not in MODEL_REGISTRY:
-        eval_logger.error(f"No model named {args.model_name} is found. Supported models: {MODEL_REGISTRY.keys()}")
+        eval_logger.error(f"No model named {model_type} is found. Supported models: {MODEL_REGISTRY.keys()}")
         sys.exit(-1)
     
     if task_type not in TASK_REGISTRY:
-        eval_logger.error(f"No task named {args.task_name} is found. Supported tasks: {TASK_REGISTRY.keys()}")
+        eval_logger.error(f"No task named {task_type} is found. Supported tasks: {TASK_REGISTRY.keys()}")
         sys.exit(-1)
         
     model_init_kwargs = model_config["init_kwargs"]
-    print(model_init_kwargs)
     task_init_kwargs = task_config["init_kwargs"]
 
     model = MODEL_REGISTRY[model_type](**model_init_kwargs)
@@ -80,7 +80,7 @@ def main(args):
     
     model_name = model.model_version.split("/")[-1]
     task_name = task.task_name
-    file_dir = os.path.join(args.log_dir, f"{args.model_name}_{args.task_name}", datetime_str)
+    file_dir = os.path.join(args.log_dir, f"{model_type}_{task_type}", datetime_str)
         
     os.makedirs(file_dir, exist_ok=True)
     accuracy_file = os.path.join(file_dir, f"{model_name}_{task_name}_accuracy.json")
@@ -109,11 +109,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--log_dir",
         default="./logs",
-        type=str
-    )
-    parser.add_argument(
-        "--logs_prefix",
-        default="",
         type=str
     )
     parser.add_argument(

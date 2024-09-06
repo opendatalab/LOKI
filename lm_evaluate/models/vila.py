@@ -276,7 +276,7 @@ class VILA(LMM):
 
         stopping_criteria = KeywordsStoppingCriteria(keywords, self.tokenizer, input_ids)
         
-        gen_kwargs = {}
+        gen_kwargs = kwargs
         
         if "max_new_tokens" not in kwargs:
             gen_kwargs["max_new_tokens"] = 1024
@@ -291,7 +291,7 @@ class VILA(LMM):
         with torch.inference_mode():
             output_ids = self.model.generate(
                 input_ids=input_ids,
-                images=processed_image_tensors,
+                images=processed_image_tensors if len(processed_image_tensors) > 0 else None,
                 attention_mask=attention_masks,
                 use_cache=self.use_cache,
                 stopping_criteria=[stopping_criteria],

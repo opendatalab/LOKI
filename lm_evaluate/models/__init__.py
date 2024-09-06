@@ -12,4 +12,4 @@ from lm_evaluate.models.llava_next import LLaVANeXT
 from lm_evaluate.models.mantis import Mantis
 from lm_evaluate.models.idefics import Idefics
 from lm_evaluate.models.qwen_vl_api import QwenVLAPI
-from lm_evaluate.models.mistral_api import Mistral
+from lm_evaluate.models.mistral_api import MistralAPI

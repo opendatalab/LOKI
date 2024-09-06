@@ -1,11 +1,13 @@
 import os
 from datetime import datetime
 import json
+import yaml
 
 import pandas as pd
 
 from itertools import islice
 from collections import defaultdict
+from lm_evaluate.api.registry import MODEL_REGISTRY
 
 
 def create_iterator(raw_iterator, rank, world_size, limit=None):
@@ -123,17 +125,12 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir):
             df_list = []
 
             for model_name, (_, accuracies) in models.items():
-                accuracies['model'] = model_name  # 在每行中添加 'model' 字段
-                # 将每个模型的准确率数据添加到列表中
+                accuracies['model'] = model_name  
                 df_list.append(pd.DataFrame([accuracies]))
 
-            # 使用 pd.concat 将所有数据拼接到一起
             df = pd.concat(df_list, ignore_index=True)
-
-            # 将 'model' 字段移动到表头第一列
             df = df[['model'] + [col for col in df.columns if col != 'model']]
 
-            # 保存为 CSV
             csv_filename = f"{task_type}_{task_name}_accuracies.csv"
             os.makedirs(os.path.join(result_dir, 'csv'), exist_ok=True)
             df.to_csv(os.path.join(result_dir, 'csv', csv_filename), index=False)
@@ -144,4 +141,15 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir):
             os.makedirs(os.path.join(result_dir, 'markdown'), exist_ok=True)
             with open(os.path.join(result_dir, 'markdown', markdown_name), 'w') as f:
                 f.write(markdown_table)
-            
+
+
+def load_model_from_config(config_path):
+    model_config = yaml.load(open(config_path), Loader=yaml.SafeLoader)
+    
+    
+    model_init_kwargs = model_config["init_kwargs"]
+    model_type = model_config["model_type"]
+    model = MODEL_REGISTRY[model_type](**model_init_kwargs)
+    generate_kwargs = model_config["generate_kwargs"]
+    
+    return model, generate_kwargs, model_config

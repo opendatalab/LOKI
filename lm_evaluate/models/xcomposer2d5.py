@@ -1,5 +1,6 @@
 import json
 import re
+import os
 
 import torch
 import av
@@ -136,19 +137,24 @@ class XComposer2D5(LMM):
         # visuals is a string
         # visuals is a PIL Image
         # visuals is None
+        image_idx = 0
         if isinstance(visuals, list):
             for visual in visuals:
                 if isinstance(visual, str):
                     images.append(visual)
                 elif isinstance(visual, Image.Image):
-                    images.append(visual)
+                    visual.save(os.path.join(self.tmp_folder, f"tmp_{image_idx}_{self.rank}_{self.world_size}.jpg"))
+                    images.append(os.path.join(self.tmp_folder, f"tmp_{image_idx}_{self.rank}_{self.world_size}.jpg"))
+                    image_idx += 1
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
             images.append(visuals)
         elif isinstance(visuals, Image.Image):
-            images.append(visuals)
+            visuals.save(os.path.join(self.tmp_folder, f"tmp_{image_idx}_{self.rank}_{self.world_size}.jpg"))
+            images.append(os.path.join(self.tmp_folder, f"tmp_{image_idx}_{self.rank}_{self.world_size}.jpg"))
+            image_idx += 1
         
         # Segment the text according to video and image token
         prompt = contexts.replace("<video>", "<ImageHere>").replace("<image>", "<ImageHere>")
