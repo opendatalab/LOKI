@@ -1,4 +1,5 @@
 from lm_evaluate.models.llava_next_video_hf import LLaVANeXTVideoHF
+from lm_evaluate.models.claude import Claude
 from lm_evaluate.models.openai_api import OpenAI
 from lm_evaluate.models.xcomposer2d5 import XComposer2D5
 from lm_evaluate.models.internvl2 import InternVL2

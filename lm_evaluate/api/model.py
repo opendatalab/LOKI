@@ -1,8 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Union, List
 
-
-from transformers import PreTrainedModel
 from PIL import Image
 
 
@@ -21,7 +19,7 @@ class LMM(ABC):
         self._world_size = None # For MultiGPU Inference
     
     @abstractmethod
-    def prepare_model(self) -> Union[str, PreTrainedModel]:
+    def prepare_model(self):
         pass
     
     @abstractmethod
