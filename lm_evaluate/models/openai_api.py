@@ -176,7 +176,7 @@ class OpenAI(LMM):
         if contexts.count(IMAGE_TOKEN) != len(imgs):
             eval_logger.warning(f"Image tokens are mismatched! Contexts: {contexts}. Image token num: {contexts.count(IMAGE_TOKEN)}. Number of images(frames) num: {len(imgs)}")
             if contexts.count(IMAGE_TOKEN) < len(imgs):
-                contexts = f"{IMAGE_TOKEN} " * len(imgs) - (contexts.count(IMAGE_TOKEN))
+                contexts = f"{IMAGE_TOKEN} " * (len(imgs) - (contexts.count(IMAGE_TOKEN))) + contexts
             
         contexts = contexts.split(IMAGE_TOKEN)
         

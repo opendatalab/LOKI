@@ -73,8 +73,8 @@ class MistralAPI(LMM):
     
     def generate(
         self, 
-        visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
-        contexts: str,
+        visuals: Union[Image.Image, str, List[Union[Image.Image, str]]] = None,
+        contexts: str = None,
         **generate_kwargs
     ) -> str:
         """

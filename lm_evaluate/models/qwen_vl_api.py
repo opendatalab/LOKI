@@ -76,7 +76,6 @@ class QwenVLAPI(LMM):
             payload["num_beams"] = generate_kwargs["num_beams"]
         
         return payload
-
     
     def generate(
         self, 

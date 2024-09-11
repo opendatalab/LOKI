@@ -10,3 +10,4 @@ generate_kwargs:
   top_k: None
   temperature: 0
   max_new_tokens: 1024
+  # response_format: {"type": "json_object"}

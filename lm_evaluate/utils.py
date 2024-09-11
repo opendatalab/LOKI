@@ -7,7 +7,6 @@ import pandas as pd
 
 from itertools import islice
 from collections import defaultdict
-from lm_evaluate.api.registry import MODEL_REGISTRY
 
 
 def create_iterator(raw_iterator, rank, world_size, limit=None):
@@ -144,6 +143,7 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir):
 
 
 def load_model_from_config(config_path):
+    from lm_evaluate.api import MODEL_REGISTRY
     model_config = yaml.load(open(config_path), Loader=yaml.SafeLoader)
     
     

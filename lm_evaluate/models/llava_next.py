@@ -275,7 +275,7 @@ class LLaVANeXT(LMM):
         
         # Segment the text according to video and image token
         
-        if len(images) > contexts.count("<image>"):
+        if len(image_sizes) > contexts.count("<image>"):
             eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
             contexts = "<image> " * (len(images) - contexts.count("<image>")) + contexts
 
