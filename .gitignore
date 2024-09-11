@@ -4,3 +4,4 @@ previous_logs/
 results/
 text_data/
 tools/
+**/__pycache__/
