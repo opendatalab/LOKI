@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/image/image_vqa_add_no_option_0909.json
+  task_name: image-vqa

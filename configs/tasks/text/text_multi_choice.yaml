@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/text/text_multiple_choice.json
+  task_name: text-multi-choice

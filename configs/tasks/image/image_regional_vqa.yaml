@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/image/image_regional_vqa_0909.json
+  task_name: image-regional-vqa
