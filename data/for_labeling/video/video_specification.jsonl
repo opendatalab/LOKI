@@ -1,0 +1,100 @@
+{"name": "0", "pathList": ["fake_video/VideoDrafter/VideoDrafter_fake_0.mp4", "real_video/VideoDrafter/VideoDrafter_real_0.mp4"]}
+{"name": "1", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_1.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_1.mp4"]}
+{"name": "2", "pathList": ["fake_video/CogVideoX/CogVideoX_5.mp4", "real_video/CogVideoX/CogVideoX_real_5.mp4"]}
+{"name": "3", "pathList": ["fake_video/open_sora/open_sora_fake_17.mp4", "real_video/open_sora/open_sora_real_17.mp4"]}
+{"name": "4", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_0.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_0.mp4"]}
+{"name": "5", "pathList": ["fake_video/keling/keling_fake_17.mp4", "real_video/keling/keling_real_17.mp4"]}
+{"name": "6", "pathList": ["fake_video/StreamingT2V/StreamingT2V_fake_16.mp4", "real_video/StreamingT2V/StreamingT2V_real_16.mp4"]}
+{"name": "7", "pathList": ["fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_8.mp4", "real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_8.mp4"]}
+{"name": "8", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_9.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_9.mp4"]}
+{"name": "9", "pathList": ["real_video/Lumiere-new/Lumiere-new_real_1.mp4", "fake_video/Lumiere-new/Lumiere-new_fake_1.mp4"]}
+{"name": "10", "pathList": ["real_video/keling/keling_real_9.mp4", "fake_video/keling/keling_fake_9.mp4"]}
+{"name": "11", "pathList": ["real_video/runway-new/runway-new_real_4.mp4", "fake_video/runway-new/runway-new_fake_4.mp4"]}
+{"name": "12", "pathList": ["real_video/keling/keling_real_31.mp4", "fake_video/keling/keling_fake_31.mp4"]}
+{"name": "13", "pathList": ["fake_video/CogVideoX/CogVideoX_7.mp4", "real_video/CogVideoX/CogVideoX_real_7.mp4"]}
+{"name": "14", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_28.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_28.mp4"]}
+{"name": "15", "pathList": ["fake_video/open_sora/open_sora_fake_14.mp4", "real_video/open_sora/open_sora_real_14.mp4"]}
+{"name": "16", "pathList": ["real_video/runway/runway_real_8.mp4", "fake_video/runway/runway_fake_8.mp4"]}
+{"name": "17", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_11.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_11.mp4"]}
+{"name": "18", "pathList": ["fake_video/Lumiere/Lumiere_fake_17.mp4", "real_video/Lumiere/Lumiere_real_17.mp4"]}
+{"name": "19", "pathList": ["fake_video/runway/runway_fake_1.mp4", "real_video/runway/runway_real_1.mp4"]}
+{"name": "20", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_7.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_7.mp4"]}
+{"name": "21", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_33.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_33.mp4"]}
+{"name": "22", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_18.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_18.mp4"]}
+{"name": "23", "pathList": ["fake_video/runway/runway_fake_10.mp4", "real_video/runway/runway_real_10.mp4"]}
+{"name": "24", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_23.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_23.mp4"]}
+{"name": "25", "pathList": ["real_video/keling/keling_real_4.mp4", "fake_video/keling/keling_fake_4.mp4"]}
+{"name": "26", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_3.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_3.mp4"]}
+{"name": "27", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_11.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_11.mp4"]}
+{"name": "28", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_20.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_20.mp4"]}
+{"name": "29", "pathList": ["real_video/Lumiere-new/Lumiere-new_real_6.mp4", "fake_video/Lumiere-new/Lumiere-new_fake_6.mp4"]}
+{"name": "30", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_36.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_36.mp4"]}
+{"name": "31", "pathList": ["fake_video/VideoDrafter2/VideoDrafter2_fake_4.mp4", "real_video/VideoDrafter2/VideoDrafter2_real_4.mp4"]}
+{"name": "32", "pathList": ["real_video/CogVideoX/CogVideoX_real_1.mp4", "fake_video/CogVideoX/CogVideoX_1.mp4"]}
+{"name": "33", "pathList": ["real_video/keling/keling_real_10.mp4", "fake_video/keling/keling_fake_10.mp4"]}
+{"name": "34", "pathList": ["real_video/runway/runway_real_2.mp4", "fake_video/runway/runway_fake_2.mp4"]}
+{"name": "35", "pathList": ["fake_video/runway/runway_fake_17.mp4", "real_video/runway/runway_real_17.mp4"]}
+{"name": "36", "pathList": ["fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_27.mp4", "real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_27.mp4"]}
+{"name": "37", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_8.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_8.mp4"]}
+{"name": "38", "pathList": ["real_video/runway/runway_real_13.mp4", "fake_video/runway/runway_fake_13.mp4"]}
+{"name": "39", "pathList": ["fake_video/keling/keling_fake_28.mp4", "real_video/keling/keling_real_28.mp4"]}
+{"name": "40", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_10.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_10.mp4"]}
+{"name": "41", "pathList": ["fake_video/runway-new/runway-new_fake_2.mp4", "real_video/runway-new/runway-new_real_2.mp4"]}
+{"name": "42", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_30.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_30.mp4"]}
+{"name": "43", "pathList": ["fake_video/StreamingT2V/StreamingT2V_fake_14.mp4", "real_video/StreamingT2V/StreamingT2V_real_14.mp4"]}
+{"name": "44", "pathList": ["fake_video/StreamingT2V/StreamingT2V_fake_18.mp4", "real_video/StreamingT2V/StreamingT2V_real_18.mp4"]}
+{"name": "45", "pathList": ["fake_video/CogVideoX/CogVideoX_6.mp4", "real_video/CogVideoX/CogVideoX_real_6.mp4"]}
+{"name": "46", "pathList": ["fake_video/keling/keling_fake_26.mp4", "real_video/keling/keling_real_26.mp4"]}
+{"name": "47", "pathList": ["real_video/keling/keling_real_27.mp4", "fake_video/keling/keling_fake_27.mp4"]}
+{"name": "48", "pathList": ["real_video/keling/keling_real_21.mp4", "fake_video/keling/keling_fake_21.mp4"]}
+{"name": "49", "pathList": ["real_video/runway/runway_real_7.mp4", "fake_video/runway/runway_fake_7.mp4"]}
+{"name": "50", "pathList": ["real_video/open_sora/open_sora_real_19.mp4", "fake_video/open_sora/open_sora_fake_19.mp4"]}
+{"name": "51", "pathList": ["fake_video/open_sora/open_sora_fake_5.mp4", "real_video/open_sora/open_sora_real_5.mp4"]}
+{"name": "52", "pathList": ["fake_video/runway/runway_fake_15.mp4", "real_video/runway/runway_real_15.mp4"]}
+{"name": "53", "pathList": ["real_video/VideoDrafter/VideoDrafter_real_5.mp4", "fake_video/VideoDrafter/VideoDrafter_fake_5.mp4"]}
+{"name": "54", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_21.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_21.mp4"]}
+{"name": "55", "pathList": ["real_video/open_sora/open_sora_real_9.mp4", "fake_video/open_sora/open_sora_fake_9.mp4"]}
+{"name": "56", "pathList": ["fake_video/open_sora/open_sora_fake_15.mp4", "real_video/open_sora/open_sora_real_15.mp4"]}
+{"name": "57", "pathList": ["real_video/runway/runway_real_12.mp4", "fake_video/runway/runway_fake_12.mp4"]}
+{"name": "58", "pathList": ["fake_video/runway-new/runway-new_fake_6.mp4", "real_video/runway-new/runway-new_real_6.mp4"]}
+{"name": "59", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_13.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_13.mp4"]}
+{"name": "60", "pathList": ["fake_video/Lumiere-new/Lumiere-new_fake_12.mp4", "real_video/Lumiere-new/Lumiere-new_real_12.mp4"]}
+{"name": "61", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_24.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_24.mp4"]}
+{"name": "62", "pathList": ["fake_video/keling/keling_fake_18.mp4", "real_video/keling/keling_real_18.mp4"]}
+{"name": "63", "pathList": ["fake_video/open_sora/open_sora_fake_16.mp4", "real_video/open_sora/open_sora_real_16.mp4"]}
+{"name": "64", "pathList": ["fake_video/CogVideoX/CogVideoX_10.mp4", "real_video/CogVideoX/CogVideoX_real_10.mp4"]}
+{"name": "65", "pathList": ["fake_video/runway/runway_fake_3.mp4", "real_video/runway/runway_real_3.mp4"]}
+{"name": "66", "pathList": ["real_video/Lumiere/Lumiere_real_10.mp4", "fake_video/Lumiere/Lumiere_fake_10.mp4"]}
+{"name": "67", "pathList": ["fake_video/Lumiere-new/Lumiere-new_fake_11.mp4", "real_video/Lumiere-new/Lumiere-new_real_11.mp4"]}
+{"name": "68", "pathList": ["real_video/Lumiere/Lumiere_real_4.mp4", "fake_video/Lumiere/Lumiere_fake_4.mp4"]}
+{"name": "69", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_14.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_14.mp4"]}
+{"name": "70", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_18.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_18.mp4"]}
+{"name": "71", "pathList": ["fake_video/Lumiere-new/Lumiere-new_fake_10.mp4", "real_video/Lumiere-new/Lumiere-new_real_10.mp4"]}
+{"name": "72", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_5.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_5.mp4"]}
+{"name": "73", "pathList": ["real_video/pika/pika_real_0.mp4", "fake_video/pika/pika_fake_0.mp4"]}
+{"name": "74", "pathList": ["real_video/Lumiere/Lumiere_real_7.mp4", "fake_video/Lumiere/Lumiere_fake_7.mp4"]}
+{"name": "75", "pathList": ["fake_video/Lumiere-new/Lumiere-new_fake_9.mp4", "real_video/Lumiere-new/Lumiere-new_real_9.mp4"]}
+{"name": "76", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_12.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_12.mp4"]}
+{"name": "77", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_8.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_8.mp4"]}
+{"name": "78", "pathList": ["fake_video/OpenAI_Sora/OpenAI_Sora_fake_25.mp4", "real_video/OpenAI_Sora/OpenAI_Sora_real_25.mp4"]}
+{"name": "79", "pathList": ["real_video/VideoDrafter2/VideoDrafter2_real_3.mp4", "fake_video/VideoDrafter2/VideoDrafter2_fake_3.mp4"]}
+{"name": "80", "pathList": ["real_video/open_sora/open_sora_real_0.mp4", "fake_video/open_sora/open_sora_fake_0.mp4"]}
+{"name": "81", "pathList": ["fake_video/ViDiT-Q/ViDiT-Q_fake_3.mp4", "real_video/ViDiT-Q/ViDiT-Q_real_3.mp4"]}
+{"name": "82", "pathList": ["real_video/VideoDrafter/VideoDrafter_real_3.mp4", "fake_video/VideoDrafter/VideoDrafter_fake_3.mp4"]}
+{"name": "83", "pathList": ["real_video/keling/keling_real_25.mp4", "fake_video/keling/keling_fake_25.mp4"]}
+{"name": "84", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_17.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_17.mp4"]}
+{"name": "85", "pathList": ["real_video/open_sora/open_sora_real_12.mp4", "fake_video/open_sora/open_sora_fake_12.mp4"]}
+{"name": "86", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_19.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_19.mp4"]}
+{"name": "87", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_5.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_5.mp4"]}
+{"name": "88", "pathList": ["fake_video/keling/keling_fake_12.mp4", "real_video/keling/keling_real_12.mp4"]}
+{"name": "89", "pathList": ["fake_video/keling/keling_fake_32.mp4", "real_video/keling/keling_real_32.mp4"]}
+{"name": "90", "pathList": ["real_video/CogVideoX/CogVideoX_real_2.mp4", "fake_video/CogVideoX/CogVideoX_2.mp4"]}
+{"name": "91", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_11.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_11.mp4"]}
+{"name": "92", "pathList": ["fake_video/keling/keling_fake_11.mp4", "real_video/keling/keling_real_11.mp4"]}
+{"name": "93", "pathList": ["real_video/runway/runway_real_11.mp4", "fake_video/runway/runway_fake_11.mp4"]}
+{"name": "94", "pathList": ["real_video/OpenAI_Sora/OpenAI_Sora_real_29.mp4", "fake_video/OpenAI_Sora/OpenAI_Sora_fake_29.mp4"]}
+{"name": "95", "pathList": ["fake_video/VideoDrafter2/VideoDrafter2_fake_1.mp4", "real_video/VideoDrafter2/VideoDrafter2_real_1.mp4"]}
+{"name": "96", "pathList": ["real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_26.mp4", "fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_26.mp4"]}
+{"name": "97", "pathList": ["fake_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_fake_13.mp4", "real_video/Photorealistic Video Generation with Diffusion Models/Photorealistic Video Generation with Diffusion Models_real_13.mp4"]}
+{"name": "98", "pathList": ["real_video/Lumiere-new/Lumiere-new_real_8.mp4", "fake_video/Lumiere-new/Lumiere-new_fake_8.mp4"]}
+{"name": "99", "pathList": ["real_video/StreamingT2V/StreamingT2V_real_1.mp4", "fake_video/StreamingT2V/StreamingT2V_fake_1.mp4"]}

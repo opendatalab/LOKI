@@ -1,0 +1,1802 @@
+[
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/7_fake.wav",
+            "AudioDataset/speech/tts/real/7_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/104_fake.wav",
+            "AudioDataset/speech/vc/real/104_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/rain/9_fake.wav",
+            "AudioDataset/audio/real/rain/9_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/149_real.wav",
+            "AudioDataset/singing/svc/fake/149_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/46_real.wav",
+            "AudioDataset/singing/svs/fake/46_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/moving_motor_vehicle/7_fake.wav",
+            "AudioDataset/audio/real/moving_motor_vehicle/7_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/10dur7jhFQM.wav",
+            "AudioDataset/music/fake/musicgen/10dur7jhFQM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/110_real.wav",
+            "AudioDataset/speech/tts/fake/110_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/75_fake.wav",
+            "AudioDataset/singing/svc/real/75_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/S48GsFznk50.wav",
+            "AudioDataset/music/real/S48GsFznk50.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/133_fake.wav",
+            "AudioDataset/singing/svc/real/133_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/BurGML_ZqSA.wav",
+            "AudioDataset/music/real/BurGML_ZqSA.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/195_fake.wav",
+            "AudioDataset/speech/tts/real/195_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/13_fake.wav",
+            "AudioDataset/singing/svs/real/13_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/2_real.wav",
+            "AudioDataset/singing/svs/fake/2_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/23_fake.wav",
+            "AudioDataset/speech/vc/real/23_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/47_real.wav",
+            "AudioDataset/speech/tts/fake/47_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/77_fake.wav",
+            "AudioDataset/singing/svc/real/77_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/gunshot/11_real.wav",
+            "AudioDataset/audio/fake/gunshot/11_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/99_real.wav",
+            "AudioDataset/speech/tts/fake/99_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/179_fake.wav",
+            "AudioDataset/speech/tts/real/179_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/8zGJ9N7c6pE.wav",
+            "AudioDataset/music/real/8zGJ9N7c6pE.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/88_fake.wav",
+            "AudioDataset/singing/svs/real/88_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/rain/2_fake.wav",
+            "AudioDataset/audio/real/rain/2_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/rain/11_real.wav",
+            "AudioDataset/audio/fake/rain/11_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/gunshot/17_real.wav",
+            "AudioDataset/audio/fake/gunshot/17_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/114_real.wav",
+            "AudioDataset/singing/svc/fake/114_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/112_fake.wav",
+            "AudioDataset/singing/svs/real/112_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/63_real.wav",
+            "AudioDataset/singing/svs/fake/63_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/54_real.wav",
+            "AudioDataset/speech/vc/fake/54_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/18_fake.wav",
+            "AudioDataset/singing/svc/real/18_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/DsAp3b1poeA.wav",
+            "AudioDataset/music/real/DsAp3b1poeA.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/37_fake.wav",
+            "AudioDataset/singing/svc/real/37_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/8zGJ9N7c6pE.wav",
+            "AudioDataset/music/fake/audioldm/8zGJ9N7c6pE.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/zPMiMXCazAI.wav",
+            "AudioDataset/music/real/zPMiMXCazAI.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/94_fake.wav",
+            "AudioDataset/speech/tts/real/94_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/26_fake.wav",
+            "AudioDataset/singing/svs/real/26_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/sneeze_cough/9_real.wav",
+            "AudioDataset/audio/fake/sneeze_cough/9_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/128_fake.wav",
+            "AudioDataset/singing/svs/real/128_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/MpWGx5odhh8.wav",
+            "AudioDataset/music/real/MpWGx5odhh8.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/TIASpLtI8ks.wav",
+            "AudioDataset/music/fake/audioldm/TIASpLtI8ks.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/26_real.wav",
+            "AudioDataset/speech/vc/fake/26_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/dog_bark/7_real.wav",
+            "AudioDataset/audio/fake/dog_bark/7_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/sneeze_cough/5_real.wav",
+            "AudioDataset/audio/fake/sneeze_cough/5_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/ASgLbz48BaY.wav",
+            "AudioDataset/music/fake/suno/ASgLbz48BaY.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/dog_bark/17_real.wav",
+            "AudioDataset/audio/fake/dog_bark/17_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/185_fake.wav",
+            "AudioDataset/singing/svc/real/185_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/156_real.wav",
+            "AudioDataset/speech/vc/fake/156_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/r0Xvr8maR34.wav",
+            "AudioDataset/music/fake/musicgen/r0Xvr8maR34.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/12_real.wav",
+            "AudioDataset/singing/svc/fake/12_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/footstep/9_real.wav",
+            "AudioDataset/audio/fake/footstep/9_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/x9bcsYF_by8.wav",
+            "AudioDataset/music/fake/suno/x9bcsYF_by8.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/45_fake.wav",
+            "AudioDataset/singing/svc/real/45_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/138_real.wav",
+            "AudioDataset/speech/vc/fake/138_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/80_fake.wav",
+            "AudioDataset/speech/vc/real/80_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/HXG8DnTpyPc.wav",
+            "AudioDataset/music/real/HXG8DnTpyPc.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/L5CgdTtGv8o.wav",
+            "AudioDataset/music/fake/audioldm/L5CgdTtGv8o.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/118_fake.wav",
+            "AudioDataset/speech/vc/real/118_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/REpuZwvyThM.wav",
+            "AudioDataset/music/real/REpuZwvyThM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/43_real.wav",
+            "AudioDataset/speech/tts/fake/43_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/171_real.wav",
+            "AudioDataset/singing/svc/fake/171_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/196_fake.wav",
+            "AudioDataset/speech/vc/real/196_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/2zpITTJiw7Q.wav",
+            "AudioDataset/music/real/2zpITTJiw7Q.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/32_fake.wav",
+            "AudioDataset/speech/vc/real/32_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/footstep/19_fake.wav",
+            "AudioDataset/audio/real/footstep/19_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/sneeze_cough/17_fake.wav",
+            "AudioDataset/audio/real/sneeze_cough/17_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/lePP2BaZhJU.wav",
+            "AudioDataset/music/fake/suno/lePP2BaZhJU.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/22_fake.wav",
+            "AudioDataset/speech/tts/real/22_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/84_fake.wav",
+            "AudioDataset/singing/svc/real/84_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/136_real.wav",
+            "AudioDataset/speech/vc/fake/136_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/134_real.wav",
+            "AudioDataset/singing/svs/fake/134_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/21_real.wav",
+            "AudioDataset/singing/svs/fake/21_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/4CkZqT26Vb0.wav",
+            "AudioDataset/music/fake/audioldm/4CkZqT26Vb0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/sm7eBFHtdeA.wav",
+            "AudioDataset/music/fake/audioldm/sm7eBFHtdeA.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/181_fake.wav",
+            "AudioDataset/speech/tts/real/181_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/194_real.wav",
+            "AudioDataset/speech/tts/fake/194_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/aUH12rRIVDw.wav",
+            "AudioDataset/music/real/aUH12rRIVDw.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/21_real.wav",
+            "AudioDataset/singing/svc/fake/21_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/keyboard/13_real.wav",
+            "AudioDataset/audio/fake/keyboard/13_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/oZrMoZeJ8Ng.wav",
+            "AudioDataset/music/fake/musicgen/oZrMoZeJ8Ng.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/178_real.wav",
+            "AudioDataset/speech/vc/fake/178_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/27_fake.wav",
+            "AudioDataset/speech/tts/real/27_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/147_real.wav",
+            "AudioDataset/speech/vc/fake/147_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/100_fake.wav",
+            "AudioDataset/speech/tts/real/100_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/footstep/7_fake.wav",
+            "AudioDataset/audio/real/footstep/7_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/174_fake.wav",
+            "AudioDataset/singing/svs/real/174_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/XdBf_omYIO4.wav",
+            "AudioDataset/music/real/XdBf_omYIO4.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/167_fake.wav",
+            "AudioDataset/speech/vc/real/167_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/28_real.wav",
+            "AudioDataset/speech/vc/fake/28_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/HXG8DnTpyPc.wav",
+            "AudioDataset/music/real/HXG8DnTpyPc.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/sneeze_cough/15_real.wav",
+            "AudioDataset/audio/fake/sneeze_cough/15_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/157_fake.wav",
+            "AudioDataset/speech/vc/real/157_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/118_fake.wav",
+            "AudioDataset/speech/tts/real/118_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/95_fake.wav",
+            "AudioDataset/speech/vc/real/95_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/77_real.wav",
+            "AudioDataset/speech/tts/fake/77_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/wYtd_Sq2-Tw.wav",
+            "AudioDataset/music/real/wYtd_Sq2-Tw.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/sneeze_cough/10_fake.wav",
+            "AudioDataset/audio/real/sneeze_cough/10_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/44_fake.wav",
+            "AudioDataset/singing/svc/real/44_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/_kPmYc1nXuQ.wav",
+            "AudioDataset/music/fake/musicgen/_kPmYc1nXuQ.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/r0Xvr8maR34.wav",
+            "AudioDataset/music/real/r0Xvr8maR34.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/98_fake.wav",
+            "AudioDataset/singing/svc/real/98_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/moving_motor_vehicle/14_fake.wav",
+            "AudioDataset/audio/real/moving_motor_vehicle/14_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/166_real.wav",
+            "AudioDataset/singing/svs/fake/166_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/124_fake.wav",
+            "AudioDataset/singing/svs/real/124_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/footstep/11_fake.wav",
+            "AudioDataset/audio/real/footstep/11_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/34_real.wav",
+            "AudioDataset/speech/vc/fake/34_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/120_real.wav",
+            "AudioDataset/speech/vc/fake/120_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/162_fake.wav",
+            "AudioDataset/singing/svs/real/162_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/125_fake.wav",
+            "AudioDataset/speech/vc/real/125_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/1_real.wav",
+            "AudioDataset/singing/svc/fake/1_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/OxxRnDpN9cc.wav",
+            "AudioDataset/music/real/OxxRnDpN9cc.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/177_real.wav",
+            "AudioDataset/singing/svs/fake/177_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/192_real.wav",
+            "AudioDataset/speech/tts/fake/192_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/102_fake.wav",
+            "AudioDataset/singing/svc/real/102_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/52_fake.wav",
+            "AudioDataset/singing/svs/real/52_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/qutPvh6TFd8.wav",
+            "AudioDataset/music/real/qutPvh6TFd8.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/65_fake.wav",
+            "AudioDataset/speech/vc/real/65_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/RI71ebbU0PQ.wav",
+            "AudioDataset/music/fake/suno/RI71ebbU0PQ.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/24_fake.wav",
+            "AudioDataset/singing/svc/real/24_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/LAeWwMC2EaI.wav",
+            "AudioDataset/music/real/LAeWwMC2EaI.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/gunshot/2_real.wav",
+            "AudioDataset/audio/fake/gunshot/2_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/11_fake.wav",
+            "AudioDataset/singing/svs/real/11_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/79_fake.wav",
+            "AudioDataset/speech/vc/real/79_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/keyboard/12_fake.wav",
+            "AudioDataset/audio/real/keyboard/12_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/B3lq6U4PDZo.wav",
+            "AudioDataset/music/fake/audioldm/B3lq6U4PDZo.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/14_fake.wav",
+            "AudioDataset/singing/svs/real/14_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/dog_bark/19_real.wav",
+            "AudioDataset/audio/fake/dog_bark/19_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/107_real.wav",
+            "AudioDataset/speech/vc/fake/107_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/tjQTZM-sqS0.wav",
+            "AudioDataset/music/real/tjQTZM-sqS0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/96_real.wav",
+            "AudioDataset/speech/vc/fake/96_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/148_fake.wav",
+            "AudioDataset/singing/svc/real/148_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/emP2Sg9QEg4.wav",
+            "AudioDataset/music/fake/audioldm/emP2Sg9QEg4.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/156_real.wav",
+            "AudioDataset/speech/tts/fake/156_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/_miAGxDX5FM.wav",
+            "AudioDataset/music/real/_miAGxDX5FM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/gunshot/5_fake.wav",
+            "AudioDataset/audio/real/gunshot/5_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/4_real.wav",
+            "AudioDataset/singing/svc/fake/4_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/38_fake.wav",
+            "AudioDataset/singing/svs/real/38_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/126_real.wav",
+            "AudioDataset/singing/svc/fake/126_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/OyRtTtTSXuM.wav",
+            "AudioDataset/music/real/OyRtTtTSXuM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/113_fake.wav",
+            "AudioDataset/speech/vc/real/113_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/80_real.wav",
+            "AudioDataset/singing/svs/fake/80_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/180_fake.wav",
+            "AudioDataset/singing/svs/real/180_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/12_real.wav",
+            "AudioDataset/speech/vc/fake/12_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/sneeze_cough/19_real.wav",
+            "AudioDataset/audio/fake/sneeze_cough/19_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/159_real.wav",
+            "AudioDataset/speech/tts/fake/159_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/62_real.wav",
+            "AudioDataset/speech/vc/fake/62_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/vEl7ImwLlrA.wav",
+            "AudioDataset/music/real/vEl7ImwLlrA.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/5blPLHS0Cko.wav",
+            "AudioDataset/music/fake/audioldm/5blPLHS0Cko.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/90_real.wav",
+            "AudioDataset/speech/vc/fake/90_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/6_fake.wav",
+            "AudioDataset/speech/vc/real/6_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/107_fake.wav",
+            "AudioDataset/speech/tts/real/107_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/145_fake.wav",
+            "AudioDataset/singing/svc/real/145_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/75_real.wav",
+            "AudioDataset/speech/vc/fake/75_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/125_fake.wav",
+            "AudioDataset/speech/tts/real/125_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/188_real.wav",
+            "AudioDataset/speech/vc/fake/188_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/rain/0_real.wav",
+            "AudioDataset/audio/fake/rain/0_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/42_fake.wav",
+            "AudioDataset/speech/vc/real/42_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/24_fake.wav",
+            "AudioDataset/speech/tts/real/24_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/186_real.wav",
+            "AudioDataset/speech/tts/fake/186_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/5JkPsWsq3E8.wav",
+            "AudioDataset/music/fake/musicgen/5JkPsWsq3E8.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/170_fake.wav",
+            "AudioDataset/singing/svs/real/170_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/OxxRnDpN9cc.wav",
+            "AudioDataset/music/real/OxxRnDpN9cc.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/180_real.wav",
+            "AudioDataset/speech/tts/fake/180_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/PbUyPbafFh0.wav",
+            "AudioDataset/music/fake/musicgen/PbUyPbafFh0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/CdWA-SNcYpM.wav",
+            "AudioDataset/music/fake/suno/CdWA-SNcYpM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/154_real.wav",
+            "AudioDataset/speech/vc/fake/154_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/150_fake.wav",
+            "AudioDataset/singing/svs/real/150_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/7h6nTyP7d9o.wav",
+            "AudioDataset/music/real/7h6nTyP7d9o.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/v4sANJkuwP4.wav",
+            "AudioDataset/music/real/v4sANJkuwP4.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/real/181_real.wav",
+            "AudioDataset/singing/svc/fake/181_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/160_real.wav",
+            "AudioDataset/speech/vc/fake/160_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/104_fake.wav",
+            "AudioDataset/speech/tts/real/104_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/real/keyboard/2_real.wav",
+            "AudioDataset/audio/fake/keyboard/2_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/103_real.wav",
+            "AudioDataset/singing/svs/fake/103_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/audio/fake/dog_bark/6_fake.wav",
+            "AudioDataset/audio/real/dog_bark/6_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "audio",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/PbUyPbafFh0.wav",
+            "AudioDataset/music/fake/audioldm/PbUyPbafFh0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/audioldm/-1LrH01Ei1w.wav",
+            "AudioDataset/music/real/-1LrH01Ei1w.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/suno/OxxRnDpN9cc.wav",
+            "AudioDataset/music/real/OxxRnDpN9cc.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/71_fake.wav",
+            "AudioDataset/singing/svc/real/71_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/YqAsph_ouRM.wav",
+            "AudioDataset/music/fake/musicgen/YqAsph_ouRM.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/59_real.wav",
+            "AudioDataset/singing/svs/fake/59_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/XdxTZ4-sJvY.wav",
+            "AudioDataset/music/fake/suno/XdxTZ4-sJvY.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/126_real.wav",
+            "AudioDataset/speech/vc/fake/126_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/real/177_real.wav",
+            "AudioDataset/speech/vc/fake/177_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/65_fake.wav",
+            "AudioDataset/speech/tts/real/65_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/198_real.wav",
+            "AudioDataset/speech/tts/fake/198_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svc/fake/92_fake.wav",
+            "AudioDataset/singing/svc/real/92_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/4CkZqT26Vb0.wav",
+            "AudioDataset/music/real/4CkZqT26Vb0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/fake/149_fake.wav",
+            "AudioDataset/singing/svs/real/149_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/TIASpLtI8ks.wav",
+            "AudioDataset/music/fake/suno/TIASpLtI8ks.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/fake/musicgen/MV4tgzc9X6s.wav",
+            "AudioDataset/music/real/MV4tgzc9X6s.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/real/191_real.wav",
+            "AudioDataset/speech/tts/fake/191_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/29_fake.wav",
+            "AudioDataset/speech/tts/real/29_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/153_real.wav",
+            "AudioDataset/singing/svs/fake/153_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/44_fake.wav",
+            "AudioDataset/speech/vc/real/44_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/vc/fake/60_fake.wav",
+            "AudioDataset/speech/vc/real/60_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-vc",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/speech/tts/fake/12_fake.wav",
+            "AudioDataset/speech/tts/real/12_real.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "speech-tts",
+        "answer": "A"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/83_real.wav",
+            "AudioDataset/singing/svs/fake/83_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/music/real/pDgWT99uaJ0.wav",
+            "AudioDataset/music/fake/suno/pDgWT99uaJ0.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "music",
+        "answer": "B"
+    },
+    {
+        "audio_path": [
+            "AudioDataset/singing/svs/real/35_real.wav",
+            "AudioDataset/singing/svs/fake/35_fake.wav"
+        ],
+        "question_type": "multi",
+        "type_sec": "singing-svs",
+        "answer": "B"
+    }
+]
