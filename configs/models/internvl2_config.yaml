@@ -1,8 +1,9 @@
 model_type: internvl2
 
 init_kwargs:
-  model_version: OpenGVLab/InternVL2-8B
+  model_version: OpenGVLab/InternVL2-26B
   max_num_frames: 8
+  device_map: auto
 
 generate_kwargs:
   top_p: 1

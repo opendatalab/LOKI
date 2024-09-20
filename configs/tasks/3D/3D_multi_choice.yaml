@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/3D/3D_multi_choice.json
-  task_name: 3D-multi-choice

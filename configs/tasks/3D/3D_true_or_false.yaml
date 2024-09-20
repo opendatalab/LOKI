@@ -1,5 +1,5 @@
 task_type: synthbench-visual
 
 init_kwargs:
-  dataset_path: ./data/3D/3D_true_or_false.json
+  dataset_path: ./data/3D/3D_true_or_false_0917.json
   task_name: 3D-true-or-false

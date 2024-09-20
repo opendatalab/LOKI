@@ -42,7 +42,7 @@ def main(args):
         eval_logger.error(f"Model config path: {args.model_config_path} does not exist.")
     
     if not os.path.exists(args.task_config_path):
-        eval_logger.error(f"Model config path: {args.task_config_path} does not exist.")
+        eval_logger.error(f"Task config path: {args.task_config_path} does not exist.")
     
     model_config = yaml.load(open(args.model_config_path), Loader=yaml.SafeLoader)
     task_config = yaml.load(open(args.task_config_path), Loader=yaml.SafeLoader)
@@ -60,16 +60,20 @@ def main(args):
         
     model_init_kwargs = model_config["init_kwargs"]
     task_init_kwargs = task_config["init_kwargs"]
-
-    model = MODEL_REGISTRY[model_type](**model_init_kwargs)
     task = TASK_REGISTRY[task_type](**task_init_kwargs)
+
+    if not args.evaluate_from_predictions:
+        model = MODEL_REGISTRY[model_type](**model_init_kwargs)
+        model_name = model.model_version.split("/")[-1]
+        model.prepare_model()
+        model_generate_kwargs = model_config["generate_kwargs"]
+        results, accuracies = task.evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
     
-    
-    model.prepare_model()
-    
-    model_generate_kwargs = model_config["generate_kwargs"]
-    
-    results, accuracies = task.evaluate(model, **model_generate_kwargs)
+    else:
+        prediction_json = json.load(open(args.prediction_file, 'r'))
+        responses = prediction_json["responses"]
+        model_name = prediction_json["model"]
+        results, accuracies = task.evaluate_from_predictions(responses)
     
     accuracies['model_config'] = model_config
     accuracies['task_config'] = task_config
@@ -78,7 +82,6 @@ def main(args):
     now = datetime.datetime.now()
     datetime_str = now.strftime("%m%d_%H%M")
     
-    model_name = model.model_version.split("/")[-1]
     task_name = task.task_name
     file_dir = os.path.join(args.log_dir, f"{model_type}_{task_type}", datetime_str)
         
@@ -89,10 +92,7 @@ def main(args):
     task.log_accuracies(accuracies, accuracy_file)
     task.log_results(results, result_file)
     
-
     
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     
@@ -107,6 +107,11 @@ if __name__ == "__main__":
         required=True
     )
     parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=1
+    )
+    parser.add_argument(
         "--log_dir",
         default="./logs",
         type=str
@@ -116,6 +121,18 @@ if __name__ == "__main__":
         type=str,
         default="INFO",
         help="Log error when tasks are not registered.",
+    )
+    parser.add_argument(
+        "--evaluate_from_predictions",
+        action="store_true"
+    )
+    parser.add_argument(
+        "--predict_only",
+        action="store_true"
+    )
+    parser.add_argument(
+        "--prediction_file",
+        type=str,
     )
     
     args = parser.parse_args()

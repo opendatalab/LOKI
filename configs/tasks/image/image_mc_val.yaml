@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/image/image_mc_val_0919.json
+  task_name: image-mc-val

@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: data/for_labeling/3D/3D-detection-val.json
+  task_name: 3D-detection-val

@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/for_labeling/image/image_detection_val_0919.json
+  task_name: image-detection-val
