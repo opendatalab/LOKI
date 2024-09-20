@@ -31,7 +31,8 @@ class XComposer2D5(LMM):
         device: str = "cuda",
         device_map: str = "cuda",
         dtype: Optional[Union[str, torch.dtype]] = torch.bfloat16,
-        truncation: bool = True
+        truncation: bool = True,
+        tmp_folder: str = './tmp'
     ):
         self.model_version = model_version
         
@@ -43,6 +44,7 @@ class XComposer2D5(LMM):
         self.dtype = dtype
         self.truncation = truncation
         
+        self.tmp_folder = tmp_folder
         
         self.prepare_model()
         

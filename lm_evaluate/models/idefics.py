@@ -217,9 +217,9 @@ class Idefics(LMM):
         total_frame_num = len(vr)
         uniform_sampled_frames = np.linspace(0, total_frame_num - 1, self.max_num_frames, dtype=int)
         frame_idx = uniform_sampled_frames.tolist()
-        spare_frames = vr.get_batch(frame_idx).asnumpy()
+        sparse_frames = vr.get_batch(frame_idx).asnumpy()
         sparse_frames = [Image.fromarray(v.astype('uint8')) for v in sparse_frames]
-        return spare_frames  # (frames, height, width, channels)
+        return sparse_frames  # (frames, height, width, channels)
         
     
     
@@ -242,6 +242,7 @@ class Idefics(LMM):
         
         images = []
         
+        num_image = 0
         video_frames = []
         # four scenarios:
         # visuals is a list of string
@@ -260,6 +261,7 @@ class Idefics(LMM):
                     video_frames.append(len(frames))
                 elif isinstance(visual, Image.Image):
                     images.append(visual)
+                    num_image += 1
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
@@ -269,10 +271,11 @@ class Idefics(LMM):
             video_frames.append(len(frames))
         elif isinstance(visuals, Image.Image):
             images.append(visuals)
+            num_image += 1
         
         # Segment the text according to video and image token
         
-        if len(images) > contexts.count("<image>"):
+        if num_image > contexts.count("<image>"):
             eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
             contexts = "<image> " * (len(images) - contexts.count("<image>")) + contexts
 

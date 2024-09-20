@@ -43,7 +43,7 @@ VIDEO_TOKEN = "<video>"
 NUM_SECONDS_TO_SLEEP = 30
 
 
-@register_model("gpt-4o", "gpt-4v", "qwen")
+@register_model("gpt-4o", "gpt-4v")
 class OpenAI(LMM):
     supported_modalities = ["video-text", "image-text", "text-only"]
     def __init__(
@@ -120,12 +120,6 @@ class OpenAI(LMM):
             api_key = os.getenv("AZURE_API_KEY", "YOUR_API_KEY")
             self.headers = {
                 "api-key": api_key,
-                "Content-Type": "application/json",
-            }
-        elif self.api_type == "openai" and 'qwen' in self.model_version:
-            api_key = os.getenv("DASHSCOPE_API_KEY", None)
-            self.headers = {
-                "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
             }
 

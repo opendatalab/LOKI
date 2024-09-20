@@ -19,7 +19,7 @@ from PIL import Image
 try:
     from mistralai import Mistral
 except Exception as e:
-    eval_logger.debug(f"Please install mistralai packages to use GPT\n{e}")
+    eval_logger.debug(f"Please install mistralai packages to use Mistral\n{e}")
 
 from lm_evaluate.api.model import LMM
 from lm_evaluate.api.registry import register_model

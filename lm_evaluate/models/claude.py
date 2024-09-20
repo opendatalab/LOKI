@@ -19,7 +19,7 @@ from PIL import Image
 from lm_evaluate.api.model import LMM
 from lm_evaluate.api.registry import register_model
 
-API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
+API_URL = "https://api.anthropic.com/v1/messages"
     
 IMAGE_TOKEN = "<image>"
 VIDEO_TOKEN = "<video>"
@@ -72,7 +72,7 @@ class Claude(LMM):
         self._set_headers()
             
         self.prepared = True
-        eval_logger.info(f"GPT activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")
+        eval_logger.info(f"Claude activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")
     
     
     def _prepare_generate_kwargs(self, payload, generate_kwargs):
@@ -180,7 +180,7 @@ class Claude(LMM):
                 response = url_requests.post(self.api_url, headers=self.headers, json=payload, timeout=self.timeout)
                 eval_logger.debug(response)
                 response_data = response.json()
-                response_text = response_data["content"]["text"]
+                response_text = response_data["content"][0]["text"]
                 break  # If successful, break out of the loop
 
             except Exception as e:

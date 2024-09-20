@@ -73,7 +73,7 @@ def get_to_dict_bottom(accuracies, accuracy_for_table, last_key=None):
                 accuracy_for_table[last_key][key] = accuracies[key]
             
 
-def accuracies_to_tables_from_log_dir(log_dir, result_dir):
+def accuracies_to_tables_from_log_dir(log_dir, result_dir, datetime_cutoff: str = None):
     """
     Log dir contains many subdirs and files:
         1. Level one: model_type + task_type (separated by "_")
@@ -100,6 +100,11 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir):
                 model_type, task_type = model_task_type.split('_')
                 
                 log_time = datetime.strptime(log_time_str, "%m%d_%H%M")
+                
+                if datetime_cutoff is not None:
+                    cutoff_time = datetime.strptime(datetime_cutoff, "%m%d_%H%M")
+                    if log_time < cutoff_time:
+                        continue
 
                 with open(accuracy_file_path, 'r') as f:
                     accuracy_data = json.load(f)
@@ -124,8 +129,12 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir):
             df_list = []
 
             for model_name, (_, accuracies) in models.items():
-                accuracies['model'] = model_name  
-                df_list.append(pd.DataFrame([accuracies]))
+                accuracy_for_df = {'model': model_name}
+                for key in accuracies.keys():
+                    accuracy_for_df_key = "_".join([key, str(accuracies[key]["num"])])
+                    accuracy_for_df[accuracy_for_df_key] = accuracies[key]["accuracy"]
+                
+                df_list.append(pd.DataFrame([accuracy_for_df]))
 
             df = pd.concat(df_list, ignore_index=True)
             df = df[['model'] + [col for col in df.columns if col != 'model']]
@@ -153,3 +162,19 @@ def load_model_from_config(config_path):
     generate_kwargs = model_config["generate_kwargs"]
     
     return model, generate_kwargs, model_config
+
+
+
+def split_chunks(iter, n, fn=None):
+    pass
+    arr = []
+    iter = tuple(iter)
+    
+    for i, x in enumerate(iter):
+        arr.append(x)
+        if len(arr) == (fn(i, iter) if fn else n):
+            yield arr
+            arr = []
+            
+    if arr:
+        yield arr

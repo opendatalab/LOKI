@@ -109,31 +109,33 @@ class Task(ABC):
     
     def build_docs(self, limit=None, rank=None, world_size=None) -> None:
         
-        # eval_logger.info(f"Building docs for task {self.task_name} on rank {rank}")
+        eval_logger.info(f"Building docs for task {self.task_name} on rank {rank}")
         
-        # docs = []
+        docs = []
         
-        # doc_id_iterator = utils.create_iterator([i for i in range(len(self.datasets)), rank, world_size, limit])
-        # doc_id_iterator, doc_id_iterator_counting = itertools.tee(doc_id_iterator)
+        # create a slice of the documents based on rank and world size
+        doc_id_iterator = utils.create_iterator([i for i in range(len(self.dataset))], rank, world_size, limit)
         
-        # total_docs = sum(1 for _ in doc_id_iterator_counting)
+        doc_id_iterator, doc_id_iterator_counting = itertools.tee(doc_id_iterator)
         
-        # pbar = tqdm(total=total_docs, desc=f"Building docs", disable=(rank != 0))
+        total_docs = sum(1 for _ in doc_id_iterator_counting)
         
-        # for doc_id in doc_id_iterator:
+        pbar = tqdm(total=total_docs, desc=f"Building docs on rank {rank}")
+        
+        for doc_id in doc_id_iterator:
             
-        #     doc = self.datasets[doc_id]
+            doc = self.dataset[doc_id]
+            doc["doc_id"] = doc_id
             
-        #     if not isinstance(doc, list):
-        #         doc = [doc]
+            if not isinstance(doc, list):
+                doc = [doc]
                 
-        #     docs.extend(doc)
-        #     pbar.update(1)
+            docs.extend(doc)
+            pbar.update(1)
         
-        # pbar.close()
+        pbar.close()
         
-        # self._docs = docs
-        pass
+        return docs
     
     
     @abstractmethod
@@ -161,9 +163,22 @@ class Task(ABC):
     def print_pretty_accuracy(self, accuracies):
         pass
     
+    
+    def evaluate_from_predictions(self, responses):
+        results = self.process_responses(self.dataset, responses)
+            
+        accuracies = self.aggregate_results(results)
+        
+        self.print_pretty_accuracy(accuracies)
+        
+        return results, accuracies
+    
+    
     def evaluate(
         self, 
-        model: LMM, 
+        model: LMM,
+        predict_only: bool = False, 
+        batch_size: int = 1,
         **model_kwargs,
     ) -> list:
         """
@@ -178,17 +193,21 @@ class Task(ABC):
         
         responses = []
         
-        # self.build_docs(rank=model.rank, world_size=model.world_size)
+        # building docs on GPU:{rank} and {world size}
+        docs = self.build_docs(rank=model.rank, world_size=model.world_size)
+        # split docs to chunks according to batch size however, there are models that do not support batching, for those models, we reset batch size to 1
         
-        pbar = tqdm(total=len(self.dataset), desc="Model Responding")
+        if not model.support_batching and batch_size > 1:
+            eval_logger.warning(f"Model type: {type(model)} does not support batching. Setting batch_size from {batch_size} to 1...")
+            batch_size = 1
+            
+        chunks = utils.split_chunks(docs, batch_size)
+        
+        pbar = tqdm(total=len(self.dataset), desc="Model Responding", disable=model.rank != 0)
         
         for doc in self.dataset:
             contexts = self.doc_to_text(doc)
             visuals = self.doc_to_visual(doc)
-            # target = self.doc_to_target(doc)
-            
-            # res_doc = {}
-            # try:
             if "text-only" in model.supported_modalities and len(model.supported_modalities) == 1:
                 visuals = []
             response = model.generate(
@@ -196,23 +215,29 @@ class Task(ABC):
                 contexts=contexts,
                 **model_kwargs
             )
-            # except Exception as e:
-            #     eval_logger.error(f"Model tried to respond, but ran into: {e}")
-            #     response = ""
             
             eval_logger.debug(f"Model response: {response}")
-            
 
             responses.append(response)
             pbar.update(1)
-
-        results = self.process_responses(self.dataset, responses)
+            
+        if model.world_size > 1 and getattr(model, "accelerator", None) is not None:
+            model.accelerator.wait_for_everyone()
         
-        accuracies = self.aggregate_results(results)
+        # Now, we need to reorder the responses to the correct order so that each response is index-aligned with the dataset
+        if not predict_only:
+            results = self.process_responses(self.dataset, responses)
+            
+            accuracies = self.aggregate_results(results)
+            
+            self.print_pretty_accuracy(accuracies)
         
-        self.print_pretty_accuracy(accuracies)
+        else:
+            results = {
+                "model": model.model_version.split("/")[-1],
+                "responses": responses
+            }
+            accuracies = {}
         
-        # eval_logger.info()
         
         return results, accuracies
-            

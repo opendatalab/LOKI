@@ -7,6 +7,9 @@ from PIL import Image
 class LMM(ABC):
     prepared = False
     supported_modalities = []
+    _rank = 0
+    _world_size = 1
+    support_batching = False
     def __init__(self):
         """
         Defines the base model class.
@@ -15,8 +18,8 @@ class LMM(ABC):
             2. Generate texts based on provided visuals and contexts.
         """
         self._model = None
-        self._rank = None # For MultiGPU Inference
-        self._world_size = None # For MultiGPU Inference
+        self._rank = 0 # For MultiGPU Inference
+        self._world_size = 1 # For MultiGPU Inference
     
     @abstractmethod
     def prepare_model(self):
