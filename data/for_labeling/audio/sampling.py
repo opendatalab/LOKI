@@ -18,9 +18,11 @@ for data in data_list:
         mc_list.append(data)
     
 print(len(mc_list))
+print(len(tf_list))
         
-sampled_mc_list = random.sample(mc_list, 200)
-sampled_tf_list = random.sample(tf_list, 200)
+sampled_mc_list = random.sample(mc_list, 124)
+sampled_tf_list = random.sample(tf_list, 228)
 
 json.dump(sampled_mc_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-multi-choice.json", "w"), indent=4)
 json.dump(sampled_tf_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-tf.json", "w"), indent=4)
+

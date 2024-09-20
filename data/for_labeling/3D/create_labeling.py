@@ -32,3 +32,5 @@ for i, mc in enumerate(mc_sampled_data):
 with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D_specification.jsonl", "w") as file:
     for data in mc_label_list:
         file.write(json.dumps(data) + "\n")
+        
+        

@@ -4,7 +4,7 @@ from pathlib import Path
 tf_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/image/image-tf.json"
 mc_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/image/image-multi-choice.json"
 
-image_dir = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/FakeImage_dataset"
+image_dir = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/FakeImage_dataset"
 
 tf_file_path_txt = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/image/tf_file_path.txt"
 

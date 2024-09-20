@@ -1,0 +1,132 @@
+[
+    {
+        "problems": {
+            "rgb_texture": "吊灯的纹理质量很差，图像上比较多的噪点和不自然的纹理过渡，图上的颜色差异过大，出现许多不自然的黑色。",
+            "normal_lighting": "吊灯的几何表面精度较差，几何表面法线比较粗糙，部分视角下表面法线出现比较突兀的变化，几何对称性比较差"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/fantasia3d/fantasia3d_27.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "凳子的纹理质量一般，凳子的背面以及坐垫处颜色不一致，纹理模糊且出现明显的噪点。",
+            "normal_lighting": "凳子的几何精度一般，表面法线分布十分粗糙，整体形状坑坑洼洼，且凳脚长度不一致与真实情况不符，靠背与坐垫的形状存在一定的粘连过渡。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/magic3d/magic3d_13.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "猫的脸部、身体的纹理与真实情况不相符，纹理精细度低。地面阴影部分不应当为猫的纹理信息。猫出现了三只耳朵，与现实情况不相符。",
+            "normal_lighting": "猫的表面几何精度低，其表面不应当如此平滑。地面的阴影不应当存在几何模型。猫出现了三只耳朵，与现实情况不相符。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/CLAY/CLAY_4.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "椅子的纹理清晰度有限，凳脚部分边缘模糊，形状不自然，凳子从不同视角的观测有一定的差异，图像中存在明显的噪点和不自然的高光钝角处。",
+            "normal_lighting": "凳子的几何表面精度低，坐垫处不够平整，且对应的凳脚和支柱部分存在明显的粗糙现象，法线不均匀，这与现实情况不符。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/dreamfusion/dreamfusion_13.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "章鱼玩偶在不同角度的纹理情况不一致，正面纹理较为精细，其他视角下的纹理粗糙且模糊。触手处的铅笔侧面和背面纹理与正面不一致，边缘的清晰度低。正面与侧面的纹理连续性差。",
+            "normal_lighting": "章鱼玩偶的表面存在部分区域的异常凸起和凹陷，且几何边缘模糊不清晰，几何流畅性差。触手铅笔部分被作为了一个整体而非多个独立模型。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/dreamgaussian/dreamgaussian_21.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "书的纹理质量很差，图像上存在不自然的色彩过渡以及明显的噪点，部分视角下的颜色纹理与边缘轮廓模糊。",
+            "normal_lighting": "书的几何表面精度很低，表面法线粗糙，形状出现严重错误，难以看出书的基本属性，与显示的长椅和书不同，几何对称性差。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/fantasia3d/fantasia3d_11.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "浴缸底部纹理与缸身纹理不一致。鸭子的嘴巴上下颜色不一致。浴缸内的倒影纹理清晰度差，且与上侧的鸭子纹理不一致。",
+            "normal_lighting": "浴缸底部的几何不具有物理稳定性，与真实形状不相符。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/CLAY/CLAY_22.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "小船的纹理质量比较，图像上出现明显的噪点，纹理边缘模糊，从纹理上难以看出小船的基本属性。",
+            "normal_lighting": "小船的表面法线比较粗糙，表面法线过渡突兀，形状出现明显错误，与现实的小船不符合。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/fantasia3d/fantasia3d_12.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "气球的纹理质量一般，蓝色气球颜色不均匀，气球间的阴影和高光不自然。",
+            "normal_lighting": "气球的几何精度较差，表面法线粗糙，尽管法线过渡较为均匀，但是部分气球的形状出现错误，存在异常突起的现象，几何不对称。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/magic3d/magic3d_15.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    },
+    {
+        "problems": {
+            "rgb_texture": "底部书本边缘不清晰，纹理模糊且出现混合的情况，不同角度观察的纹理情况有较大差别。笔的纹理模糊，细节程度差。",
+            "normal_lighting": "底部书本的形状不对称，不同角度的形状存在较大差异，与现实不相符。书本书页的法线过于平滑，与现实不相符。不同书本应当是各自独立的个体，但图中的每个书本边缘均融合在了一起作为一个整体。"
+        },
+        "image_path": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset/labelU_data/CLAY/CLAY_18.png",
+        "question": "<image>\n\nThis is the rendering of an AI-generated 3D object. The rendering displays four-view RGB renders on the left and four-view normal maps on the right, illustrating the surface texture and lighting interactions of the 3D model.\n\n**Your Task:**\n\n- **Analyze and explain** where this 3D object appears inauthentic from the following perspectives:\n\n  1. **RGB Rendering**:\n    - Identify any issues with the textures, colors, and overall appearance.\n    - Provide detailed explanations for why these aspects seem inauthentic.\n    - Reference specific parts of the images to support your observations.\n\n  2. **Normal Rendering**:\n    - Examine the normal maps for inconsistencies or errors in the surface geometry.\n    - Explain in detail any anomalies that suggest the object is artificially generated.\n    - Use specific visual evidence from the normal maps in your explanations.\n\n**Guidelines:**\n\n- **Be Thorough**: Offer a comprehensive analysis covering all noticeable issues.\n- **Be Accurate**: Ensure your explanations correctly reflect the visual information.\n- **Avoid False Positives**: Do not mistake authentic features for inauthentic ones.\n- **Provide Logical Explanations**: Your reasoning should be based on observable evidence and sound logic.\n- **Organize Your Response**: Use clear headings and structure to separate your analysis.\n",
+        "choices": [],
+        "answer": "",
+        "modality": "image-text",
+        "question_type": "3D_open_ended_vqa",
+        "metric": "3d-model-as-judge"
+    }
+]
