@@ -5,3 +5,4 @@ results/
 text_data/
 tools/
 **/__pycache__/
+/tmp
