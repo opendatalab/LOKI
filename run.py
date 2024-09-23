@@ -65,9 +65,13 @@ def main(args):
     if not args.evaluate_from_predictions:
         model = MODEL_REGISTRY[model_type](**model_init_kwargs)
         model_name = model.model_version.split("/")[-1]
-        model.prepare_model()
         model_generate_kwargs = model_config["generate_kwargs"]
-        results, accuracies = task.evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
+        
+        # FIXME: This is a temporary hack for batching
+        if args.batch_size > 1:
+            results, accuracies = task.batch_evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
+        else:
+            results, accuracies = task.evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
     
     else:
         prediction_json = json.load(open(args.prediction_file, 'r'))
@@ -78,19 +82,24 @@ def main(args):
     accuracies['model_config'] = model_config
     accuracies['task_config'] = task_config
     
+    # start logging
+    
+    model.accelerator.wait_for_everyone()
+    
+    if model.rank == 0:
     # get log dir name
-    now = datetime.datetime.now()
-    datetime_str = now.strftime("%m%d_%H%M")
-    
-    task_name = task.task_name
-    file_dir = os.path.join(args.log_dir, f"{model_type}_{task_type}", datetime_str)
+        now = datetime.datetime.now()
+        datetime_str = now.strftime("%m%d_%H%M")
         
-    os.makedirs(file_dir, exist_ok=True)
-    accuracy_file = os.path.join(file_dir, f"{model_name}_{task_name}_accuracy.json")
-    result_file = os.path.join(file_dir, f"{model_name}_{task_name}_result.json")
-    
-    task.log_accuracies(accuracies, accuracy_file)
-    task.log_results(results, result_file)
+        task_name = task.task_name
+        file_dir = os.path.join(args.log_dir, f"{model_type}_{task_type}", datetime_str)
+        
+        os.makedirs(file_dir, exist_ok=True)
+        accuracy_file = os.path.join(file_dir, f"{model_name}_{task_name}_accuracy.json")
+        result_file = os.path.join(file_dir, f"{model_name}_{task_name}_result.json")
+        
+        task.log_accuracies(accuracies, accuracy_file)
+        task.log_results(results, result_file)
     
     
 if __name__ == "__main__":
