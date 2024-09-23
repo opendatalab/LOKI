@@ -32,7 +32,7 @@ for i, tf in enumerate(tf_sampled_data):
     label_sample["custom"] = {"id": tf["id"]}
     mc_tf_list.append(label_sample)
 
-with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/text/text_specification.jsonl", "w") as file:
+with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/text/text_specification_all.jsonl", "w") as file:
     for data in mc_tf_list:
         file.write(json.dumps(data, ensure_ascii=False) + "\n")
         

@@ -1,12 +1,12 @@
 import json
 from pathlib import Path
 
-tf_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D-tf.json"
-mc_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D-multi-choice.json"
+tf_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D-tf-all.json"
+mc_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D-multi-choice-all.json"
 
 image_dir = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset"
 
-tf_file_path_txt = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/tf_file_path.txt"
+tf_file_path_txt = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/tf_file_path_all.txt"
 
 tf_sampled_data = json.load(open(tf_sampled_data_path, "r"))
 mc_sampled_data = json.load(open(mc_sampled_data_path, "r"))
@@ -29,7 +29,7 @@ for i, mc in enumerate(mc_sampled_data):
     label_sample["pathList"] = [str(Path(image_path).relative_to(Path(image_dir))) for image_path in image_paths]
     mc_label_list.append(label_sample)
 
-with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D_specification.jsonl", "w") as file:
+with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/3D/3D_specification_all.jsonl", "w") as file:
     for data in mc_label_list:
         file.write(json.dumps(data) + "\n")
         

@@ -3,8 +3,9 @@ import os
 import shutil
 import uuid
 
-MODALITIES = ["image", "3D"]
-PARENT_DIR = ['/mnt/hwfile/opendatalab/bigdata_rs/datasets/FakeImage_dataset', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset']
+MODALITIES = ["video", "audio"]
+# PARENT_DIR = ['/mnt/hwfile/opendatalab/bigdata_rs/datasets/FakeImage_dataset', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset']
+PARENT_DIR = ['/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/synthbench-audio/data/AudioDataset_wav']
 FILES_TARGET_DIR = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/boyue_for_labeling"
 
 

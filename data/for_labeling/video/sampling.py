@@ -18,8 +18,8 @@ for data in data_list:
 print(len(mc_list))
 print(len(tf_list))
         
-sampled_mc_list = random.sample(mc_list, 26)
-sampled_tf_list = random.sample(tf_list, 69)
+# sampled_mc_list = random.sample(mc_list, 26)
+# sampled_tf_list = random.sample(tf_list, 69)
 
-json.dump(sampled_mc_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-multi-choice.json", "w"), indent=4)
-json.dump(sampled_tf_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-tf.json", "w"), indent=4)
+json.dump(mc_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-multi-choice-all.json", "w"), indent=4)
+json.dump(tf_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-tf-all.json", "w"), indent=4)

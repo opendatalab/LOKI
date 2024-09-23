@@ -20,9 +20,9 @@ for data in data_list:
 print(len(mc_list))
 print(len(tf_list))
         
-sampled_mc_list = random.sample(mc_list, 124)
-sampled_tf_list = random.sample(tf_list, 228)
+# sampled_mc_list = random.sample(mc_list, len(mc_list))
+# sampled_tf_list = random.sample(tf_list, 228)
 
-json.dump(sampled_mc_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-multi-choice.json", "w"), indent=4)
-json.dump(sampled_tf_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-tf.json", "w"), indent=4)
+json.dump(mc_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-multi-choice-all.json", "w"), indent=4)
+json.dump(tf_list, open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/audio/audio-tf-all.json", "w"), indent=4)
 
