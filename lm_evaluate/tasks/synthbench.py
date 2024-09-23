@@ -232,7 +232,7 @@ def get_multi_choice_info(options):
     return index2ans, all_choices
 
 
-def parse_multi_choice_response(response, all_choices, index2ans):
+def parse_multi_choice_response(response, all_choices, index2ans, doc):
     """
     Parse the prediction from the generated response.
     Return the predicted index e.g., A, B, C, D.
@@ -265,6 +265,11 @@ def parse_multi_choice_response(response, all_choices, index2ans):
         for choice in all_choices:  # e.g., A. B. C. D.
             if f"{choice}." in response:
                 candidates.append(choice)
+    
+    if len(candidates) == 0:
+        for ans in index2ans.values():
+            if f"{ans}" in response:
+                candidates.append(ans)
 
     # if all above doesn't get candidates, check if the content is larger than 5 tokens and try to parse the example
     if len(candidates) == 0 and len(response.split()) > 5:
@@ -274,7 +279,7 @@ def parse_multi_choice_response(response, all_choices, index2ans):
                 index_ans = False  # it's content ans.
 
     if len(candidates) == 0:  # still not get answer, randomly choose one.
-        print(all_choices, response)
+        print(all_choices, response, doc)
         pred_index = random.choice(all_choices)
     elif len(candidates) > 1:
         start_indexes = []
@@ -653,7 +658,7 @@ class Loki(Task):
             return parse_pred_ans(response)
         elif doc['metric'] == 'multi-choice':
             index2ans, all_choices = get_multi_choice_info(doc['choices'])
-            return parse_multi_choice_response(response, all_choices, index2ans)
+            return parse_multi_choice_response(response, all_choices, index2ans, doc)
         
         return response
     
@@ -811,7 +816,7 @@ class Loki(Task):
             
             # compute circular accuracy
             for key, value in circular_table.items():
-                question_type = key.split("_")[0] + "_circular"
+                question_type = "_".join(key.split("_")[:-1]) + "_circular"
                 per_question_type_accuracy[question_type].append(sum(value) == len(value))
         
         for metric in per_metric_accuracy.keys():

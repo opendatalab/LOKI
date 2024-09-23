@@ -4,6 +4,7 @@ import os
 import time
 import requests as url_requests
 
+from datetime import timedelta
 from loguru import logger as eval_logger
 
 try:
@@ -14,7 +15,11 @@ except Exception as e:
 
 import PIL
 import numpy as np
+import torch
 
+from accelerate import Accelerator, DistributedType
+from accelerate.utils import InitProcessGroupKwargs
+from accelerate.state import AcceleratorState
 from io import BytesIO
 from typing import List, Union
 from copy import deepcopy
@@ -43,7 +48,7 @@ VIDEO_TOKEN = "<video>"
 NUM_SECONDS_TO_SLEEP = 30
 
 
-@register_model("gpt-4o", "gpt-4v")
+@register_model("gpt-4o", "gpt-4v", "qwen")
 class OpenAI(LMM):
     supported_modalities = ["video-text", "image-text", "text-only"]
     def __init__(
@@ -61,6 +66,8 @@ class OpenAI(LMM):
         self.timeout = timeout
         self.max_num_frames = max_num_frames
         self.api_type = api_type
+        
+        self.prepare_model()
     
 
     def encode_image(self, image: Image.Image) -> str:
@@ -86,6 +93,40 @@ class OpenAI(LMM):
         return base64_frames
     
     def prepare_model(self):
+        
+        accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
+        accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
+        if accelerator.num_processes > 1:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        else:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        
+        self.accelerator = accelerator
+        if accelerator.num_processes > 1:
+            assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
+            # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
+            # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
+            # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
+            if accelerator.distributed_type == DistributedType.DEEPSPEED:
+                kwargs = {
+                    "train_micro_batch_size_per_gpu": 1,
+                    "train_batch_size": 1 * accelerator.num_processes,
+                }
+                AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
+                eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
+            
+            
+            if self.accelerator.is_local_main_process:
+                eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
+            self._rank = self.accelerator.local_process_index
+            self._world_size = self.accelerator.num_processes
+        else:
+            eval_logger.info(f"Using single device: {self._device}")
+            self._rank = 0
+            self._world_size = 1
+            
         if "qwen" in self.model_version and "vl" not in self.model_version:
             self.supported_modalities = ["text_only"]
         
@@ -110,7 +151,7 @@ class OpenAI(LMM):
         return payload
 
     def _set_headers(self):
-        if self.api_type == "openai" and ('gpt' in self.model_version or 'claude' in self.model_version or 'llama' in self.model_version):
+        if self.api_type == "openai" and ('gpt' in self.model_version or 'claude' in self.model_version or 'llama' in self.model_version or 'gemini' in self.model_version):
             api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
             self.headers = {
                 "Authorization": f"Bearer {api_key}",
@@ -120,6 +161,12 @@ class OpenAI(LMM):
             api_key = os.getenv("AZURE_API_KEY", "YOUR_API_KEY")
             self.headers = {
                 "api-key": api_key,
+                "Content-Type": "application/json",
+            }
+        elif self.api_type == "openai" and 'qwen' in self.model_version:
+            api_key = os.getenv("DASHSCOPE_API_KEY", "YOUR_API_KEY")
+            self.headers = {
+                "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
             }
 

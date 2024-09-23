@@ -6,6 +6,7 @@ import torch
 import av
 import numpy as np
 
+from collections import Counter
 from typing import List, Union, Optional
 from copy import deepcopy
 from datetime import timedelta
@@ -34,6 +35,7 @@ except Exception as e:
 @register_model("llava-next")
 class LLaVANeXT(LMM):
     supported_modalities = ["video-text", "image-text", "text-only"]
+    support_batching = True
     def __init__(
         self,
         model_version: str = "lmms-lab/llama3-llava-next-8b",
@@ -103,17 +105,17 @@ class LLaVANeXT(LMM):
     
     def prepare_model(self):
         
-        # accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
-        # accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
-        # if accelerator.num_processes > 1:
-        #     self._device = torch.device(f"cuda:{accelerator.local_process_index}")
-        #     self.device_map = f"cuda:{accelerator.local_process_index}"
-        # elif accelerator.num_processes == 1 and self.device_map == "auto":
-        #     self._device = torch.device(self._device)
-        #     self.device_map = self.device_map
-        # else:
-        #     self._device = torch.device(f"cuda:{accelerator.local_process_index}")
-        #     self.device_map = f"cuda:{accelerator.local_process_index}"
+        accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
+        accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
+        if accelerator.num_processes > 1:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        elif accelerator.num_processes == 1 and self.device_map == "auto":
+            self._device = torch.device(self._device)
+            self.device_map = self.device_map
+        else:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
         
         
         
@@ -129,38 +131,39 @@ class LLaVANeXT(LMM):
         self.model.eval()
         self.model.tie_weights()
         
+        self.tokenizer.padding_side = "left"
         
-        
-        # if accelerator.num_processes > 1:
-        #     assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
-        #     # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
-        #     # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
-        #     # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
-        #     if accelerator.distributed_type == DistributedType.DEEPSPEED:
-        #         kwargs = {
-        #             "train_micro_batch_size_per_gpu": 1,
-        #             "train_batch_size": 1 * accelerator.num_processes,
-        #         }
-        #         AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
-        #         eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
-        #     if accelerator.distributed_type == DistributedType.FSDP or accelerator.distributed_type == DistributedType.DEEPSPEED:
-        #         self._model = accelerator.prepare(self.model)
-        #     else:
-        #         self._model = accelerator.prepare_model(self.model, evaluation_mode=True)
-        #     self.accelerator = accelerator
-        #     if self.accelerator.is_local_main_process:
-        #         eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
-        #     self._rank = self.accelerator.local_process_index
-        #     self._world_size = self.accelerator.num_processes
-        # elif accelerator.num_processes == 1 and self.device_map == "auto":
-        #     eval_logger.info(f"Using {accelerator.num_processes} devices with tensor parallelism")
-        #     self._rank = 0
-        #     self._word_size = 1
-        # else:
-        #     eval_logger.info(f"Using single device: {self._device}")
-        #     self._model.to(self._device)
-        #     self._rank = 0
-        #     self._world_size = 1
+        self.accelerator = accelerator
+        if accelerator.num_processes > 1:
+            assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
+            # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
+            # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
+            # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
+            if accelerator.distributed_type == DistributedType.DEEPSPEED:
+                kwargs = {
+                    "train_micro_batch_size_per_gpu": 1,
+                    "train_batch_size": 1 * accelerator.num_processes,
+                }
+                AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
+                eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
+            if accelerator.distributed_type == DistributedType.FSDP or accelerator.distributed_type == DistributedType.DEEPSPEED:
+                self._model = accelerator.prepare(self.model)
+            else:
+                self._model = accelerator.prepare_model(self.model, evaluation_mode=True)
+            
+            if self.accelerator.is_local_main_process:
+                eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
+            self._rank = self.accelerator.local_process_index
+            self._world_size = self.accelerator.num_processes
+        elif accelerator.num_processes == 1 and self.device_map == "auto":
+            eval_logger.info(f"Using {accelerator.num_processes} devices with tensor parallelism")
+            self._rank = 0
+            self._word_size = 1
+        else:
+            eval_logger.info(f"Using single device: {self._device}")
+            self._model.to(self._device)
+            self._rank = 0
+            self._world_size = 1
         
         self.prepared = True
         
@@ -187,6 +190,16 @@ class LLaVANeXT(LMM):
     def device(self):
         return self._device
     
+    
+    def pad_sequence(self, input_ids, batch_first, padding_value):
+        if self.tokenizer.padding_side == "left":
+            input_ids = [torch.flip(_input_ids, [0]) for _input_ids in input_ids]
+        input_ids = torch.nn.utils.rnn.pad_sequence(input_ids, batch_first=batch_first, padding_value=padding_value)
+        if self.tokenizer.padding_side == "left":
+            input_ids = torch.flip(input_ids, [1])
+        return input_ids
+
+    
     def encode_video(self, video_path):
         if type(video_path) == str:
             vr = VideoReader(video_path, ctx=cpu(0))
@@ -198,6 +211,158 @@ class LLaVANeXT(LMM):
         spare_frames = vr.get_batch(frame_idx).asnumpy()
         return spare_frames  # (frames, height, width, channels)
         
+    
+    def batch_generate(
+        self, 
+        batched_visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
+        batched_contexts: str,
+        **kwargs
+    ):
+        
+        images = []
+        videos = []
+        
+        video_frames = []
+        
+        processed_image_tensors = []
+        
+        modalities = []
+        image_sizes = []
+        
+        batch_image_counter = Counter()
+        batch_video_counter = Counter()
+        
+        # four scenarios:
+        # visuals is a list of string
+        # visuals is a list of PIL Images and strings
+        # visuals is a string
+        # visuals is a PIL Image
+        # visuals is None
+        for i, visuals in enumerate(batched_visuals):
+            if isinstance(visuals, list):
+                for visual in visuals:
+                    if isinstance(visual, str):
+                        frames = self.encode_video(visual)
+                        video_frames.append(len(frames))
+                        video_tensors = self._image_processor.preprocess(frames, return_tensors="pt")["pixel_values"].half().cuda()
+                        eval_logger.debug(video_tensors.size())
+                        processed_image_tensors.append(video_tensors)
+                        modalities.append('video')
+                        image_sizes.append(None)
+                        batch_video_counter[i] += 1
+                    elif isinstance(visual, Image.Image):
+                        image_tensor = process_images([visual], self._image_processor, self._config)[0]
+                        if type(image_tensor) is list:
+                            image_tensor = [_image.to(dtype=torch.float16, device=self.device) for _image in image_tensor]
+                        else:
+                            image_tensor = image_tensor.to(dtype=torch.float16, device=self.device)
+                        processed_image_tensors.append(image_tensor)
+                        modalities.append('image')
+                        image_sizes.append(visual.size)
+                        batch_image_counter[i] += 1
+                    else:
+                        error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
+                        eval_logger.error(TypeError(error_msg))
+            elif isinstance(visuals, str):
+                frames = self.encode_video(visuals)
+                video_frames.append(len(frames))
+                video_tensors = self._image_processor.preprocess(frames, return_tensors="pt")["pixel_values"].half().cuda()
+                processed_image_tensors.append(video_tensors)
+                modalities.append('video')
+                image_sizes.append(None)
+                batch_video_counter[i] += 1
+                
+            elif isinstance(visuals, Image.Image):
+                image_tensor = process_images([visuals], self._image_processor, self._config)
+                if type(image_tensor) is list:
+                    image_tensor = [_image.to(dtype=torch.float16, device=self.device) for _image in image_tensor]
+                else:
+                    image_tensor = image_tensor.to(dtype=torch.float16, device=self.device)
+            
+                processed_image_tensors.append(image_tensor)
+                modalities.append('image')
+                image_sizes.append(visuals.size)
+                batch_image_counter[i] += 1
+        
+    
+        batched_prompts = []
+        for i, contexts in enumerate(batched_contexts):
+            # Segment the text according to video and image token
+            if batch_image_counter[i] > contexts.count("<image>"):
+                eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
+                batched_contexts[i] = "<image> " * (len(images) - contexts.count("<image>")) + contexts
+
+            if batch_video_counter[i] > contexts.count("<video>"):
+                eval_logger.warning("<video> tokens num is less than actual number of images. Appending <video> at the front.")
+                batched_contexts[i] = "<video> " * (len(videos) - contexts.count("<video>")) + contexts
+        
+            # Segment the text according to video and image token
+            contexts = re.split(r'(<video>|<image>)', contexts)
+            contexts = [context for context in contexts if context]
+            
+            prompt = ""
+            
+            video_idx = 0
+            
+            for context in contexts:
+                if context == "<video>":
+                    prompt += "<image>\n" * video_frames[video_idx] if self.token_strategy == "multiple" else "<image>\n"
+                    video_idx += 1
+                elif context == "<image>":
+                    prompt += "<image>\n"
+                else:
+                    prompt += context
+        
+            if "llama_3" in self.conv_template:
+                conv = copy.deepcopy(conv_templates[self.conv_template])
+            else:
+                conv = conv_templates[self.conv_template].copy()
+        
+
+            conv.append_message(conv.roles[0], prompt)
+            conv.append_message(conv.roles[1], None)
+            prompt = conv.get_prompt()
+            
+            batched_prompts.append(prompt)
+        
+        eval_logger.debug(f"\nBatched Prompt: {batched_prompts}")
+
+        input_ids_list = [tokenizer_image_token(prompt, self.tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt").to(self.device) for prompt in batched_prompts]
+        pad_token_ids = self.tokenizer.pad_token_id if self.tokenizer.pad_token_id is not None else self.tokenizer.eos_token_id
+        input_ids = self.pad_sequence(input_ids_list, batch_first=True, padding_value=pad_token_ids).to(self.device)
+        
+        attention_masks = input_ids.ne(pad_token_ids).to(self.device)
+        
+        gen_kwargs = kwargs
+        
+        if "max_new_tokens" not in kwargs:
+            gen_kwargs["max_new_tokens"] = 1024
+        if "temperature" not in kwargs:
+            gen_kwargs["temperature"] = 0.2
+        if "top_p" not in kwargs:
+            gen_kwargs["top_p"] = None
+        if "num_beams" not in kwargs:
+            gen_kwargs["num_beams"] = 1
+
+            
+        with torch.inference_mode():
+            output_ids = self.model.generate(
+                input_ids,
+                images=processed_image_tensors if len(processed_image_tensors) > 0 else None,
+                attention_mask=attention_masks,
+                use_cache=self.use_cache,
+                do_sample=True if gen_kwargs["temperature"] > 0 else False,
+                temperature=gen_kwargs["temperature"],
+                top_p=gen_kwargs["top_p"],
+                num_beams=gen_kwargs["num_beams"],
+                max_new_tokens=gen_kwargs["max_new_tokens"],
+                modalities=modalities,
+                image_sizes=image_sizes
+            )
+
+        response = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)
+        
+        return response
     
     
     def generate(
@@ -332,7 +497,8 @@ class LLaVANeXT(LMM):
         with torch.inference_mode():
             output_ids = self.model.generate(
                 input_ids,
-                images=processed_image_tensors,
+                images=processed_image_tensors if len(processed_image_tensors) > 0 else None,
+                pad_token_id=pad_token_ids,
                 attention_mask=attention_masks,
                 use_cache=self.use_cache,
                 do_sample=True if gen_kwargs["temperature"] > 0 else False,

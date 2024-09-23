@@ -124,17 +124,17 @@ class Idefics(LMM):
     
     def prepare_model(self):
         
-        # accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
-        # accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
-        # if accelerator.num_processes > 1:
-        #     self._device = torch.device(f"cuda:{accelerator.local_process_index}")
-        #     self.device_map = f"cuda:{accelerator.local_process_index}"
-        # elif accelerator.num_processes == 1 and self.device_map == "auto":
-        #     self._device = torch.device(self._device)
-        #     self.device_map = self.device_map
-        # else:
-        #     self._device = torch.device(f"cuda:{accelerator.local_process_index}")
-        #     self.device_map = f"cuda:{accelerator.local_process_index}"
+        accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
+        accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
+        if accelerator.num_processes > 1:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        elif accelerator.num_processes == 1 and self.device_map == "auto":
+            self._device = torch.device(self._device)
+            self.device_map = self.device_map
+        else:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
         
         
         
@@ -152,37 +152,37 @@ class Idefics(LMM):
         self.model.tie_weights()
         
         
-        
-        # if accelerator.num_processes > 1:
-        #     assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
-        #     # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
-        #     # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
-        #     # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
-        #     if accelerator.distributed_type == DistributedType.DEEPSPEED:
-        #         kwargs = {
-        #             "train_micro_batch_size_per_gpu": 1,
-        #             "train_batch_size": 1 * accelerator.num_processes,
-        #         }
-        #         AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
-        #         eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
-        #     if accelerator.distributed_type == DistributedType.FSDP or accelerator.distributed_type == DistributedType.DEEPSPEED:
-        #         self._model = accelerator.prepare(self.model)
-        #     else:
-        #         self._model = accelerator.prepare_model(self.model, evaluation_mode=True)
-        #     self.accelerator = accelerator
-        #     if self.accelerator.is_local_main_process:
-        #         eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
-        #     self._rank = self.accelerator.local_process_index
-        #     self._world_size = self.accelerator.num_processes
-        # elif accelerator.num_processes == 1 and self.device_map == "auto":
-        #     eval_logger.info(f"Using {accelerator.num_processes} devices with tensor parallelism")
-        #     self._rank = 0
-        #     self._word_size = 1
-        # else:
-        #     eval_logger.info(f"Using single device: {self._device}")
-        #     self._model.to(self._device)
-        #     self._rank = 0
-        #     self._world_size = 1
+        self.accelerator = accelerator
+        if accelerator.num_processes > 1:
+            assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
+            # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
+            # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
+            # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
+            if accelerator.distributed_type == DistributedType.DEEPSPEED:
+                kwargs = {
+                    "train_micro_batch_size_per_gpu": 1,
+                    "train_batch_size": 1 * accelerator.num_processes,
+                }
+                AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
+                eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
+            if accelerator.distributed_type == DistributedType.FSDP or accelerator.distributed_type == DistributedType.DEEPSPEED:
+                self._model = accelerator.prepare(self.model)
+            else:
+                self._model = accelerator.prepare_model(self.model, evaluation_mode=True)
+            
+            if self.accelerator.is_local_main_process:
+                eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
+            self._rank = self.accelerator.local_process_index
+            self._world_size = self.accelerator.num_processes
+        elif accelerator.num_processes == 1 and self.device_map == "auto":
+            eval_logger.info(f"Using {accelerator.num_processes} devices with tensor parallelism")
+            self._rank = 0
+            self._word_size = 1
+        else:
+            eval_logger.info(f"Using single device: {self._device}")
+            self._model.to(self._device)
+            self._rank = 0
+            self._world_size = 1
         
         self.prepared = True
         
@@ -318,7 +318,7 @@ class Idefics(LMM):
         prompt = self._processor.apply_chat_template(message, add_generation_prompt=True)
             
         
-        inputs = self._processor(images=images, text=prompt, return_tensors="pt", truncation=True)
+        inputs = self._processor(images=images if len(images) > 0 else None, text=prompt, return_tensors="pt", truncation=True)
         if "image_patches" in inputs.keys():
             inputs["image_patches"] = inputs["image_patches"][0]  # FIXME: Fuyu model would return a list instead of a pytorch tensor. This weird behavior needs fixing.
         inputs = {k: v.to(self.device) for k, v in inputs.items()}

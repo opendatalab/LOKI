@@ -4,11 +4,13 @@ import os
 import time
 import requests as url_requests
 
+from datetime import timedelta
 from loguru import logger as eval_logger
     
 
 import PIL
 import numpy as np
+import torch
 
 from io import BytesIO
 from typing import List, Union
@@ -20,6 +22,10 @@ try:
     from mistralai import Mistral
 except Exception as e:
     eval_logger.debug(f"Please install mistralai packages to use Mistral\n{e}")
+
+from accelerate import Accelerator, DistributedType
+from accelerate.utils import InitProcessGroupKwargs
+from accelerate.state import AcceleratorState
 
 from lm_evaluate.api.model import LMM
 from lm_evaluate.api.registry import register_model
@@ -51,7 +57,40 @@ class MistralAPI(LMM):
         self.timeout = timeout
     
     
-    def prepare_model(self):            
+    def prepare_model(self):
+        accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
+        accelerator = Accelerator(kwargs_handlers=[accelerator_kwargs])
+        if accelerator.num_processes > 1:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        else:
+            self._device = torch.device(f"cuda:{accelerator.local_process_index}")
+            self.device_map = f"cuda:{accelerator.local_process_index}"
+        
+        self.accelerator = accelerator        
+        if accelerator.num_processes > 1:
+            assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
+            # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
+            # Also, you have to select zero stage 0 (equivalent to DDP) in order to make the prepare model works
+            # I tried to set different parameters in the kwargs to let default zero 2 stage works, but it didn't work.
+            if accelerator.distributed_type == DistributedType.DEEPSPEED:
+                kwargs = {
+                    "train_micro_batch_size_per_gpu": 1,
+                    "train_batch_size": 1 * accelerator.num_processes,
+                }
+                AcceleratorState().deepspeed_plugin.deepspeed_config_process(must_match=True, **kwargs)
+                eval_logger.info("Detected that you are using DistributedType.DEEPSPEED. Make sure you run `accelerate config` and set zero stage to 0")
+            
+            
+            if self.accelerator.is_local_main_process:
+                eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
+            self._rank = self.accelerator.local_process_index
+            self._world_size = self.accelerator.num_processes
+        else:
+            eval_logger.info(f"Using single device: {self._device}")
+            self._rank = 0
+            self._world_size = 1
+                
         self.prepared = True
         eval_logger.info(f"Mistral activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")
     

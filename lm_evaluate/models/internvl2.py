@@ -233,7 +233,7 @@ class InternVL2(LMM):
                 self._model = accelerator.prepare(self.model)
             else:
                 self._model = accelerator.prepare_model(self.model, evaluation_mode=True)
-            self.accelerator = accelerator
+            
             if self.accelerator.is_local_main_process:
                 eval_logger.info(f"Using {accelerator.num_processes} devices with data parallelism")
             self._rank = self.accelerator.local_process_index
@@ -247,7 +247,7 @@ class InternVL2(LMM):
             self._model.to(self._device)
             self._rank = 0
             self._world_size = 1
-        
+        self.accelerator = accelerator
         self.prepared = True
         
     

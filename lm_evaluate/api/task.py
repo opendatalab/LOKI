@@ -7,10 +7,11 @@ import chardet
 import lm_evaluate.utils as utils
 
 import datasets
-
-from loguru import logger as eval_logger
+import torch.distributed as dist
 
 from lm_evaluate.api.model import LMM
+
+from loguru import logger as eval_logger
 
 from abc import ABC, abstractmethod
 from tqdm import tqdm
@@ -84,8 +85,8 @@ class Task(ABC):
         
         with open(self.dataset_path, 'rb') as f:
             raw_data = f.read()
-        result = chardet.detect(raw_data)  # 自动检测文件编码
-        encoding = result['encoding']  # 检测到的编码
+        result = chardet.detect(raw_data)  
+        encoding = result['encoding']
         with open(self.dataset_path, 'r', encoding=encoding) as f:
             dataset = json.load(f)
         
@@ -122,10 +123,12 @@ class Task(ABC):
         
         pbar = tqdm(total=total_docs, desc=f"Building docs on rank {rank}")
         
+        doc_ids = []
         for doc_id in doc_id_iterator:
             
             doc = self.dataset[doc_id]
             doc["doc_id"] = doc_id
+            doc_ids.append(doc_id)
             
             if not isinstance(doc, list):
                 doc = [doc]
@@ -174,6 +177,100 @@ class Task(ABC):
         return results, accuracies
     
     
+    def batch_evaluate(
+        self, 
+        model: LMM,
+        predict_only: bool = False, 
+        batch_size: int = 1,
+        **model_kwargs,
+    ):
+        """
+        Args:
+            model (LMM): Models to be evaluated
+        
+        TODO: Support multi-gpu inference
+        """
+        
+        responses = []
+        
+        # building docs on GPU:{rank} and {world size}
+        docs = self.build_docs(rank=model.rank, world_size=model.world_size)
+        # split docs to chunks according to batch size however, there are models that do not support batching, for those models, we reset batch size to 1
+        
+        if not model.support_batching and batch_size > 1:
+            eval_logger.warning(f"Model type: {type(model)} does not support batching. Setting batch_size from {batch_size} to 1...")
+            batch_size = 1
+            
+        chunks = tuple(utils.split_chunks(docs, batch_size))
+        
+        pbar = tqdm(total=len(chunks), desc="Model Responding", disable=model.rank != 0)
+        
+        all_response = []
+        doc_ids = []
+        for chunk in chunks:
+            batched_contexts = [self.doc_to_text(doc) for doc in chunk]
+            batched_visuals = [self.doc_to_visual(doc) for doc in chunk]
+        
+            # visuals now is a 2d list, we should leave it to the model to decide whether they want to flatten it
+            if "text-only" in model.supported_modalities and len(model.supported_modalities) == 1:
+                batched_visuals = []
+            
+            responses = model.batch_generate(
+                batched_visuals=batched_visuals,
+                batched_contexts=batched_contexts,
+                **model_kwargs
+            )
+            
+            # response is a list
+            all_response.extend(responses)
+            doc_ids.extend([doc["doc_id"] for doc in chunk])
+            
+            pbar.update(1)
+
+        responses_with_doc_ids = list(zip(all_response,  doc_ids))
+        
+        model.accelerator.wait_for_everyone()
+        
+        if model.world_size > 1:
+            gathered_responses_with_ids = None
+            if model.rank == 0:
+                gathered_responses_with_ids = [None] * model.world_size
+            
+            dist.gather_object(
+                responses_with_doc_ids, 
+                object_gather_list=gathered_responses_with_ids if model.rank == 0 else None, 
+                dst=0
+            )
+            
+            if model.rank == 0:
+                flattened_responses_with_ids = [item for sublist in gathered_responses_with_ids for item in sublist]
+                flattened_responses_with_ids.sort(key=lambda x: x[1])
+                flattened_responses = [response for response,  _ in flattened_responses_with_ids]
+            else:
+                flattened_responses = []
+        else:
+            flattened_responses = all_response
+
+        if model.rank == 0:
+            if not predict_only:
+                results = self.process_responses(self.dataset, flattened_responses)
+                accuracies = self.aggregate_results(results)
+                self.print_pretty_accuracy(accuracies)
+            else:
+                results = {
+                    "model": model.model_version.split("/")[-1],
+                    "responses": flattened_responses
+                }
+                accuracies = {}
+        else:
+            results = {}
+            accuracies = {}
+        
+        model.accelerator.wait_for_everyone()
+
+        return results, accuracies
+    
+    
     def evaluate(
         self, 
         model: LMM,
@@ -187,9 +284,6 @@ class Task(ABC):
         
         TODO: Support multi-gpu inference
         """
-        if not model.prepared:
-            eval_logger.warning(f"Model {model} not prepared. Preparing model here...")
-            model.prepare_model()
         
         responses = []
         
@@ -201,11 +295,10 @@ class Task(ABC):
             eval_logger.warning(f"Model type: {type(model)} does not support batching. Setting batch_size from {batch_size} to 1...")
             batch_size = 1
             
-        chunks = utils.split_chunks(docs, batch_size)
+        pbar = tqdm(total=len(docs), desc="Model Responding", disable=model.rank != 0)
         
-        pbar = tqdm(total=len(self.dataset), desc="Model Responding", disable=model.rank != 0)
-        
-        for doc in self.dataset:
+        doc_ids = []
+        for doc in docs:
             contexts = self.doc_to_text(doc)
             visuals = self.doc_to_visual(doc)
             if "text-only" in model.supported_modalities and len(model.supported_modalities) == 1:
@@ -216,28 +309,51 @@ class Task(ABC):
                 **model_kwargs
             )
             
+            doc_ids.append(doc["doc_id"])
             eval_logger.debug(f"Model response: {response}")
 
             responses.append(response)
             pbar.update(1)
-            
-        if model.world_size > 1 and getattr(model, "accelerator", None) is not None:
-            model.accelerator.wait_for_everyone()
         
-        # Now, we need to reorder the responses to the correct order so that each response is index-aligned with the dataset
-        if not predict_only:
-            results = self.process_responses(self.dataset, responses)
-            
-            accuracies = self.aggregate_results(results)
-            
-            self.print_pretty_accuracy(accuracies)
+        model.accelerator.wait_for_everyone()
         
+        if model.world_size > 1:
+            responses_with_doc_ids = list(zip(responses, doc_ids))
+            
+            gathered_responses_with_ids = None
+            if model.rank == 0:
+                gathered_responses_with_ids = [None] * model.world_size
+
+            dist.gather_object(
+                responses_with_doc_ids, 
+                object_gather_list=gathered_responses_with_ids, 
+                dst=0
+                )
+            
+            if model.rank == 0:
+                flattened_responses_with_ids = [item for sublist in gathered_responses_with_ids for item in sublist]
+                flattened_responses_with_ids.sort(key=lambda x: x[1])
+                flattened_responses = [response for response,  _ in flattened_responses_with_ids]
+            else:
+                flattened_responses = []
         else:
-            results = {
-                "model": model.model_version.split("/")[-1],
-                "responses": responses
-            }
+            flattened_responses = responses
+
+        if model.rank == 0:
+            if not predict_only:
+                results = self.process_responses(self.dataset, flattened_responses)
+                accuracies = self.aggregate_results(results)
+                self.print_pretty_accuracy(accuracies)
+            else:
+                results = {
+                    "model": model.model_version.split("/")[-1],
+                    "responses": flattened_responses
+                }
+                accuracies = {}
+        else:
+            results = {}
             accuracies = {}
         
+        model.accelerator.wait_for_everyone()
         
         return results, accuracies
