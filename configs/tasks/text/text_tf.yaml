@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/text/text_true_or_false.json
+  task_name: text-tf

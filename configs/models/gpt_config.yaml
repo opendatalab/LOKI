@@ -1,7 +1,7 @@
 model_type: gpt-4o
 
 init_kwargs:
-  model_version: gpt-4o
+  model_version: gpt-4o-2024-08-06
   max_num_frames: 8
   # api_url: https://api.claudeshop.top/v1/chat/completions 
 
@@ -9,5 +9,5 @@ generate_kwargs:
   top_p: 1
   top_k: None
   temperature: 0
-  max_new_tokens: 1024
+  max_new_tokens: 16
   # response_format: {"type": "json_object"}
