@@ -123,12 +123,10 @@ class Task(ABC):
         
         pbar = tqdm(total=total_docs, desc=f"Building docs on rank {rank}")
         
-        doc_ids = []
         for doc_id in doc_id_iterator:
             
             doc = self.dataset[doc_id]
             doc["doc_id"] = doc_id
-            doc_ids.append(doc_id)
             
             if not isinstance(doc, list):
                 doc = [doc]

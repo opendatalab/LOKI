@@ -55,6 +55,7 @@ class MistralAPI(LMM):
         self.client = Mistral(api_key=API_KEY)
         
         self.timeout = timeout
+        self.prepare_model()
     
     
     def prepare_model(self):
