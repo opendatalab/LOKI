@@ -1,0 +1,3 @@
+bash scripts/run_evals.sh "configs/models/idefics_config.yaml" "configs/tasks/text/text_mc.yaml,configs/tasks/text/text_tf.yaml" INFO 4 1
+bash scripts/run_evals.sh "configs/models/internvl2_config.yaml,configs/models/llava_next_config.yaml,configs/models/internvl2_config.yaml,configs/models/qwen2_vl_config.yaml" "configs/tasks/text/text_mc.yaml,configs/tasks/text/text_tf.yaml" INFO 4 1
+bash scripts/run_evals.sh "configs/models/phi_3.5_vision_config.yaml,configs/models/mplug_owl_config.yaml,configs/models/minicpm_v2.6_config.yaml" "configs/models/idefics_config.yaml" "configs/tasks/text/text_mc.yaml,configs/tasks/text/text_tf.yaml" INFO 4 1

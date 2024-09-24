@@ -20,6 +20,6 @@ for MODEL_CONFIG_PATH in "${MODEL_CONFIG_PATHS[@]}"
 do
     for TASK_CONFIG_PATH in "${TASK_CONFIG_PATHS[@]}"
     do
-        python -m accelerate.commands.launch --num_processes="${NUM_PROCESS}" run.py --model_config_path "${MODEL_CONFIG_PATH}" --task_config_path "${TASK_CONFIG_PATH}" --verbosity "${VERBOSITY}" --batch_size "${BATCH_SIZE}"
+        python -m accelerate.commands.launch --num_processes="${NUM_PROCESS}" --main_process_port 12211 run.py --model_config_path "${MODEL_CONFIG_PATH}" --task_config_path "${TASK_CONFIG_PATH}" --verbosity "${VERBOSITY}" --batch_size "${BATCH_SIZE}"
     done
 done

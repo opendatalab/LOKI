@@ -1,5 +1,5 @@
 task_type: synthbench-visual
 
 init_kwargs:
-  dataset_path: data/3D/3D_mc_val_0919.json
+  dataset_path: ./data/3D/3D_mc_val_0923.json
   task_name: 3D-mc-val
