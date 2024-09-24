@@ -217,6 +217,7 @@ class InternVL2(LMM):
         self.tokenizer.padding_side = "left"
         self._model.tokenizer = self.tokenizer
         
+        self.accelerator = accelerator
         if accelerator.num_processes > 1:
             assert accelerator.distributed_type in [DistributedType.FSDP, DistributedType.MULTI_GPU, DistributedType.DEEPSPEED], "Unsupported distributed type provided. Only DDP and FSDP are supported."
             # If you want to use DistributedType.DEEPSPEED, you have to run accelerate config before using the model
@@ -247,7 +248,6 @@ class InternVL2(LMM):
             self._model.to(self._device)
             self._rank = 0
             self._world_size = 1
-        self.accelerator = accelerator
         self.prepared = True
         
     

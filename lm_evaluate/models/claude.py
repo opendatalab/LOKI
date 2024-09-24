@@ -82,9 +82,6 @@ class Claude(LMM):
         if accelerator.num_processes > 1:
             self._device = torch.device(f"cuda:{accelerator.local_process_index}")
             self.device_map = f"cuda:{accelerator.local_process_index}"
-        elif accelerator.num_processes == 1 and self.device_map == "auto":
-            self._device = torch.device(self._device)
-            self.device_map = self.device_map
         else:
             self._device = torch.device(f"cuda:{accelerator.local_process_index}")
             self.device_map = f"cuda:{accelerator.local_process_index}"
