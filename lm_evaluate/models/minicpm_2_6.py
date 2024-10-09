@@ -18,7 +18,10 @@ from accelerate.utils import InitProcessGroupKwargs
 from accelerate.state import AcceleratorState
 from loguru import logger as eval_logger
 from transformers import AutoModel, AutoTokenizer
-from transformers.utils import is_flash_attn_2_available
+try:
+    from transformers.utils import is_flash_attn_2_available
+except:
+    eval_logger.debug("Upgrade transformers to use MiniCPM")
 from PIL import Image
 
 

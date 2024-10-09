@@ -22,37 +22,29 @@ from loguru import logger as eval_logger
 from PIL import Image
 
 try:
-    from longva.model.builder import load_pretrained_model
-    from longva.mm_utils import get_model_name_from_path, process_images, tokenizer_image_token, KeywordsStoppingCriteria
-    from longva.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, IGNORE_INDEX
-    from longva.conversation import conv_templates, SeparatorStyle
-
+    from transformers import MllamaForConditionalGeneration, AutoProcessor
 except Exception as e:
-    eval_logger.debug("longva is not installed. Please install longva to use this model.\nError: %s" % e)
-    
+    eval_logger.debug("Upgrade transformers to use Mantis's idefics model.\nError: %s" % e)
 
 
-@register_model("longva")
-class LongVA(LMM):
+DEFAULT_IMAGE_TOKEN = "<image>"
+
+
+@register_model("llama3-vision")
+class Llama3Vision(LMM):
     supported_modalities = ["video-text", "image-text", "text-only"]
     def __init__(
         self,
-        model_version: str = "lmms-lab/LongVA-7B",
+        model_version: str = "meta-llama/Llama-3.2-11B-Vision",
         device: str = "cuda",
         device_map: str = "cuda",
         model_name: str = None,
-        # dtype: Optional[Union[str, torch.dtype]] = torch.bfloat16,
+        dtype: Optional[Union[str, torch.dtype]] = torch.bfloat16,
         attn_implementation: Optional[str] = (
             "sdpa" if torch.__version__ >= "2.1.2" else "eager"
         ),
         max_num_frames: Optional[int] = 32,
         truncation: bool = True,
-        conv_template: str = "qwen_1_5",
-        truncate_context: Optional[bool] = False,  # whether to truncate the context in generation, set it False for LLaVA-1.6
-        customized_config: Optional[str] = None,  # ends in json
-        token_strategy: Optional[str] = "single",  # could be "single" or "multiple", "multiple" denotes adding multiple <image> tokens for each frame
-        mm_spatial_pool_stride: Optional[int] = 2,
-        mm_spatial_pool_mode: Optional[str] = "average",
         use_cache=True,
         **kwargs
     ):
@@ -71,37 +63,12 @@ class LongVA(LMM):
         
         self.max_num_frames = max_num_frames
         
-        self.conv_template = conv_template
-        self.truncate_context = truncate_context
-        
-        llava_model_args = {
-            "multimodal": True,
-        }
-        if customized_config is not None:
-            llava_model_args["customized_config"] = customized_config
-        if attn_implementation is not None:
-            llava_model_args["attn_implementation"] = attn_implementation
-        if "use_flash_attention_2" in kwargs:
-            llava_model_args["use_flash_attention_2"] = kwargs["use_flash_attention_2"]
-        
-        self.token_strategy = token_strategy
-        self.mm_spatial_pool_stride = mm_spatial_pool_stride
-        self.mm_spatial_pool_mode = mm_spatial_pool_mode
-        
-        overwrite_config = {}
-        overwrite_config["mm_spatial_pool_stride"] = self.mm_spatial_pool_stride
-        overwrite_config["mm_spatial_pool_mode"] = self.mm_spatial_pool_mode
-
-        llava_model_args["overwrite_config"] = overwrite_config
-        
-        self.model_name = model_name if model_name is not None else get_model_name_from_path(pretrained)
-        self.llava_model_args = llava_model_args
         
         self.use_cache = use_cache
         
         self.prepare_model()
-        
     
+        
     def prepare_model(self):
         
         accelerator_kwargs = InitProcessGroupKwargs(timeout=timedelta(weeks=52))
@@ -118,14 +85,15 @@ class LongVA(LMM):
         
         
         
-        try:
-            # Try to load the model with the multimodal argument
-            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, **self.llava_model_args)
-        except TypeError:
-            # for older versions of LLaVA that don't have multimodal argument
-            self.llava_model_args.pop("multimodal", None)
-            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, **self.llava_model_args)
+        # Here we load the "non-idefics" Mantis model.
         
+        self._processor = AutoProcessor.from_pretrained(self.model_version)
+        self._model = MllamaForConditionalGeneration.from_pretrained(self.model_version, device_map=self.device_map, torch_dtype=self.dtype)
+
+        self._tokenizer = self._processor.tokenizer
+        
+        self._processor.chat_template = self.default_chat_template
+
         self._config = self._model.config
         self.model.eval()
         self.model.tie_weights()
@@ -196,8 +164,9 @@ class LongVA(LMM):
         total_frame_num = len(vr)
         uniform_sampled_frames = np.linspace(0, total_frame_num - 1, self.max_num_frames, dtype=int)
         frame_idx = uniform_sampled_frames.tolist()
-        spare_frames = vr.get_batch(frame_idx).asnumpy()
-        return spare_frames  # (frames, height, width, channels)
+        sparse_frames = vr.get_batch(frame_idx).asnumpy()
+        sparse_frames = [Image.fromarray(v.astype('uint8')) for v in sparse_frames]
+        return sparse_frames  # (frames, height, width, channels)
         
     
     
@@ -208,7 +177,7 @@ class LongVA(LMM):
         **kwargs
     ) -> str:
         """
-            Call mplug-owl for response with visuals and contexts. Visuals can be a list of strings(representing video paths), or a list of PIL.Image.Image or a combination of both. Returns a piece of response text.
+            Call mantis for response with visuals and contexts. Visuals can be a list of strings(representing video paths), or a list of PIL.Image.Image or a combination of both. Returns a piece of response text.
             
             Args:
                 visuals: Media objects. Visuals can be one image, one video path, or a list of them. 
@@ -219,71 +188,57 @@ class LongVA(LMM):
         """
         
         images = []
-        videos = []
         
+        num_image = 0
         video_frames = []
-        
-        processed_image_tensors = []
-        
-        modalities = []
-        image_sizes = []
-        
         # four scenarios:
         # visuals is a list of string
         # visuals is a list of PIL Images and strings
         # visuals is a string
         # visuals is a PIL Image
         # visuals is None
+        
+        # For mantis, we convert concat media objects (videos, images) together
+        # Ensure images is 1D (type Image.Image as elements)
         if isinstance(visuals, list):
             for visual in visuals:
                 if isinstance(visual, str):
                     frames = self.encode_video(visual)
+                    images.extend(frames)
                     video_frames.append(len(frames))
-                    video_tensors = self._image_processor.preprocess(frames, return_tensors="pt")["pixel_values"].half().cuda()
-                    eval_logger.debug(video_tensors.size())
-                    processed_image_tensors.append(video_tensors)
-                    modalities.append('video')
-                    image_sizes.append(None)
                 elif isinstance(visual, Image.Image):
-                    image_tensor = process_images([visual], self._image_processor, self._config)[0]
-                    if type(image_tensor) is list:
-                        image_tensor = [_image.to(dtype=torch.float16, device=self.device) for _image in image_tensor]
-                    else:
-                        image_tensor = image_tensor.to(dtype=torch.float16, device=self.device)
-                    processed_image_tensors.append(image_tensor)
-                    modalities.append('image')
-                    image_sizes.append(visual.size)
+                    images.append(visual)
+                    num_image += 1
                 else:
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
             frames = self.encode_video(visuals)
+            images.extend(frames)
             video_frames.append(len(frames))
-            video_tensors = self._image_processor.preprocess(frames, return_tensors="pt")["pixel_values"].half().cuda()
-            processed_image_tensors.append(video_tensors)
-            modalities.append('video')
-            image_sizes.append(None)
         elif isinstance(visuals, Image.Image):
-            image_tensor = process_images([visuals], self._image_processor, self._config)
-            if type(image_tensor) is list:
-                image_tensor = [_image.to(dtype=torch.float16, device=self.device) for _image in image_tensor]
-            else:
-                image_tensor = image_tensor.to(dtype=torch.float16, device=self.device)
-        
-            processed_image_tensors.append(image_tensor)
-            modalities.append('image')
-            image_sizes.append(visuals.size)
+            images.append(visuals)
+            num_image += 1
         
         # Segment the text according to video and image token
         
-        if len(images) > contexts.count("<image>"):
+        if num_image > contexts.count("<image>"):
             eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
             contexts = "<image> " * (len(images) - contexts.count("<image>")) + contexts
 
-        if len(videos) > contexts.count("<video>"):
+        if len(video_frames) > contexts.count("<video>"):
             eval_logger.warning("<video> tokens num is less than actual number of images. Appending <video> at the front.")
-            contexts = "<video> " * (len(videos) - contexts.count("<video>")) + contexts
+            contexts = "<video> " * (len(video_frames) - contexts.count("<video>")) + contexts
         
+        
+        gen_kwargs = {}
+        
+        if "max_new_tokens" not in kwargs:
+            gen_kwargs["max_new_tokens"] = 1024
+        if "temperature" not in kwargs:
+            gen_kwargs["temperature"] = 0
+            
+            
         # Segment the text according to video and image token
         contexts = re.split(r'(<video>|<image>)', contexts)
         contexts = [context for context in contexts if context]
@@ -294,58 +249,28 @@ class LongVA(LMM):
         
         for context in contexts:
             if context == "<video>":
-                prompt += "<image>\n" * video_frames[video_idx] if self.token_strategy == "multiple" else "<image>\n"
+                prompt += "<image>\n" * video_frames[video_idx]
                 video_idx += 1
             elif context == "<image>":
                 prompt += "<image>\n"
             else:
-                prompt += context
+                prompt += "<|begin_of_text|>" + context
         
-        if "llama_3" in self.conv_template:
-            conv = copy.deepcopy(conv_templates[self.conv_template].copy())
-        else:
-            conv = conv_templates[self.conv_template].copy()
         
+        gen_kwargs = {"max_new_tokens": 1024}
+        # Follow the idefics implementation:            
+        
+        inputs = self._processor(images=images if len(images) > 0 else None, text=prompt, return_tensors="pt", truncation=True)
 
-        conv.append_message(conv.roles[0], prompt)
-        conv.append_message(conv.roles[1], None)
-        prompt = conv.get_prompt()
-        
-        eval_logger.debug(f"\nPrompt: {prompt}")
+        inputs = {k: v.to(self.device) for k, v in inputs.items()}
 
-        input_ids = tokenizer_image_token(prompt, self.tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt").unsqueeze(0).cuda()
-        pad_token_ids = self.tokenizer.pad_token_id if self.tokenizer.pad_token_id is not None else self.tokenizer.eos_token_id
+        output_ids = self.model.generate(**inputs, **gen_kwargs)
         
-        attention_masks = input_ids.ne(pad_token_ids).long().cuda()
+        input_ids = inputs["input_ids"]
+        output_ids = output_ids[0][len(input_ids[0]):]
         
-        gen_kwargs = copy.deepcopy(kwargs)
+        response = self.tokenizer.decode(output_ids, skip_special_tokens=True)
         
-        if "max_new_tokens" not in kwargs:
-            gen_kwargs["max_new_tokens"] = 1024
-        if "temperature" not in kwargs:
-            gen_kwargs["temperature"] = 0.2
-        if "top_p" not in kwargs:
-            gen_kwargs["top_p"] = None
-        if "num_beams" not in kwargs:
-            gen_kwargs["num_beams"] = 1
-
-            
-        with torch.inference_mode():
-            output_ids = self.model.generate(
-                input_ids,
-                images=processed_image_tensors if len(processed_image_tensors) > 0 else None,
-                attention_mask=attention_masks,
-                use_cache=self.use_cache,
-                do_sample=True if gen_kwargs["temperature"] > 0 else False,
-                temperature=gen_kwargs["temperature"],
-                top_p=gen_kwargs["top_p"],
-                num_beams=gen_kwargs["num_beams"],
-                max_new_tokens=gen_kwargs["max_new_tokens"],
-                modalities=modalities,
-                image_sizes=image_sizes
-            )
-
-        response = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
-        
+        eval_logger.debug(response)
         
         return response

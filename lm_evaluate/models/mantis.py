@@ -236,9 +236,9 @@ class Mantis(LMM):
         total_frame_num = len(vr)
         uniform_sampled_frames = np.linspace(0, total_frame_num - 1, self.max_num_frames, dtype=int)
         frame_idx = uniform_sampled_frames.tolist()
-        spare_frames = vr.get_batch(frame_idx).asnumpy()
+        sparse_frames = vr.get_batch(frame_idx).asnumpy()
         sparse_frames = [Image.fromarray(v.astype('uint8')) for v in sparse_frames]
-        return spare_frames  # (frames, height, width, channels)
+        return sparse_frames  # (frames, height, width, channels)
         
     
     
@@ -291,19 +291,13 @@ class Mantis(LMM):
         
         # Segment the text according to video and image token
         
-        if len(images) > contexts.count("<image>"):
-            eval_logger.warning("<image> tokens num is less than actual number of images. Appending <image> at the front.")
-            contexts = "<image> " * (len(images) - contexts.count("<image>")) + contexts
-
-        if len(video_frames) > contexts.count("<video>"):
-            eval_logger.warning("<video> tokens num is less than actual number of images. Appending <video> at the front.")
-            contexts = "<video> " * (len(video_frames) - contexts.count("<video>")) + contexts
         
+        gen_kwargs = copy.deepcopy(kwargs)
         
-        gen_kwargs = {}
+        gen_kwargs["top_k"] = 0
         
         if "max_new_tokens" not in kwargs:
-                gen_kwargs["max_new_tokens"] = 1024
+            gen_kwargs["max_new_tokens"] = 1024
         if "temperature" not in kwargs:
             gen_kwargs["temperature"] = 0
             
@@ -349,10 +343,13 @@ class Mantis(LMM):
             conv.append_message(conv.roles[1], "")
             prompt = conv.get_prompt()
         
-        inputs = self._processor(images=images, text=prompt, return_tensors="pt", truncation=True)
+        inputs = self._processor(images=images if len(images) > 0 else None, text=prompt, return_tensors="pt", truncation=True)
         if "image_patches" in inputs.keys():
             inputs["image_patches"] = inputs["image_patches"][0]  # FIXME: Fuyu model would return a list instead of a pytorch tensor. This weird behavior needs fixing.
-        inputs = {k: v.to(self.device) for k, v in inputs.items()}
+            
+        for k, v in inputs.items():
+            if v is not None:
+                inputs[k] = v.to(self.device)
 
         output_ids = self.model.generate(**inputs, **gen_kwargs)
         

@@ -28,7 +28,6 @@ try:
     from qwen_vl_utils import process_vision_info
 except Exception as e:
     eval_logger.debug(f"Upgrade transformers to use Qwen2-VL. {e}")
-from transformers.utils import is_flash_attn_2_available
 from PIL import Image
 
 if version.parse(transformers.__version__) < version.parse("4.43.0"):

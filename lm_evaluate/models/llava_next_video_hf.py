@@ -2,7 +2,7 @@ import json
 import re
 
 import torch
-import av
+
 import numpy as np
 
 from typing import List, Union, Optional
@@ -17,6 +17,14 @@ from accelerate import Accelerator, DistributedType
 from accelerate.utils import InitProcessGroupKwargs
 from accelerate.state import AcceleratorState
 from loguru import logger as eval_logger
+
+
+try:
+    import av
+except Exception as e:
+    eval_logger.debug("av is required for llava next video")
+    
+    
 try:
     from transformers import LlavaNextVideoProcessor, LlavaNextVideoForConditionalGeneration
 except ImportError:

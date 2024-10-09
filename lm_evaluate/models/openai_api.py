@@ -57,11 +57,13 @@ class OpenAI(LMM):
         api_url: str = API_URL,
         max_num_frames: int = 10,
         timeout: int = 120,
-        api_type: str = "openai"
+        api_type: str = "openai",
+        api_key: str = os.getenv("OPENAI_API_KEY", "YOUR_KEY")
     ) -> None:
     
         self.model_version = model_version
         self.api_url = api_url
+        self.api_key = api_key
         
         self.timeout = timeout
         self.max_num_frames = max_num_frames
@@ -152,7 +154,7 @@ class OpenAI(LMM):
 
     def _set_headers(self):
         if self.api_type == "openai" and ('gpt' in self.model_version or 'claude' in self.model_version or 'llama' in self.model_version or 'gemini' in self.model_version):
-            api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
+            api_key = self.api_key
             self.headers = {
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
@@ -188,10 +190,12 @@ class OpenAI(LMM):
                 A piece of response text
         """
         imgs = []
+        video_frames = 0
         
         if isinstance(visuals, list):
             for visual in visuals:
                 if isinstance(visual, str):
+                    video_frames += len(self.encode_video(visual, self.max_num_frames))
                     imgs.extend(self.encode_video(visual, self.max_num_frames))
                 elif isinstance(visual, Image.Image):
                     imgs.append(self.encode_image(visual))
@@ -199,6 +203,7 @@ class OpenAI(LMM):
                     error_msg = f"Expected visual type to be Image.Image or str. Got: {type(visual)}"
                     eval_logger.error(TypeError(error_msg))
         elif isinstance(visuals, str):
+            video_frames += len(self.encode_video(visuals, self.max_num_frames))
             imgs.extend(self.encode_video(visuals, self.max_num_frames))
         
         elif isinstance(visuals, Image.Image):
@@ -207,7 +212,8 @@ class OpenAI(LMM):
         # Construct messages for request
         
         # First, convert video place holders to image place holders according to max_num_frames
-        contexts = contexts.replace(VIDEO_TOKEN, f"{IMAGE_TOKEN} " * self.max_num_frames)
+        if video_frames > 0:
+            contexts = contexts.replace(VIDEO_TOKEN, f"{IMAGE_TOKEN} " * (video_frames // contexts.count("<video>")))
         
         payload = {"messages": []}
         

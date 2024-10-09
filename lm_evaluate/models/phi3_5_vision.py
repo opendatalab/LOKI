@@ -21,7 +21,6 @@ from accelerate.utils import InitProcessGroupKwargs
 from accelerate.state import AcceleratorState
 from loguru import logger as eval_logger
 from transformers import AutoModelForCausalLM, AutoProcessor
-from transformers.utils import is_flash_attn_2_available
 from PIL import Image
 
 if version.parse(transformers.__version__) < version.parse("4.43.0"):

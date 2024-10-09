@@ -202,9 +202,11 @@ class InternVL2(LMM):
             self._model.eval()
         elif accelerator.num_processes == 1 and self.device_map == "auto":
             self._device = torch.device(self._device)
+            eval_logger.info("Splitting model across gpus")
             device_map = split_model(self.model_version.split("/")[1])
-            self._model = AutoModel.from_pretrained(self.model_version, torch_dtype=self.dtype, use_flash_attn=True, device_map=device_map, low_cpu_mem_usage=True, trust_remote_code=True)
-            self._model.eval()
+            self._model = AutoModel.from_pretrained(self.model_version, torch_dtype=self.dtype, use_flash_attn=True, load_in_8bit=True, device_map=device_map, low_cpu_mem_usage=True, trust_remote_code=True)
+            eval_logger.info(f"Device map: {device_map}")
+            self._model = self._model.eval()
 
         else:
             self._device = torch.device(f"cuda:{accelerator.local_process_index}")
@@ -314,9 +316,9 @@ class InternVL2(LMM):
             
         
         if len(pixel_values_list) > 0:
-            pixel_values_list = [pixel_values.to(self.dtype).cuda() for pixel_values in pixel_values_list]
+            pixel_values_list = [pixel_values.to(self.dtype).to(self._device) for pixel_values in pixel_values_list]
             
-            pixel_values = torch.cat(pixel_values_list, dim=0)
+            pixel_values = torch.cat(pixel_values_list, dim=0).to(self._device)
         else:
             pixel_values = None
     
@@ -347,7 +349,7 @@ class InternVL2(LMM):
         generation_config = dict(max_new_tokens=1024, do_sample=False)
         
         try:
-            response, _ = self.model.chat(
+            response, _ = self._model.chat(
                 self.tokenizer,
                 pixel_values,
                 prompt,
