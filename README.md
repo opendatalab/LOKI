@@ -3,7 +3,7 @@
 
 
 ## &#x1F389; News
-* **[2024.10.12]**  Our paper: [LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models](https://longhz140516.github.io/LOKI.github.io/) is to be released!
+
 
 
 ## &#x1F525; Takeaways
@@ -19,7 +19,7 @@
             • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as professional <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/satellite.png">statellite images, 
             <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/medical.png">medical images, <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/philosophy.png">philosophical and
             <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/ancient-literature.png">ancient chinese text, as well as <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span> data like 
-            <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/singing.png">singing voice and <img style="height: 35px;" src="static/img/icons/music.png">music. <br>
+            <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/singing.png">singing voice and <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/music.png">music. <br>
             • <strong>Multi-level tasks:</strong> Our benchmark includes basic true/false labels for tasks such as <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/judgement.png"> judgment
             and <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/selection.png"> multiple-choice questions. Additionally, it features fine-grained abnormality annotations for explanation-based questions, aimed at exploring the capabilities of large multimodal models (LMMs) in Transparent Defake detection. <br>
             • <strong>Multimodal synthetic data evaluation framework:</strong> We propose a comprehensive multimodal
