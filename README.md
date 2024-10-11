@@ -1,9 +1,9 @@
 <h2 align="center">LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models<h5 align="center">
 
-[![arXiv](https://img.shields.io/badge/Arxiv-2402.14289-b31b1b.svg?logo=arXiv)](https://longhz140516.github.io/LOKI.github.io/)
+
 
 ## &#x1F389; News
-* **[2024.10.12]**  Our paper: [LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models](https://longhz140516.github.io/LOKI.github.io/) is released!
+* **[2024.10.12]**  Our paper: [LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models](https://longhz140516.github.io/LOKI.github.io/) is to be released!
 
 
 ## &#x1F525; Takeaways
