@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "ubuntu";
+    font-style: italic;
+    font-weight: 300;
+    src: local("Lato Light Italic"), local("Lato-LightItalic"),
+      url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2)
+        format("woff2");
+  }
+  
+  .wrapper {
+    text-align: left; /* 将文本对齐方式设置为左对齐 */
+    width: 100%; /* 确保父容器占满宽度 */
+  }
+  
+  .wrapper h1 {
+    font-size: 92px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    /* background: linear-gradient(to right, #ffd257 25%, #fe9047 50%, #7ffb32 75%, #3597f9 100%); */
+    background: linear-gradient(45deg, #FF4500, #FFA500, #00CED1, #4169E1);
+    background-size: 400% 200%; /* 设置背景大小为4倍宽度 */
+    color: transparent; /* 设置文本颜色为透明 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* 使用 -webkit-text-fill-color */
+    animation: gradientAnimation 6s ease infinite; /* 添加动画 */
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }

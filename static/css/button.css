@@ -1,0 +1,183 @@
+.button-bar {
+  text-align: center;
+}
+.bookmarkBtn {
+    width: 135px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    display: inline-block;
+    overflow: hidden;
+    position: relative; /* 添加相对定位 */
+    margin-top: 0px;
+    margin-bottom: 2em;
+    margin-left: 5px; 
+    margin-right: 5px; 
+    cursor: pointer;
+  }
+  
+  .IconContainer {
+    width: 40px;
+    height: 40px;
+    /* background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255)); */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    transition-duration: 0.3s;
+    position: absolute; /* 绝对定位 */
+    left: 5px; /* 初始位置在左边 */
+    bottom: 3.5px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+ .bookmarkBtn .text {
+    height: 100%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.3em;
+    line-height: 1.2;
+    position: absolute; /* 添加绝对定位 */
+    left: 52%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平居中 */
+    margin-left: 15px;
+    bottom: -9px;
+  }
+  
+  .bookmarkBtn:hover .IconContainer {
+    left: 50%; /* 悬停时和激活时移动到中间 */
+    transform: translateX(-50%); /* 水平居中 */
+    transition-duration: 0.3s;
+  }
+  .bookmarkBtn:hover .text,
+  .bookmarkBtn:active .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+  }
+
+div .active-button,
+.button-bar button:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px #666;
+  transform: translateY(-2px);
+}
+
+/* Image button style */
+#img-image-container button {
+    /* background-color: #5ccbe6; */
+    /* background-color: #50b1e4; */
+    /* background-color: #6bc0eb; */
+    background-color: #66c8ef;
+}
+
+#img-image-container .active-button,
+#img-image-container button:hover {
+    background-color: #1288f4;
+    box-shadow: 0 6px #666;
+    transform: translateY(-2px);
+}
+
+/* Audio button style */
+#img-audio-container button {
+    background-color: #ee9ec4;
+}
+
+#img-audio-container .active-button,
+#img-audio-container button:hover {
+    background-color: #d54169;
+    box-shadow: 0 6px #666;
+    transform: translateY(-2px);
+}
+
+/* text button style */
+#img-text-container button {
+    background-color: #e1b9f0;
+}
+
+#img-text-container .active-button,
+#img-text-container button:hover {
+    background-color: #c36eef;
+    box-shadow: 0 6px #666;
+    transform: translateY(-2px);
+}
+
+/* loki exam */
+#img-exam-container button {
+  background-color: #ee9ec4;
+}
+
+#img-exam-container .active-button,
+#img-exam-container button:hover {
+  background-color: #d54169;
+  box-shadow: 0 6px #666;
+  transform: translateY(-2px);
+}
+
+/* card */
+#jud-container button,
+#sel-container button {
+    background-color: #ffccd5;
+}
+
+#jud-container .active-button,
+#sel-container .active-button,
+#jud-container button:hover,
+#sel-container button:hover {
+    background-color: #fb6f92;
+    box-shadow: 0 6px #666;
+    transform: translateY(-2px);
+}
+
+/* new button style */
+#num1 .IconContainer,
+#num2 .IconContainer,
+#num3 .IconContainer,
+#num4 .IconContainer {
+  width: 50px;
+  height: 50px;
+}
+#num1 img,
+#num2 img,
+#num3 img,
+#num4 img {
+  margin-top: 20%;
+}
+
+/* #num1 .IconContainer
+{
+  width: 100px;
+  height: 52px;
+}
+#num2 .IconContainer {
+  top: 2px;
+  width: 140px;
+  height: 45px;
+}
+#num3 .IconContainer {
+  top: 3px;
+  width: 120px;
+  height: 42px;
+}
+#num4 .IconContainer {
+  width: 140px;
+  height: 42px;
+} */

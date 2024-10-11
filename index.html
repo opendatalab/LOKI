@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>LOKI</title>
+        <link rel="icon" type="image/x-icon" href="static/img/icons/loki.png">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="https://LOKI.github.io/" />
+        <meta property="og:image" content="https://LOKI.github.io/static/img/preview.png" />
+        <meta property="og:title" content="LOKI: Can Large mOdels Identify syntheticK data?" />
+        <meta property="og:description" content="A multimodal benchmark designed to evaluate the performance of large multimodal models in detecting synthetic data across various modalities." />
+
+        <meta name="twitter:url" content="https://LOKI.github.io/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://LOKI.github.io/static/img/preview.png" />
+        <meta name="twitter:title" content="LOKI: Can Large mOdels Identify syntheticK data?" />
+        <meta name="twitter:description" content="An open-source framework for embodied agent and open-world computer vision research. Develop practical agents and test foundation models grounded with real street view imagery from around the world." />
+
+        <script src="./static/js/distill_template.v2.js"></script>
+
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+        <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+        <script defer="" src="./static/js/hider.js"></script>
+        <script src="./static/js/image_interact.js"></script>
+        <script src="./static/js/switch_videos.js"></script>
+
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+        <!-- medium zoom https://github.com/francoischalifour/medium-zoom -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
+        <script defer src="./static/js/medium-zoom.min.js"></script>
+        <script defer src="./static/js/zoom.js"></script>
+
+        <!-- music player -->
+        <link rel="stylesheet" href="./static/css/music-player.css">
+        <script src="./static/js/music-player.js"></script>
+
+        <!-- new button -->
+        <link rel="stylesheet" href="./static/css/button.css">
+
+        <!-- text animation -->
+        <link rel="stylesheet" href="./static/css/text-animation.css">
+
+        <!-- scroll-bar -->
+        <link rel="stylesheet" href="./static/css/scroll-bar.css">
+        <script defer src="./static/js/scroll-bar.js"></script>
+
+        <!-- card -->
+        <link rel="stylesheet" href="./static/css/card.css">
+        <script defer src="./static/js/card.js"></script>
+
+        <!-- finding card -->
+        <link rel="stylesheet" href="./static/css/finding-card.css">
+
+        <!-- author-affiliations -->
+         <script defer src="./static/js/author-affiliations.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <div class="header-wrapper">
+            <div class="header-container" id="header-container">
+                <div class="header-content">
+                    <div class="wrapper">
+                        <h1>LOKI</h1>
+                    </div>
+                    <!-- <h1 style="margin-top: 0px">Can <span class="blank-text">L</span>arge m<span class="blank-text">O</span>dels <span class="blank-text">I</span>dentify syntheti<span class="blank-text">K</span> data?</h1> -->
+                    <!-- <h1 style="margin-top: 0px; color: transparent; -webkit-text-stroke: 2px #FFC436;">Can <span style="color:#FFC436">L</span>arge m<span style="color:#FFC436">O</span>dels <span style="color:#FFC436">I</span>dentify synthetic<span style="color:#FFC436">K</span> data?</h1> -->
+                    <h1 style="margin-top: 0px; color: #FFC436;">A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models</h1>
+                    <!-- <div class="icon-container">
+                        <div class="icon-item">
+                            <img src="./static/img/header_icon/multi_type.png" alt="">
+                            <div><strong>Diverse modalities</strong>: Our dataset includes multimodal data like video, image, 3D, text, and audio, paired with real samples from the same domain.</div>
+                        </div>
+                        <div class="icon-item">
+                            <img src="./static/img/header_icon/multi_cate.png" alt="">
+                            <div><strong>Heterogeneous category</strong>: The dataset contains 28 categories across various modalities, including remote sensing images, medical images, literature, and audio.</div>
+                        </div>
+                        <div class="icon-item">
+                            <img src="./static/img/header_icon/multi_annotation.png" alt="">
+                            <div><strong>Multi-level annotation</strong>: It features basic true/false labels and fine-grained abnormality annotations for explanation-based questions, aiding Transparent Defake detection.</div>
+                        </div>
+                        <div class="icon-item">
+                            <img src="./static/img/header_icon/multi_framework.png" alt="">
+                            <div><strong>Multimodal synthetic data evaluation framework</strong>: We propose a framework that evaluates multimodal data formats, including video, image, text, audio, and point clouds, in mainstream models.</div>
+                        </div>
+                    </div> -->
+                    <p style="color: #FFF7D4">
+                        <em><strong style="color: #ffe099">Authors:</strong></em>
+                        <a href="https://yejy53.github.io/" class="author-link SYSU-author AILAB-author" target="_blank">Junyan Ye <sup>1,2</sup></a>, 
+                        <a href="https://baichuanzhou.github.io/" class="author-link AILAB-author" target="_blank"> Baichuan Zhou <sup>2</sup></a>, 
+                        <a href="https://github.com/LongHZ140516" class="author-link SYSU-author" target="_blank"> Zilong Huang <sup>1</sup></a>, 
+                        <a href="" class="author-link CUHK-SZ-author" target="_blank"> Junan Zhang <sup>5</sup></a>, <br>
+                        <a href="https://beccabai.github.io/" class="author-link AILAB-author" target="_blank"> Tianyi Bai <sup>2</sup></a>, 
+                        <a href="" class="author-link AILAB-author" target="_blank"> Hengrui Kang <sup>2</sup></a>, 
+                        <a href="https://github.com/RedShallot" class="author-link SYSU-author" target="_blank"> Jun He <sup>1</sup></a>, 
+                        <a href="" class="author-link AILAB-author" target="_blank"> Honglin Lin <sup>2</sup></a>, 
+                        <a href="" class="author-link SYSU-author" target="_blank"> Zihao Wang <sup>1</sup></a>,
+                        <a href="https://wutong16.github.io/" class="author-link CUHK-author" target="_blank"> Tong Wu <sup>4</sup></a>, 
+                        <a href="https://drwuz.com/" class="author-link CUHK-SZ-author" target="_blank"> Zhizheng Wu <sup>5</sup></a>, 
+                        <a href="https://ting-devin-han.github.io/Epingpages.github.io/" class="author-link SYSU-author" target="_blank"> Yiping Chen <sup>1</sup></a>, 
+                        <a href="http://dahua.site/" class="author-link AILAB-author" target="_blank"> Dahua Lin <sup>2</sup></a>,
+                        <a href="https://conghui.github.io/" class="author-link SenseTime-author AILAB-author" target="_blank"> Conghui He <sup>2,3</sup></a>,
+                        <a href="https://liweijia.github.io/" class="author-link SYSU-author" target="_blank"> Weijia Li <sup>1</sup></a>
+                    </p>
+                    <p style="color: #FFF7D4">
+                        <em><strong style="color: #ffe099">Affiliations:</strong></em>
+                        <span id="SYSU" class="affiliation" data-affiliation="SYSU"><sup>1</sup>Sun Yat-sen University</span>, 
+                        <span id="AILAB" class="affiliation" data-affiliation="AILAB"><sup>2</sup>Shanghai AI Laboratory</span>, 
+                        <span id="SenseTime" class="affiliation" data-affiliation="SenseTime"><sup>3</sup>SenseTime Research</span>,
+                        <span id="CUHK" class="affiliation" data-affiliation="CUHK"><sup>4</sup>The Chinese University of Hong Kong</span>,
+                        <span id="CUHK-SZ" class="affiliation" data-affiliation="CUHK-SZ"><sup>5</sup>The Chinese University of Hong Kong (Shenzhen)</span>
+                    </p>
+                    <div class="button-container">
+                        <a href="" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="ai ai-arxiv"></i>
+                            </span>
+                            ArXiv
+                        </a>
+                        <!-- <a href="" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>PDF</span>
+                        </a> -->
+                        <a href="" class="button paper-link" target="_blank">
+                            <span class="icon is-small" style="font-size: 20px; margin-left: -5%;">
+                                🤗</i>
+                            </span>
+                            <span>Dataset</span>
+                        </a>
+                        <a href="" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
+                        <a href="https://label.lvuslf.top/Login" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fa fa-comment"></i>
+                            </span>
+                            <span>Web</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image">
+                    <img src="static/img/cover_test.png" alt="Teaser Image" class="teaser-image">
+                    <figcaption id="cover-img"><strong>Generated by AI</strong></figcaption>
+                </div>
+            </div>
+        </div>
+        <div class="marquee">
+            <ul class="marquee-content">
+              <li><img src="static/img/scrollbar-icons/volcano.png" alt="volcano"></li>
+              <li><img src="static/img/scrollbar-icons/VILA.png" alt="VILA"></i></li>
+              <li><img src="static/img/scrollbar-icons/qianwen.png" alt="qianwen"></li>
+              <li><img src="static/img/scrollbar-icons/gemini.png" alt="gemini"></li>
+              <li><img src="static/img/scrollbar-icons/meta.png" alt="meta"></li>
+              <li><img src="static/img/scrollbar-icons/claude.png" alt="claude"></li>
+              <li><img src="static/img/scrollbar-icons/openai.png" alt="openai"></li>
+                <li><img src="static/img/scrollbar-icons/mistral.png" alt="mistral"></li>
+                <li><img src="static/img/scrollbar-icons/internVL.png" alt="internVL"></li>
+                <li><img src="static/img/scrollbar-icons/idefics.png" alt="idefics"></li>
+                <li><img src="static/img/scrollbar-icons/instructBLIP.png" alt="instructBLIP"></li>
+            </ul>
+          </div>
+    <d-article>
+        <!-- 导航栏 -->
+        <div class="nav-bar" id="nav-bar">
+            <!-- TOP -->
+            <a class="nav-link" href="#top" style="opacity: 0.7">
+                <div style="margin: 8px 0px; text-align: center">
+                    <span style="font-size: 30px;">&#128285;</span>
+                </div>
+            </a>
+            <hr style="display: block; margin: auto;">
+            <!-- finding -->
+            <div id="nav-bar-finding">
+                <a class="nav-link" href="#fingding"><img src="static/img/icons/finding.png" title="finding"></a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- dataset -->
+            <div id="nav-bar-dataset">
+                <a class="nav-link" href="#dataset"><img src="static/img/icons/dataset.png" title="dataset"></a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- video -->
+            <div class="video-color">
+                <a class="nav-link" href="#video">
+                    <img class="loki-tag" src="static/img/tags/video.jpg">
+                </a>
+                <a class="nav-link" href="#video-case">
+                    <img src="static/img/icons/video.png" title="video data">
+                </a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- audio -->
+            <div class="audio-color">
+                <a class="nav-link" href="#audio">
+                    <img class="loki-tag" src="static/img/tags/audio.jpg">
+                </a>
+                <a class="nav-link" href="#audio-case"><img src="static/img/icons/audio.png" title="audio data">
+                </a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- image -->
+            <div class="image-color">
+                <a class="nav-link" href="#image">
+                    <img class="loki-tag" src="static/img/tags/image.jpg">
+                </a>
+                <a class="nav-link" href="#image-case"><img src="static/img/icons/image.png" title="image data">
+                </a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- 3D -->
+            <div class="td-color">
+                <a class="nav-link" href="#td">
+                    <img class="loki-tag" src="static/img/tags/3D.jpg">
+                </a>
+                <a class="nav-link" href="#tD-case"><img src="static/img/icons/3d.png" title="3D data">
+                </a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- text -->
+            <div class="text-color">
+                <a class="nav-link" href="#text-type">
+                    <img class="loki-tag" src="static/img/tags/text.jpg">
+                </a>
+                <a class="nav-link" href="#text-case">
+                    <img src="static/img/icons/text.png" title="text data">
+                </a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- LLM exam -->
+            <div id="nav-bar-system">
+                <a class="nav-link" href="#LLM-test"><img src="static/img/icons/QA.png" title="QA"></a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- evaluation -->
+            <div id="nav-bar-evaluation">
+                <a class="nav-link" href="#evaluation"><img src="static/img/icons/evaluation.png" title="evaluation"></a>
+            </div>
+            <hr style="display: block; margin: auto;">
+            <!-- conclusion -->
+            <div id="nav-bar-conclusion">
+                <a class="nav-link" href="#conclusion"><img src="static/img/icons/conclusion.png" title="LOKI conclusion"></a>
+            </div>
+        </div>
+        <!-- 摘要图片 -->
+        <div id="main-image">
+            <img src="static/img/main-image.jpg" alt="" style="z-index: 8000" data-zoomable>
+            <figcaption style="text-align: center"></figcaption>
+        </div>
+        <p class="text">
+            • <strong>Diverse modalities:</strong> Our dataset includes high-quality multimodal data generated by recent
+            popular synthetic models, covering 
+            <span style="color:#ffb60dde; font-weight: bold;">video</span>, 
+            <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span>, 
+            <span style="color:rgba(41, 208, 108, 1); font-weight: bold;">3D</span>, 
+            <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span>,
+            <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>, while ensuring
+            paired real samples from the same domain. <br>
+            • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as professional <img style="height: 35px;" src="static/img/icons/satellite.png">statellite images, 
+            <img style="height: 35px;" src="static/img/icons/medical.png">medical images, <img style="height: 35px;" src="static/img/icons/philosophy.png">philosophical and
+            <img style="height: 35px;" src="static/img/icons/ancient-literature.png">ancient chinese text, as well as <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span> data like 
+            <img style="height: 35px;" src="static/img/icons/singing.png">singing voice and <img style="height: 35px;" src="static/img/icons/music.png">music. <br>
+            • <strong>Multi-level tasks:</strong> Our benchmark includes basic true/false labels for tasks such as <img style="height: 30px;" src="static/img/icons/judgement.png"> judgment
+            and <img style="height: 30px;" src="static/img/icons/selection.png"> multiple-choice questions. Additionally, it features fine-grained abnormality annotations for explanation-based questions, aimed at exploring the capabilities of large multimodal models (LMMs) in Transparent Defake detection. <br>
+            • <strong>Multimodal synthetic data evaluation framework:</strong> We propose a comprehensive multimodal
+            evaluation framework that supports the input of various data formats, including <span style="color:#ffb60dde; font-weight: bold;">video</span>, 
+            <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span>, 
+            <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span>, 
+            <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>, and 
+            <span style="color:rgba(116, 116, 116, 0.765); font-weight: bold;">point cloud</span>, into mainstream multimodal models.
+        </p>
+        <!-- 摘要文字 -->
+        <h2 class="text"><br>Abstract</h2>
+        <p class="text abstract">
+            With the rapid advancement of AI-generated content, the future internet may become saturated with synthetic media, making it increasingly challenging to discern truth and trust information. Synthetic data detection has thus garnered widespread attention, and the performance of multimodal large models (LMMs) in this task has attracted significant interest. On one hand, these models can provide natural language explanations for their authenticity judgments, paving the way for enhanced explainability in synthetic content detection. On the other hand, distinguishing between real and synthetic data tests the perception, knowledge, and reasoning abilities of LMMs—capabilities essential for advancing towards more robust Artificial General Intelligence (AGI). In response, we introduce LOKI, a novel benchmark designed to evaluate the ability of LMMs to detect synthetic data across multiple modalities. LOKI encompasses video, image, 3D, text, and audio modalities, comprising 13K carefully curated questions across 28 subcategories with clear difficulty levels. The benchmark includes coarse-grained true/false questions, in-domain multiple-choice questions, and fine-grained anomaly explanation questions, effectively assessing models in synthetic data detection and reason explanation. We evaluated 15 open-source LMMs and 3 closed-source models (including GPT-4 and Gemini) on LOKI, highlighting their potential as synthetic data detectors while also revealing current limitations such as imbalanced modality capabilities and weak logical reasoning abilities.
+        </p>
+        <hr>
+        <!-- Finding -->
+        <div id="fingding" class="content-block">
+            <h2 class="text"><img src="static/img/icons/finding.png" width="50px"> Finding</h2>
+            <p class="text">
+                On the LOKI benchmark, we evaluated <strong>22</strong> open-source LMMs, <strong>6</strong> advanced proprietary LMMs,
+                and several expert synthetic detection models. Our key findings are summarized as follows: <br>
+            </p>
+            <div class="finding-card">
+                <div class="container">
+                  <div class="left">
+                    <div class="status-ind"></div>
+                  </div>
+                  <div class="right">
+                    <div class="text-wrap">
+                    <i style="color: #4361ee;font-weight: bold;">Synthetic Data Detection Tasks:</i>
+                      <p class="text-content">
+                        ● LMMs exhibit moderate capabilities in synthetic data detection tasks,
+                        with certain levels of explainability and generalization. <br>
+                        ● LMMs are highly promising tools for synthetic detection, offering additional interpretability 
+                        compared to expert models and access to feature-level information invisible to the human eye.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="finding-card">
+                <div class="container">
+                  <div class="left">
+                    <div class="status-ind"></div>
+                  </div>
+                  <div class="right">
+                    <div class="text-wrap">
+                    <i style="color: #4361ee;font-weight: bold;">LMMs Capabilities:</i>
+                      <p class="text-content">
+                        ● Most LMMs exhibit certain model biases, tending to favor synthetic or real data in their responses. <br>
+                        ● Lack of expert domain knowledge, performing poorly on specialized image types like <img style="height: 30px;" src="static/img/icons/satellite.png">satellite and <img style="height: 30px;" src="static/img/icons/medical.png">medical images. <br>
+                        ● Unbalanced multimodal capabilities, excelling in <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span> and 
+                        <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span> tasks but underperforming in 
+                        <span style="color:rgba(41, 208, 108, 1); font-weight: bold;">3D</span> and
+                        <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span> 
+                        tasks. <br>
+                        ● Prompting strategies, including few-shot learning and chain-of-thought, helpenhance LMMs' abilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <p class="text">
+                These findings highlight the challenging and comprehensive nature of the
+                LOKI task and the promising future of LMMs in synthetic data detection tasks.
+            </p>
+        </div>
+        <!-- 数据集信息说明 -->
+        <div id="dataset" class="content-block">
+            <h2 class="text"><img src="static/img/icons/dataset.png" width="50px"> Benchmark</h2>
+            <p class="text">
+                <strong><i><span style="font-size: larger;">LOKI</span></i></strong>, a multimodal synthetic data detection benchmark, designed specifically to comprehensively assess the capabilities of LMMs in detecting synthetic data. As illustrated in <i>Figure.1</i>,
+                LOKI encompasses a variety of modalities including 
+                <span style="color:#ffb60dde; font-weight: bold;">video</span>, 
+                <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span>, 
+                <span style="color:rgba(41, 208, 108, 1); font-weight: bold;">3D</span>, 
+                <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span>,
+                <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>, with over
+                <strong>26</strong> specific subcategories of data. The benchmark utilizes fine-grained anomaly annotations to construct a tiered variety of question types, including <i>judgment, multiple-choice,</i> and <i>anomaly explanation</i>
+                 questions, totaling over <strong>18k</strong> questions. <i>Table.1</i> provides a detailed comparison of LOKI with existing datasets, including traditional synthetic detection benchmarks and
+                those tailored for evaluating LMMs. LOKI excels in data coverage, diversity, and depth of question
+                design.
+                <div id="dataset-image">
+                    <img src="static/img/dataset_chart.png" alt="" style="z-index: 8000" data-zoomable>
+                    <figcaption style="text-align: center">Figure.1 Statistical information of LOKI.</figcaption>
+                    <img src="static/img/table1.jpg" alt="" style="z-index: 8000" data-zoomable>
+                    <figcaption style="text-align: center">Table.1 The comparison between LOKI and other existing benchmarks.</figcaption>
+                </div>
+            <!-- 数据图标 -->
+            <br>
+            <p x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif; text-align: center;">Click here to go to the different data sections:</p>
+            <!-- <ul class="text-list">
+                <li><img class="loki-tag" src="static/img/tags/video.jpg"><a href="#video" class="video-color">&sect;video</a></li>
+                <li><img class="loki-tag" src="static/img/tags/audio.jpg"><a href="#audio" class="audio-color">&sect;audio</a></li>
+                <li><img class="loki-tag" src="static/img/tags/image.jpg"><a href="#image" class="image-color">&sect;image</a></li>
+                <li><img class="loki-tag" src="static/img/tags/3D.jpg"><a href="#td" class="td-color">&sect;3D</a></li>
+                <li><img class="loki-tag" src="static/img/tags/text.jpg"><a href="#text-type" class="text-color">&sect;text</a></li>
+                <li></li>
+            </ul> -->
+            <ul class="text-list">
+                <li><a href="#video" class="video-color"><img class="loki-tag" src="static/img/tags/video.jpg"></a></li>
+                <li><a href="#audio" class="audio-color"><img class="loki-tag" src="static/img/tags/audio.jpg"></a></li>
+                <li><a href="#image" class="image-color"><img class="loki-tag" src="static/img/tags/image.jpg"></a></li>
+                <li><a href="#td" class="td-color"><img class="loki-tag" src="static/img/tags/3D.jpg"></a></li>
+                <li><a href="#text-type" class="text-color"><img class="loki-tag" src="static/img/tags/text.jpg"></a></li>
+                <li></li>
+            </ul>
+            
+        </div>
+        <!-- 第一部分： video -->
+        <div id="video">
+            <h2 class="text"><img class="loki-tag" src="static/img/tags/video.jpg"><br>Video</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                We collected <strong>620</strong> video clips by utilizing various <i>closed-source</i> and <i>open-source</i> models generating high-quality text-to-video synthesis data along with corresponding real domain sample data.
+            </p>
+        </div>
+        <div id="video-page" class="content-block video">
+            <div class="l-screen grey-overlay"></div>
+            <h3 class="text" id="video-case"><img style="width: 50px" src="static/img/icons/video.png"> Video Case</h3>
+
+            <div class="l-body">
+                <div id="Touristvideo1Container" class="video-container">
+                    <video class="video-music" controls preload="metadata" playsinline>
+                        <source src="static\img\datacase\video\OpenAI_Sora_fake_0.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="Touristvideo2Container" class="video-container" style="display:none;">
+                    <video class="video-music" controls preload="metadata" playsinline>
+                        <source src="static\img\datacase\video\runway-new_fake_4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="Touristvideo3Container" class="video-container" style="display:none;">
+                    <video class="video-music" controls preload="metadata" playsinline>
+                        <source src="static\img\datacase\video\keling_fake_20.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="Touristvideo4Container" class="video-container" style="display:none;">
+                    <video class="video-music" controls preload="metadata" playsinline>
+                        <source src="static\img\datacase\video\CogVideoX_1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="Touristvideo5Container" class="video-container" style="display:none;">
+                    <video class="video-music" controls preload="metadata" playsinline>
+                        <source src="static\img\datacase\video\PVGD.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            
+                <!-- Preview Images in a Flex Container -->
+                <div class="preview-container">
+                    <img id="Touristvideo1Preview" class="preview" src="static/img/datacase/video/OpenAI.jpg" alt="Preview image of tourist-local SF" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview', 'video-scenery')">
+                    <img id="Touristvideo2Preview" class="preview" src="static/img/datacase/video/runway.jpg" alt="Preview image of tourist-local HK" onclick="switchVideo('Tourist','video2Container', 'video2Preview', 'video-human')">
+                    <img id="Touristvideo3Preview" class="preview" src="static/img/datacase/video/keling.jpg" alt="Preview image of tourist-local SF" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview', 'video-animal')">
+                    <img id="Touristvideo4Preview" class="preview" src="static/img/datacase/video/CogVideoX.jpg" alt="Preview image of tourist-local HK" onclick="switchVideo('Tourist','video4Container', 'video4Preview', 'video-object')">
+                    <img id="Touristvideo5Preview" class="preview" src="static/img/datacase/video/PVGD.jpg" alt="Preview image of tourist-local HK" onclick="switchVideo('Tourist','video5Container', 'video5Preview', 'video-plant')">
+                </div>
+
+                <aside class="video-aside" id="video-scenery">
+                    <strong>Model:</strong> Sora <br>
+                    <strong>Type:</strong> scenery <br>
+                    <strong>Prompt:</strong> A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, the view showcases historic and magnificent architectural details and tiered pathways and patios, waves are seen crashing against the rocks below as the view overlooks the horizon of the coastal waters and hilly landscapes of the Amalfi Coast Italy, several distant people are seen walking and enjoying vistas on patios of the dramatic ocean views, the warm glow of the afternoon sun creates a magical and romantic feeling to the scene, the view is stunning captured with beautiful photography
+                </aside>
+                <aside class="video-aside" id="video-human">
+                    <strong>Model:</strong> Runway <br>
+                    <strong>Type:</strong> human <br>
+                    <strong>Prompt:</strong> A close up portrait of a woman lit by the side, the camera pulls back.
+                </aside>
+                <aside class="video-aside" id="video-animal">
+                    <strong>Model:</strong> Keling <br>
+                    <strong>Type:</strong> animal <br>
+                    <strong>Prompt:</strong> A corgi wearing sunglasses walks on the beach of a tropical island
+                </aside>
+                <aside class="video-aside" id="video-object">
+                    <strong>Model:</strong> CogVideoX <br>
+                    <strong>Type:</strong> object <br>
+                    <strong>Prompt:</strong> A detailed wooden toy ship with intricately carved masts and sails is seen gliding smoothly over a plush, blue carpet that mimics the waves of the sea. The ship's hull is painted a rich brown, with tiny windows. The carpet, soft and textured, provides a perfect backdrop, resembling an oceanic expanse. Surrounding the ship are various other toys and children's items, hinting at a playful environment. The scene captures the innocence and imagination of childhood, with the toy ship's journey symbolizing endless adventures in a whimsical, indoor setting.
+                </aside>
+                <aside class="video-aside" id="video-plant">
+                    <strong>Model:</strong> W.A.L.T <br>
+                    <strong>Type:</strong> plant <br>
+                    <strong>Prompt:</strong> A tiny plant sprout coming out of the ground.
+                </aside>
+            </div>
+
+            <h3 class="text" id="video-labelu" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/LabelU.png"> Video Annotation</h3>
+            <p class="text" style="margin-top: 0;">
+                For the AI-generated video clips, we employed the <span style="color: #1B67FF; font-weight: bold;">LabelU</span> tool to annotate anomaly details, including <strong style="color: #FF8C00;">Anomalous Segments</strong> and their descriptions, <strong style="color: #FF8C00;"> Anomalous Key Frames</strong>, and <strong style="color: #FF8C00;">Global Anomaly Descriptions</strong>. 
+                (Use <span style="color: #1B67FF; font-weight: bold;"><a class="LabelU" href="https://github.com/opendatalab/labelU">LabelU</a></span> for annotation)
+            </p>
+            <video class="auto-video" muted autoplay preload="auto" loop="loop" playsinline>
+                <source src="static/video/video_labelu_animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- 第二部分： audio -->
+        <div id="audio">
+            <h2 class="text"><img class="loki-tag" src="static/img/tags/audio.jpg"><br>Audio</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                We collected various categories of audio, including <img style="height: 30px;" src="static/img/icons/audio2.png"><strong>environmental sounds</strong>, 
+                <img style="height: 30px;" src="static/img/icons/music.png"><strong>music</strong>, 
+                <img style="height: 30px;" src="static/img/icons/speech.png"><strong>speech</strong>, 
+                <img style="height: 30px;" src="static/img/icons/singing.png"><strong>singing</strong>.
+                <ul style="margin-left: -15%; width: 130%; font-size: 1.3rem">
+                    <li><img style="height: 30px;" src="static/img/icons/speech.png"><strong>speech</strong> and 
+                        <img style="height: 30px;" src="static/img/icons/singing.png"><strong>singing</strong> data ensured consistency in speaker timbre, sourced from the Logical Access part of <i>ASVSpoof2019</i> and the <i>CtrSVDD</i>
+                        Benchmark, covering four generation paradigms: TTS, VC, SVS, and SVC.</li>
+                    <li><img style="height: 30px;" src="static/img/icons/audio2.png"><strong>environmental sounds</strong> data came from <i>DCASE 2023 Task 7</i>, with real audio from the development set and synthetic audio
+                        generated using multiple methods from <i>Track A</i>.</li>
+                    <li><img style="height: 30px;" src="static/img/icons/music.png"><strong>music</strong> data were sourced from <i>MusicCaps</i>, with synthetic music generated based on descriptions using <i>MusicGen</i>, <i>AudioLDM2-Music</i>, and <i>Suno</i>.</li>
+                </ul>
+            </p>
+            <!-- 音乐播放器 -->
+            <h3 class="text" id="audio-case" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/audio.png"> Audio Case</h3>
+            <div class="interactive-image">
+                <div id="img-audio-container">
+                    <p x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif; text-align: center;">Click here to play different types of audio:</p>
+                    <div class="button-bar">
+                        <!-- Buttons to interact with the image and text -->
+                        <!-- <button onclick="changeAudio('audio')">Audio</button>
+                        <button onclick="changeAudio('music')">Music</button>
+                        <button onclick="changeAudio('speech')">Speech</button>
+                        <button onclick="changeAudio('singing')">Singing</button> -->
+                        <button class="bookmarkBtn" onclick="changeAudio('audio')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/audio2.png">
+                            </span>
+                            <p class="text">Audio</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeAudio('music')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/music.png">
+                            </span>
+                            <p class="text">Music</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeAudio('speech')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/speech.png">
+                            </span>
+                            <p class="text">Speech</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeAudio('singing')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/singing.png">
+                            </span>
+                            <p class="text">Singing</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="app-cover">
+                <div id="bg-artwork"></div>
+                <div id="bg-layer"></div>
+                <div id="player">
+                  <div id="player-track">
+                    <div id="album-name"></div>
+                    <!-- <div id="track-name"></div> -->
+                    <div id="track-time">
+                      <div id="current-time"></div>
+                      <div id="track-length"></div>
+                    </div>
+                    <div id="s-area">
+                      <div id="ins-time"></div>
+                      <div id="s-hover"></div>
+                      <div id="seek-bar"></div>
+                    </div>
+                  </div>
+                  <div id="player-content">
+                    <div id="album-art">
+                      <img src="static/img/datacase/audio/dog_fake.jpg" class="active" id="audio_fake_1">
+                      <img src="static/img/datacase/audio/dog_real.jpg" id="audio_real_1">
+                      <img src="static\img\datacase\audio\keyboard_fake.png" id="audio_fake_2">
+                      <img src="static\img\datacase\audio\keyboard_real.jpg" id="audio_real_2">
+                      <img src="static\img\datacase\audio\music_fake1.jpg" id="music_fake_1">
+                      <img src="static\img\datacase\audio\music_real1.jpg" id="music_real_1">
+                      <img src="static/img/datacase/audio/music_fake2.jpg" id="music_fake_2">
+                      <img src="static/img/datacase/audio/music_real2.jpg" id="music_real_2">
+                      <img src="static\img\datacase\audio\speech_fake1.jpg" id="speech_fake_1">
+                      <img src="static\img\datacase\audio\speech_real1.jpg" id="speech_real_1">
+                      <img src="static/img/datacase/audio/speech_fake2.jpg" id="speech_fake_2">
+                      <img src="static/img/datacase/audio/speech_real2.jpg" id="speech_real_2">
+                      <img src="static\img\datacase\audio\singing_fake1.jpg" id="singing_fake_1">
+                      <img src="static\img\datacase\audio\singing_real1.jpg" id="singing_real_1">
+                      <img src="static/img/datacase/audio/singing_fake2.jpg" id="singing_fake_2">
+                      <img src="static/img/datacase/audio/singing_real2.jpg" id="singing_real_2">
+                      <div id="buffer-box">Buffering ...</div>
+                    </div>
+                    <div id="player-controls">
+                      <div class="control">
+                        <div class="button" id="play-previous">
+                          <i class="fas fa-backward"></i>
+                        </div>
+                      </div>
+                      <div class="control">
+                        <div class="button" id="play-pause-button">
+                          <i class="fas fa-play"></i>
+                        </div>
+                      </div>
+                      <div class="control">
+                        <div class="button" id="play-next">
+                          <i class="fas fa-forward"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- 第三部分： image -->
+        <div id="image">
+            <h2 class="text"><img class="loki-tag" src="static/img/tags/image.jpg"><br>Image</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                We have collected over <strong>2,900</strong> images from <strong>7</strong> subcategories through existing dataset extraction, internet collection, and new data synthesis. The image synthesis methods include <i>FLUX</i>,
+                <i>Midjourney</i>, <i>Stable Diffusion</i>, and <strong>10</strong> other different methods to ensure high quality and diversity of the data. 
+            </p>
+        </div>
+
+        <!-- image animals -->
+        
+        <div id="image-page" class="content-block image">
+
+        <h3 class="text" id="image-case" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/image.png"> Image Case</h3>
+        <div class="l-screen grey-overlay"></div>
+        
+        <div class="interactive-image">
+            <div id="img-image-container">
+                <p x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif; text-align: center;">Click here to view different types of image:</p>
+                <div class="button-bar">
+                    <!-- Buttons to interact with the image and text -->
+                    <button class="bookmarkBtn" onclick="changeImages('animals')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/animal.png">
+                        </span>
+                        <p class="text">Animal</p>
+                    </button>
+                    <button class="bookmarkBtn" onclick="changeImages('person')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/person.png">
+                        </span>
+                        <p class="text">Person</p>
+                    </button>
+                    <button class="bookmarkBtn" onclick="changeImages('scenery')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/scenery.png">
+                        </span>
+                        <p class="text">Scenery</p>
+                    </button>
+                    <button class="bookmarkBtn" onclick="changeImages('object')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/object.png">
+                        </span>
+                        <p class="text">Object</p>
+                    </button>
+                    <br>
+                    <button class="bookmarkBtn" onclick="changeImages('document')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/document.png">
+                        </span>
+                        <p class="text">Document</p>
+                    </button>
+                    <button class="bookmarkBtn" onclick="changeImages('medical')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/medical.png">
+                        </span>
+                        <p class="text">Medical</p>
+                    </button>
+                    <button class="bookmarkBtn" onclick="changeImages('satellite')">
+                        <span class="IconContainer">
+                            <img style="height: 35px;" src="static/img/icons/satellite.png">
+                        </span>
+                        <p class="text">Satellite</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- slider image animals -->
+        <div id="slider-img-image-animals" class="slider-img-container">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/animals/0.jpg">
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/animals/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/animals/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/animals/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-animals', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-animals', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/animals/0.jpg"  onclick="currentSlide('slider-img-image-animals', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/animals/1.jpg"  onclick="currentSlide('slider-img-image-animals', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/animals/2.jpg"  onclick="currentSlide('slider-img-image-animals', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/animals/3.jpg"  onclick="currentSlide('slider-img-image-animals', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image person -->
+        <div id="slider-img-image-person" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/person/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/person/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/person/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/person/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-person', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-person', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/person/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-person', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/person/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-person', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/person/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-person', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/person/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-person', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image scenery -->
+        <div id="slider-img-image-scenery" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/scenery/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/scenery/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/scenery/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/scenery/2.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-scenery', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-scenery', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/scenery/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-scenery', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/scenery/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-scenery', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/scenery/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-scenery', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/scenery/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-scenery', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image object -->
+        <div id="slider-img-image-object" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/object/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/object/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/object/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/object/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-object', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-object', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/object/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-object', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/object/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-object', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/object/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-object', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/object/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-object', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image document -->
+        <div id="slider-img-image-document" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/document/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/document/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/document/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/document/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-document', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-document', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/document/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-document', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/document/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-document', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/document/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-document', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/document/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-document', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image medical -->
+        <div id="slider-img-image-medical" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/medical/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/medical/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/medical/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/medical/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-medical', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-medical', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/medical/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-medical', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/medical/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-medical', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/medical/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-medical', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/medical/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-medical', 4)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- slider image remote-sensing -->
+        <div id="slider-img-image-satellite" class="slider-img-container" style="display: none;">
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/satellite/0.jpg" >
+            </div>
+        
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/satellite/1.jpg" >
+            </div>
+            
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/satellite/2.jpg" >
+            </div>
+
+            <div class="my-slides">
+                <img data-zoomable src="static/img/datacase/image/satellite/3.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides('slider-img-image-satellite', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-img-image-satellite', 1)">❯</a>
+            
+            <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/satellite/0.jpg" style="width:100%" onclick="currentSlide('slider-img-image-satellite', 1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/satellite/1.jpg" style="width:100%" onclick="currentSlide('slider-img-image-satellite', 2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/satellite/2.jpg" style="width:100%" onclick="currentSlide('slider-img-image-satellite', 3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="static/img/datacase/image/satellite/3.jpg" style="width:100%" onclick="currentSlide('slider-img-image-satellite', 4)" alt="">
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text" id="image-labelu" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/LabelU.png"> Image Annotation</h3>
+        <p class="text" style="margin-top: 0;">
+            For the synthesized image data, in addition to <strong style="color:#2196F3;">Overall Annotations</strong>, we performed anomaly <span style="border: 3px solid #64DEF2; box-shadow: 2px 2px 10px #2D9DFF; border-radius: 6px;"><i>region bounding</i></span> and <i>explanations</i>. The <strong style="color:#2196F3">Region Anomaly Annotations</strong> allow for more fine-grained and specific labeling, which can be used for generating subsequent anomaly detail questions.
+            (Use <span style="color: #1B67FF; font-weight: bold;"><a class="LabelU" href="https://github.com/opendatalab/labelU">LabelU</a></span> for annotation)
+        </p>
+        <video class="auto-video" muted autoplay preload="auto" loop="loop" playsinline>
+            <source src="static/video/image_labelu_animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        </div>
+        
+        <!-- 第四部分： 3D -->
+         <div id="td">
+            <h2 class="text"><img class="loki-tag" src="static/img/tags/3D.jpg"><br>3D</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                We conducted a comprehensive analysis of <i>OmniObject3D</i>, selecting scanned instances as ground truth within the same domain. 
+                By constructing prompt texts, we synthesized <strong>three</strong> <img style="height: 25px;" src="static/img/icons/NeRF.png"><i>NeRF</i> models and <strong>three</strong> <img style="height: 25px;" src="static/img/icons/GS.png"><i>3DGS</i> models, and
+                supplemented them with results from the advanced commercial model <i>Clay</i> and some Nerf-based results from <i>GPTEval3D</i>. 
+                We collected a total of over <strong>1,200</strong> 3D models from <strong>ten</strong> different synthesis methods, including both synthesized and real scanned data.
+            </p>
+            <h3 class="text" id="tD-case" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/3d.png"> 3D Case</h3>
+            <div id="slider-img-3D" class="slider-img-container">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/3D/CLAY_21.png" style="width:100%">
+                    <figcaption style="text-align: center;">
+                        <strong>method: </strong>CLAY <br>
+                        <strong>prompt: </strong>A plush octopus whose arms are gently waving pencils
+                    </figcaption>
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/3D/GradeADreamer_0.png" style="width:100%">
+                    <figcaption style="text-align: center;">
+                        <strong>method: </strong>GradeADreamer <br>
+                        <strong>prompt: </strong>A torn hat
+                    </figcaption>
+                </div>
+                
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/3D/dreamgaussian_13.png" style="width:100%">
+                    <figcaption style="text-align: center;">
+                        <strong>method: </strong>DreamGaussian <br>
+                        <strong>prompt: </strong>A chair made from polished oak
+                    </figcaption>
+                </div>
+
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/3D/gaussiandreamer.png" style="width:100%">
+                    <figcaption style="text-align: center;">
+                        <strong>method: </strong>GaussianDreamer <br>
+                        <strong>prompt: </strong>A brick house
+                    </figcaption>
+                </div>
+
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/3D/dreamfusion.png" style="width:100%">
+                    <figcaption style="text-align: center;">
+                        <strong>method: </strong>DreamFusion <br>
+                        <strong>prompt: </strong>A pen sitting atop a pile of manuscripts
+                    </figcaption>
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-img-3D', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-img-3D', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/3D/CLAY_21.png" style="width:100%" onclick="currentSlide('slider-img-3D', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/3D/GradeADreamer_0.png" style="width:100%" onclick="currentSlide('slider-img-3D', 2)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/3D/dreamgaussian_13.png" style="width:100%" onclick="currentSlide('slider-img-3D', 3)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/3D/gaussiandreamer.png" style="width:100%" onclick="currentSlide('slider-img-3D', 4)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/3D/dreamfusion.png" style="width:100%" onclick="currentSlide('slider-img-3D', 5)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 3D labelu show -->
+            <h3 class="text" id="tD-labelu" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/LabelU.png"> 3D Annotation</h3>
+            <p class="text" style="margin-top: 0;">
+                Additionally, we performed <img style="height: 25px;" src="static/img/icons/RGB.png"> <strong style="color: #4AD66D;">Texture Anomaly Description Annotations</strong> corresponding to the
+                <strong><span style="color: red;">R</span><span style="color: green;">G</span><span style="color: blue;">B</span></strong> four views of the synthesized 3D data, 
+                as well as <img style="height: 25px;" src="static/img/icons/normal.png"> <strong style="color: #4AD66D;">Normal Anomaly Description Annotations</strong>. 
+                Notably, besides the multi-view format, the 3D data also supports <i>point clouds</i> and <i>panoramic videos</i>.
+                (Use <span style="color: #1B67FF; font-weight: bold;"><a class="LabelU" href="https://github.com/opendatalab/labelU">LabelU</a></span> for annotation)
+            </p>
+            <video class="auto-video" muted autoplay preload="auto" loop="loop" playsinline>
+                <source src="static/video/3d_labelu_animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+         <!-- 第五部分： 文本 -->
+         <div id="text-type">
+            <h2 class="text"><img class="loki-tag" src="static/img/tags/text.jpg"> <br> Text</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                Based on summarization and regeneration methods, we generated counterfeit texts similar to the original texts using mainstream models such as 
+                <img style="height: 25px;" src="static/img/icons/GPT.png"> GPT-4o, 
+                <img style="height: 25px;" src="static/img/icons/Qwen.png"> Qwen-VL-Max, 
+                <img style="height: 25px;" src="static/img/icons/llama.png"> Llama 3.1-405B. We collected <strong>eight</strong> categories of text data, pairing each sample with a real text
+                and a model-generated similar text, totaling <strong>4,320</strong> text entries. Our text data were categorized by length and language, including <i>short texts</i> (50-100 characters), <i>medium texts</i> (100-200 characters), and <i>long texts</i> (over 300 characters), with a 1:1 ratio of <strong>Chinese</strong> to <strong>English</strong> data. 
+            </p>
+         </div>
+        <div id="text-image" class="text-type">
+            <h3 class="text" id="text-case" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/text.png"> Text Case</h3>
+            <div class="l-screen grey-overlay"></div>
+            <!-- text button -->
+            <div class="interactive-image">
+                <div id="img-text-container">
+                    <p x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif; text-align: center;">Click here to view different types of text:</p>
+                    <div class="button-bar">
+                        <!-- Buttons to interact with the image and text -->
+                        <button class="bookmarkBtn" onclick="changeText('ancient-literature')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/ancient-literature.png">
+                            </span>
+                            <p class="text">Ancient Literature</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('speech')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/speech-text.png">
+                            </span>
+                            <p class="text">Speech</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('modern-literature')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/modern-literature.png">
+                            </span>
+                            <p class="text">Modern Literature</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('wiki')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/wiki.png">
+                            </span>
+                            <p class="text">Wiki</p>
+                        </button>
+                        <br>
+                        <button class="bookmarkBtn" onclick="changeText('philosophy')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/philosophy.png">
+                            </span>
+                            <p class="text">Philosophy</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('paper')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/paper.png">
+                            </span>
+                            <p class="text">Paper</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('news')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/news.png">
+                            </span>
+                            <p class="text">News</p>
+                        </button>
+                        <button class="bookmarkBtn" onclick="changeText('essay')">
+                            <span class="IconContainer">
+                                <img style="height: 35px;" src="static/img/icons/essay.png">
+                            </span>
+                            <p class="text">Essay</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ancient literature-->
+            <div id="slider-text-ancient-literature" class="slider-img-container">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/AncientLilterature_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/AncientLilterature_en.png" style="width:100%">
+                </div>
+                
+
+                <a class="prev" onclick="plusSlides('slider-text-ancient-literature', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-ancient-literature', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/AncientLilterature_ch.png" style="width:100%" onclick="currentSlide('slider-text-ancient-literature', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/AncientLilterature_en.png" style="width:100%" onclick="currentSlide('slider-text-ancient-literature', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- speech -->
+            <div id="slider-text-speech" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Speech_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Speech_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-speech', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-speech', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Speech_ch.png" style="width:100%" onclick="currentSlide('slider-text-speech', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Speech_en.png" style="width:100%" onclick="currentSlide('slider-text-speech', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- modern literature -->
+            <div id="slider-text-modern-literature" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/ModernLilterature_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/ModernLilterature_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-modern-literature', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-modern-literature', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/ModernLilterature_en.png" style="width:100%" onclick="currentSlide('slider-text-modern-literature', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/ModernLilterature_en.png" style="width:100%" onclick="currentSlide('slider-text-modern-literature', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Wiki -->
+            <div id="slider-text-wiki" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Wikipedia_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Wikipedia_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-wiki', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-wiki', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Wikipedia_ch.png" style="width:100%" onclick="currentSlide('slider-text-wiki', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Wikipedia_en.png" style="width:100%" onclick="currentSlide('slider-text-wiki', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Philosophy -->
+            <div id="slider-text-philosophy" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Philosophical_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Philosophical_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-philosophy', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-philosophy', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Philosophical_ch.png" style="width:100%" onclick="currentSlide('slider-text-philosophy', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Philosophical_en.png" style="width:100%" onclick="currentSlide('slider-text-philosophy', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper -->
+            <div id="slider-text-paper" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Paper_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Paper_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-paper', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-paper', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Paper_ch.png" style="width:100%" onclick="currentSlide('slider-text-paper', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Paper_en.png" style="width:100%" onclick="currentSlide('slider-text-paper', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- News -->
+            <div id="slider-text-news" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/News_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/News_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-news', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-news', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/News_ch.png" style="width:100%" onclick="currentSlide('slider-text-news', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/News_en.png" style="width:100%" onclick="currentSlide('slider-text-news', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Essay -->
+            <div id="slider-text-essay" class="slider-img-container" style="display: none;">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Essay_ch.png" style="width:100%;">
+                </div>
+            
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/datacase/text/Essay_en.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides('slider-text-essay', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-text-essay', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+            
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Essay_ch.png" style="width:100%" onclick="currentSlide('slider-text-essay', 1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="static/img/datacase/text/Essay_en.png" style="width:100%" onclick="currentSlide('slider-text-essay', 2)" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- GPT judgement/selection -->
+        <div id="LLM-test">
+            <h2 class="text"><img src="static/img/icons/QA.png" width="50px">  Questions</h2>
+            <div class="l-screen grey-overlay"></div>
+            <p class="text">
+                In terms of problem setting, our questions are mainly divided into the following four types:
+                <ul style="margin-left: -15%; width: 130%; font-size: 1.3rem">
+                    <li><img style="height: 35px;" src="static/img/icons/judgement.png"> <strong>Judgement</strong>: This task requires LMMs to determine whether the input
+                        data is synthetic or real.</li>
+                    <li><img style="height: 35px;" src="static/img/icons/selection.png"> <strong>Multiple-Choice</strong>: This task requires LMMs to correctly select AI-generated or real data from
+                        the provided synthetic and real data.</li>
+                    <li><img style="height: 35px;" src="static/img/icons/explanation.png"> <strong>Abnomal Explanation</strong>: Based on fine-grained anomaly annotation data from modalities such
+                        as video, images, and 3D, we effectively design prompts and utilize <img style="height: 25px;" src="static/img/icons/GPT.png"> GPT-4o for generating Abnormal Detail Selection.</li>
+                    <li><img style="height: 35px;" src="static/img/icons/details-selection.png"> <strong>Abnormal Details Selection</strong>: Furthermore, we design open-ended abnormal explanation questions, requiring LMMs to independently identify anomalies and explain their reasons. </li>
+                </ul>
+            </p>
+            <div id="question-image">
+                <img src="static/img/question_short.png" alt="" style="z-index: 8000;" data-zoomable>
+                <figcaption style="text-align: center"></figcaption>
+            </div>
+            <p class="text">*Here we have set up four question banks, each of which contains <strong>Judgement</strong> and <strong>Multiple-Choice</strong> questions, and users can experience some of the questions.</p>
+            <div class="interactive-image">
+                <div id="img-exam-container">
+                    <p x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif; text-align: center;">Click here to change examination:</p>
+                    <div class="button-bar">
+                        <button id="num1" class="bookmarkBtn" onclick="setQuizType('bank0')">
+                            <span class="IconContainer">
+                                <img style="height: 45px;" src="static/img/icons/num1_kana.png">
+                            </span>
+                            <p class="text">Exam 1</p>
+                        </button>
+                        <button id="num2" class="bookmarkBtn" onclick="setQuizType('bank1')">
+                            <span class="IconContainer">
+                                <img style="height: 45px;" src="static/img/icons/num2_aili.png">
+                            </span>
+                            <p class="text">Exam 2</p>
+                        </button>
+                        <button id="num3" class="bookmarkBtn" onclick="setQuizType('bank2')">
+                            <span class="IconContainer">
+                                <img style="height: 45px;" src="static/img/icons/num3_makoto.png">
+                            </span>
+                            <p class="text">Exam 3</p>
+                        </button>
+                        <button id="num4" class="bookmarkBtn" onclick="setQuizType('bank3')">
+                            <span class="IconContainer">
+                                <img style="height: 45px;" src="static/img/icons/num4_shajin.png">
+                            </span>
+                            <p class="text">Exam 4</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- judgement card -->
+            <h3 class="text" id="judgement_title" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/judgement.png"> Judgement</h3>
+            <div id="judgement_card" class="card">
+                <div class="card_case">
+                    <img data-zoomable id="judgement_image" src="static/img/LLM-exam/judgement/Crab_Real.jpg" alt="">
+                </div>
+                <div class="user_card">
+                    <div class="quesion">
+                        <img data-zoomable src="static/img/icons/user.png" width="50px"><strong> User</strong>
+                        <span class="Qtext" id="jud_Qtext">"You have been shown one image, possibly generated by AI. <strong>Please identify whether this image is generated by AI or not</strong>."
+                        </span>
+                        <div class="interactive-image">
+                            <div id="jud-container">
+                                <p id="jud-prompt" x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif;">Click here to choose your answer:</p>
+                                <div class="button-bar">
+                                    <!-- Buttons to interact with the image and text -->
+                                    <button onclick="checkAnswer('judgement', 'correct')"> <img style="height: 35px; margin-top: -12%;" src="static/img/icons/correct.png"></button>
+                                    <button onclick="checkAnswer('judgement', 'incorrect')"> <img style="height: 35px; margin-top: -12%;" src="static/img/icons/error.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- selection card -->
+            <h3 class="text" id="selection_title" style="margin-top: 40px;"><img style="width: 50px" src="static/img/icons/selection.png"> Selection</h3>
+            <div id="selection_card" class="card">
+                <div class="card_case">
+                    <img data-zoomable id="selection_image1" src="static/img/LLM-exam/selection/dog_fake.jpg" alt="" style="margin-bottom: 5%;">
+                    <img data-zoomable id="selection_image2" src="static/img/LLM-exam/selection/dog_real.jpg" alt="">
+                </div>
+                <div class="user_card" >
+                    <div class="quesion">
+                        <img data-zoomable src="static/img/icons/user.png" width="50px"><strong> User</strong>
+                        <span class="Qtext" id="sel_Qtext">"You have been shown two different images. One of the images is not generated by AI. <strong>Which of the above images is most likely not generated by AI ?</strong>"
+                        </span>
+                        <div class="interactive-image">
+                            <div id="sel-container">
+                                <p id="sel-prompt" x="165" y="-12.5" text-anchor="left" style="font-weight: 700; font-size: 17px; font-family: sans-serif;">Click here to choose your answer:</p>
+                                <div class="button-bar">
+                                    <!-- Buttons to interact with the image and text -->
+                                    <button onclick="checkAnswer('selection', 'A')"> <img style="height: 40px; margin-top: -12%;" src="static/img/icons/A.png"></button>
+                                    <button onclick="checkAnswer('selection', 'B')"> <img style="height: 40px; margin-top: -12%;" src="static/img/icons/B.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+         <!-- Evaluation -->
+         <div id="evaluation" style="position: relative; margin-top: 20px; margin-bottom: 40px;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px"><img src="static/img/icons/evaluation.png" width="50px"> Evaluation</h2>
+            <div id="main-image">
+                <img src="static/img/lidar-map.png" alt="" style="z-index: 8000" data-zoomable>
+                <figcaption style="text-align: center">Figure. 2 The multimodal large model capability assessment analysis results</figcaption>
+            </div>
+            <br>
+            <div id="slider-img-table" class="slider-img-container">
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/Models_testResult.jpg">
+                    <figcaption id="caption" style="margin-bottom: 10px; text-align: center">Table.2 Multimodal evaluation of LMMs</figcaption>
+                </div>
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/Models_testResult_Text&Audio.jpg" >
+                    <figcaption id="caption" style="margin-bottom: 10px; text-align: center">Table.3 Left: Text evaluaion of LLMs ; <br> Right: Audio evaluation of Audio
+                        LMMs</figcaption>
+                </div>
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/Table3_diffModel-Abnormal.jpg" >
+                    <figcaption id="caption" style="margin-bottom: 10px; text-align: center">Table.4 Results of different models on the LOKI for Abormal Details Selection and Abnormal
+                    explanation questions</figcaption>
+                </div>
+                <div class="my-slides">
+                    <img data-zoomable src="static/img/Table4&Table5.jpg" >
+                    <figcaption id="caption" style="margin-bottom: 10px; text-align: center">Table.5 Left: Result decomposition across questions difficulty levels <br>
+                        Right:  LMMs’ performances under different prompting strategies for judgement tasks
+                    </figcaption>
+                </div>
+    
+                <a class="prev" onclick="plusSlides('slider-img-table', -1)">❮</a>
+                <a class="next" onclick="plusSlides('slider-img-table', 1)">❯</a>
+                
+                <figcaption id="caption" style="margin-bottom: 10px; text-align: center"></figcaption>
+        
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div id="conclusion" style="position: relative; margin-top: 20px; margin-bottom: 40px;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px"><img src="static/img/icons/conclusion.png" width="50px"> Conclusion</h2>
+            <p class="text">
+                In this project, we introduced LOKI, a multimodal benchmark designed to evaluate the performance of large multimodal models in detecting synthetic data across various modalities. We conducted a comprehensive study of LMMs’ performance on video, image, 3D, audio, text, and specialized subdomains, and we also analyzed LMMs’ ability to explain detailed anomalies in synthetic data. The experimental results indicate that LMMs have a certain level of competence in detecting synthetic
+                data and a preliminary ability to explain anomalies. However, LMMs require further development in specialized domains and underexplored modalities such as audio and 3D data. Additionally, their reasoning and comparative analysis capabilities need improvement. The introduction of LOKI marks a significant step forward in advancing explainable synthetic data detection in the context of the growing prevalence of synthetic content on the internet and in evaluating LMM capabilities in the pursuit of AGI. Moreover, the relationship between synthesis and detection is adversarial
+                yet mutually reinforcing; better and more interpretable synthetic detectors will further promote the development of AI synthesis technologies.
+            
+            </p>
+        </div>
+
+        </d-article>
+        <d-appendix>
+            <h3>BibTeX</h3>
+            <p class="bibtex">
+                <!-- @article{yang2024virl,<br>
+                &nbsp;&nbsp;title={{V-IRL: Grounding Virtual Intelligence in Real Life}},<br>
+                &nbsp;&nbsp;author={Yang, Jihan and Ding, Runyu and Brown, Ellis and Qi, Xiaojuan and Xie, Saining},<br>
+                &nbsp;&nbsp;year={2024},<br>
+                &nbsp;&nbsp;journal={arXiv preprint arXiv:2402.03310},<br>
+                } -->
+            </p>
+
+            <d-footnote-list></d-footnote-list>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+        
+        <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
+        <d-bibliography src="bibliography.bib"></d-bibliography>
+        <script src="./static/js/nav-bar.js"></script>
+        
+        <script type="text/javascript">
+            // changeContent('Place1');
+            // switchVideo('RX399', 'video1Container', 'video1Preview');
+            // switchVideo('UrbanPlanner', 'video1Container', 'video1Preview');
+            switchVideo('Tourist', 'video1Container', 'video1Preview', 'video-scenery');
+            // initPlayer(0);
+            let slideIndex = 1;
+            // slider image
+            showSlides("slider-img-3D", slideIndex);
+            showSlides("slider-img-image-animals", slideIndex);
+            showSlides("slider-img-image-person", slideIndex);
+            showSlides("slider-img-image-scenery", slideIndex);
+            showSlides("slider-img-image-object", slideIndex);
+            showSlides("slider-img-image-document", slideIndex);
+            showSlides("slider-img-image-medical", slideIndex);
+            showSlides("slider-img-image-satellite", slideIndex);
+            // slider text
+            showSlides("slider-text-ancient-literature", slideIndex);
+            showSlides("slider-text-speech", slideIndex);
+            showSlides("slider-text-modern-literature", slideIndex);
+            showSlides("slider-text-wiki", slideIndex);
+            showSlides("slider-text-philosophy", slideIndex);
+            showSlides("slider-text-paper", slideIndex);
+            showSlides("slider-text-news", slideIndex);
+            showSlides("slider-text-essay", slideIndex);
+            // slider table
+            showSlides("slider-img-table", slideIndex);
+            // auto play slider
+            setInterval(function() {
+            plusSlides('slider-img-3D', 1);
+            }, 10000); // 10000毫秒 = 10秒
+        </script>
+    </body>
+</html>
