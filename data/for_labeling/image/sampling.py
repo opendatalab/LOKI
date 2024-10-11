@@ -15,7 +15,7 @@ for data in data_list:
     elif data["metric"] == "multi-choice" and "fake_from_real" in data["question_type"]:
         mc_list.append(data)
 
-tf_list = tf_list[0::4]
+tf_list = tf_list[0::2]
 
 print(len(mc_list))
 print(len(tf_list))

@@ -1,0 +1,5 @@
+# make sure to switch to longva environment to evaluate longva
+# bash scripts/run_evals.sh "configs/models/longva_config.yaml" "configs/tasks/image/image_mc_test.yaml,configs/tasks/image/image_mc_val.yaml,configs/tasks/image/image_tf_test.yaml,configs/tasks/image/image_tf_val.yaml" INFO 2 1
+bash scripts/run_evals.sh "configs/models/longva_config.yaml" "configs/tasks/video/video_mc_test.yaml,configs/tasks/video/video_mc_val.yaml,configs/tasks/video/video_tf_test.yaml,configs/tasks/video/video_tf_val.yaml" INFO 2 1
+# bash scripts/run_evals.sh "configs/models/longva_config.yaml" "configs/tasks/text/text_mc.yaml,configs/tasks/text/text_tf.yaml" INFO 2 1
+# bash scripts/run_evals.sh "configs/models/longva_config.yaml" "configs/tasks/3D/3D_mc_test.yaml,configs/tasks/3D/3D_mc_val.yaml,configs/tasks/3D/3D_tf_test.yaml,configs/tasks/3D/3D_tf_val.yaml" INFO 2 1

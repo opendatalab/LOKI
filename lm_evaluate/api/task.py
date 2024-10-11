@@ -227,12 +227,21 @@ class Task(ABC):
 
         responses_with_doc_ids = list(zip(all_response,  doc_ids))
         
+        results = self.process_responses(docs, all_response, rank=model.rank)
+        
+        results_with_doc_ids = list(zip(results, doc_ids))
+        
         model.accelerator.wait_for_everyone()
+        
+        # maybe we should compute results on different gpus, and then aggregate them, this could be faster.
         
         if model.world_size > 1:
             gathered_responses_with_ids = None
+            gathered_results_with_ids = None
+            
             if model.rank == 0:
                 gathered_responses_with_ids = [None] * model.world_size
+                gathered_results_with_ids = [None] * model.world_size
             
             dist.gather_object(
                 responses_with_doc_ids, 
@@ -240,10 +249,21 @@ class Task(ABC):
                 dst=0
             )
             
+            dist.gather_object(
+                results_with_doc_ids,
+                object_gather_list=gathered_results_with_ids if model.rank == 0 else None,
+                dst=0
+            )
+            
             if model.rank == 0:
                 flattened_responses_with_ids = [item for sublist in gathered_responses_with_ids for item in sublist]
                 flattened_responses_with_ids.sort(key=lambda x: x[1])
                 flattened_responses = [response for response,  _ in flattened_responses_with_ids]
+                
+                flattened_results_with_ids = [item for sublist in gathered_results_with_ids for item in sublist]
+                flattened_results_with_ids.sort(key=lambda x: x[1])
+                flattened_results = [result for result,  _ in flattened_results_with_ids]
+                
             else:
                 flattened_responses = []
         else:
@@ -251,8 +271,7 @@ class Task(ABC):
 
         if model.rank == 0:
             if not predict_only:
-                results = self.process_responses(self.dataset, flattened_responses)
-                accuracies = self.aggregate_results(results)
+                accuracies = self.aggregate_results(flattened_results)
                 self.print_pretty_accuracy(accuracies)
             else:
                 results = {
@@ -267,6 +286,7 @@ class Task(ABC):
         model.accelerator.wait_for_everyone()
 
         return results, accuracies
+    
     
     
     def evaluate(
@@ -315,12 +335,19 @@ class Task(ABC):
         
         model.accelerator.wait_for_everyone()
         
+        responses_with_doc_ids = list(zip(responses, doc_ids))
+        
+        results = self.process_responses(docs, responses, rank=model.rank)
+        
+        results_with_doc_ids = list(zip(results, doc_ids))
+        
         if model.world_size > 1:
-            responses_with_doc_ids = list(zip(responses, doc_ids))
-            
+            model.accelerator.wait_for_everyone()
             gathered_responses_with_ids = None
             if model.rank == 0:
                 gathered_responses_with_ids = [None] * model.world_size
+                
+                gathered_results_with_ids = [None] * model.world_size
 
             dist.gather_object(
                 responses_with_doc_ids, 
@@ -328,30 +355,42 @@ class Task(ABC):
                 dst=0
                 )
             
+            dist.gather_object(
+                results_with_doc_ids,
+                object_gather_list=gathered_results_with_ids if model.rank == 0 else None,
+                dst=0
+            )
+            
             if model.rank == 0:
                 flattened_responses_with_ids = [item for sublist in gathered_responses_with_ids for item in sublist]
                 flattened_responses_with_ids.sort(key=lambda x: x[1])
                 flattened_responses = [response for response,  _ in flattened_responses_with_ids]
+                
+                flattened_results_with_ids = [item for sublist in gathered_results_with_ids for item in sublist]
+                flattened_results_with_ids.sort(key=lambda x: x[1])
+                flattened_results = [result for result,  _ in flattened_results_with_ids]
+                
             else:
                 flattened_responses = []
+                flattened_results = []
         else:
             flattened_responses = responses
+            flattened_results = results
 
         if model.rank == 0:
             if not predict_only:
-                results = self.process_responses(self.dataset, flattened_responses)
-                accuracies = self.aggregate_results(results)
+                accuracies = self.aggregate_results(flattened_results)
                 self.print_pretty_accuracy(accuracies)
             else:
-                results = {
+                flattened_results = {
                     "model": model.model_version.split("/")[-1],
                     "responses": flattened_responses
                 }
                 accuracies = {}
         else:
-            results = {}
+            flattened_results = {}
             accuracies = {}
         
         model.accelerator.wait_for_everyone()
         
-        return results, accuracies
+        return flattened_results, accuracies

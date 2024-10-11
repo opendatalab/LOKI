@@ -1,5 +1,5 @@
 task_type: synthbench-visual
 
 init_kwargs:
-  dataset_path: ./data/video/video_tf_test_0923.json
+  dataset_path: ./data/video/video_tf_test_0929.json
   task_name: video-tf-test

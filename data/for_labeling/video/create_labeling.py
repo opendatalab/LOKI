@@ -1,16 +1,16 @@
 import json
 from pathlib import Path
 
-tf_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-tf-all.json"
-mc_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-multi-choice-all.json"
+tf_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-tf-lumiere.json"
+# mc_sampled_data_path = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video-multi-choice-all.json"
 
 image_dir = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc"
 image_dir2 = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc_split"
 
-tf_file_path_txt = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/tf_file_path_all.txt"
+tf_file_path_txt = "/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/tf_file_path_lumiere.txt"
 
 tf_sampled_data = json.load(open(tf_sampled_data_path, "r"))
-mc_sampled_data = json.load(open(mc_sampled_data_path, "r"))
+# mc_sampled_data = json.load(open(mc_sampled_data_path, "r"))
 
 
 with open(tf_file_path_txt, "w") as f:
@@ -20,22 +20,22 @@ with open(tf_file_path_txt, "w") as f:
         f.write(str(relative_path) + "\n")
     
 
-mc_label_list = []
-for i, mc in enumerate(mc_sampled_data):
-    label_sample = {}
+# mc_label_list = []
+# for i, mc in enumerate(mc_sampled_data):
+#     label_sample = {}
     
-    image_paths = mc["video_path"]
+#     image_paths = mc["video_path"]
     
-    label_sample["name"] = str(i)
+#     label_sample["name"] = str(i)
     
-    label_sample["pathList"] = []
-    for image_path in image_paths:
-        if "zbc_split" not in image_path:
-            label_sample["pathList"].append(str(Path(image_path).relative_to(Path(image_dir))))
-        else:
-            label_sample["pathList"].append(str(Path(image_path).relative_to(Path(image_dir2))))
-    mc_label_list.append(label_sample)
+#     label_sample["pathList"] = []
+#     for image_path in image_paths:
+#         if "zbc_split" not in image_path:
+#             label_sample["pathList"].append(str(Path(image_path).relative_to(Path(image_dir))))
+#         else:
+#             label_sample["pathList"].append(str(Path(image_path).relative_to(Path(image_dir2))))
+#     mc_label_list.append(label_sample)
 
-with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video_specification_all.jsonl", "w") as file:
-    for data in mc_label_list:
-        file.write(json.dumps(data) + "\n")
+# with open("/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/video/video_specification_all.jsonl", "w") as file:
+#     for data in mc_label_list:
+#         file.write(json.dumps(data) + "\n")

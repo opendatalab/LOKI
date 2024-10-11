@@ -37,7 +37,7 @@ def main(args):
     eval_logger.add(sys.stdout, colorize=True, level=args.verbosity)
     eval_logger.info(f"Verbosity set to {args.verbosity}")
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
-    
+        
     if not os.path.exists(args.model_config_path):
         eval_logger.error(f"Model config path: {args.model_config_path} does not exist.")
     
@@ -50,10 +50,6 @@ def main(args):
     model_type = model_config["model_type"]
     task_type = task_config["task_type"]
     
-    if model_type not in MODEL_REGISTRY:
-        eval_logger.error(f"No model named {model_type} is found. Supported models: {MODEL_REGISTRY.keys()}")
-        sys.exit(-1)
-    
     if task_type not in TASK_REGISTRY:
         eval_logger.error(f"No task named {task_type} is found. Supported tasks: {TASK_REGISTRY.keys()}")
         sys.exit(-1)
@@ -61,32 +57,63 @@ def main(args):
     model_init_kwargs = model_config["init_kwargs"]
     task_init_kwargs = task_config["init_kwargs"]
     task = TASK_REGISTRY[task_type](**task_init_kwargs)
-
-    if not args.evaluate_from_predictions:
-        model = MODEL_REGISTRY[model_type](**model_init_kwargs)
-        model_name = model.model_version.split("/")[-1]
-        model_generate_kwargs = model_config["generate_kwargs"]
+    
+    if args.evaluate_random:
+        model_name = "random"
+        results, accuracies = task.evaluate_random()
         
-        # FIXME: This is a temporary hack for batching
-        if args.batch_size > 1:
-            results, accuracies = task.batch_evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
-        else:
-            results, accuracies = task.evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
+        accuracies['model_config'] = model_config
+        accuracies['task_config'] = task_config
+        
+        now = datetime.datetime.now()
+        datetime_str = now.strftime("%m%d_%H%M")
+        
+        task_name = task.task_name
+        file_dir = os.path.join(args.log_dir, f"{model_type}_{task_type}", datetime_str)
+        
+        os.makedirs(file_dir, exist_ok=True)
+        accuracy_file = os.path.join(file_dir, f"{model_name}_{task_name}_accuracy.json")
+        result_file = os.path.join(file_dir, f"{model_name}_{task_name}_result.json")
+        
+        task.log_accuracies(accuracies, accuracy_file)
+        task.log_results(results, result_file)
+        
+        return
     
     else:
-        prediction_json = json.load(open(args.prediction_file, 'r'))
-        responses = prediction_json["responses"]
-        model_name = prediction_json["model"]
-        results, accuracies = task.evaluate_from_predictions(responses)
+        
+        if model_type not in MODEL_REGISTRY:
+            eval_logger.error(f"No model named {model_type} is found. Supported models: {MODEL_REGISTRY.keys()}")
+            sys.exit(-1)
+        
+        if not args.evaluate_from_predictions:
+            model = MODEL_REGISTRY[model_type](**model_init_kwargs)
+            model_name = model.model_version.split("/")[-1]
+            model_generate_kwargs = model_config["generate_kwargs"]
+            
+            model.accelerator.wait_for_everyone()
+            
+            # FIXME: This is a temporary hack for batching
+            if args.batch_size > 1:
+                results, accuracies = task.batch_evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
+            else:
+                results, accuracies = task.evaluate(model, predict_only=args.predict_only, batch_size=args.batch_size, **model_generate_kwargs)
+        
+        else:
+            model = None
+            prediction_json = json.load(open(args.prediction_file, 'r'))
+            responses = prediction_json["responses"]
+            model_name = prediction_json["model"]
+            results, accuracies = task.evaluate_from_predictions(responses)
     
     accuracies['model_config'] = model_config
     accuracies['task_config'] = task_config
     
     # start logging
     
-    model.accelerator.wait_for_everyone()
     
-    if model.rank == 0:
+    
+    if model is None or model.rank == 0:
     # get log dir name
         now = datetime.datetime.now()
         datetime_str = now.strftime("%m%d_%H%M")
@@ -142,6 +169,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "--prediction_file",
         type=str,
+    )
+    parser.add_argument(
+        "--evaluate_random",
+        action="store_true"
     )
     
     args = parser.parse_args()

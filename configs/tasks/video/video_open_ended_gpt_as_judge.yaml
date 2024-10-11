@@ -1,0 +1,5 @@
+task_type: synthbench-visual
+
+init_kwargs:
+  dataset_path: ./data/video/video_open_ended_qa.json
+  task_name: video-gpt-as-judge

@@ -1,0 +1,13 @@
+model_type: llava-next
+
+init_kwargs:
+  model_version: lmms-lab/llava-next-interleave-qwen-7b
+  conv_template: qwen_2
+  model_name: llava_qwen
+  max_num_frames: 8
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

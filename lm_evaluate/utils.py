@@ -8,6 +8,8 @@ import pandas as pd
 from itertools import islice
 from collections import defaultdict
 
+from shutil import copy2
+
 
 def create_iterator(raw_iterator, rank, world_size, limit=None):
     """
@@ -109,7 +111,11 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir, datetime_cutoff: str 
                 with open(accuracy_file_path, 'r') as f:
                     accuracy_data = json.load(f)
                 
-                model_name = accuracy_data['model_config']['init_kwargs']['model_version']
+                try:
+                    model_name = accuracy_data['model_config']['init_kwargs']['model_version']
+                except Exception as e:
+                    model_name = "random"
+                    
                 task_name = accuracy_data['task_config']['init_kwargs']['task_name']
                 accuracy_for_table = {}
                 
@@ -121,8 +127,13 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir, datetime_cutoff: str 
                     existing_time, _ = task_accuracies[task_type][task_name][model_name]
                     if log_time > existing_time:
                         task_accuracies[task_type][task_name][model_name] = (log_time, accuracy_for_table)
+                        os.makedirs(os.path.join(result_dir, 'results'), exist_ok=True)
+                        copy2(os.path.join(root, file.replace('_accuracy.json', '_result.json')), os.path.join(result_dir, "results", file.replace('_accuracy.json', '_result.json')))
                 else:
                     task_accuracies[task_type][task_name][model_name] = (log_time, accuracy_for_table)
+                    os.makedirs(os.path.join(result_dir, 'results'), exist_ok=True)
+                    copy2(os.path.join(root, file.replace('_accuracy.json', '_result.json')), os.path.join(result_dir, "results", file.replace('_accuracy.json', '_result.json')))
+                
 
     for task_type, task_models in task_accuracies.items():
         for task_name, models in task_models.items():
@@ -142,7 +153,6 @@ def accuracies_to_tables_from_log_dir(log_dir, result_dir, datetime_cutoff: str 
             csv_filename = f"{task_type}_{task_name}_accuracies.csv"
             os.makedirs(os.path.join(result_dir, 'csv'), exist_ok=True)
             df.to_csv(os.path.join(result_dir, 'csv', csv_filename), index=False)
-            print(df)
             
             markdown_name = f"{task_type}_{task_name}_accuracies.md"
             markdown_table = df.to_markdown(index=False)

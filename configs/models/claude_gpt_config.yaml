@@ -3,10 +3,11 @@ model_type: gpt-4o
 init_kwargs:
   model_version: claude-3-5-sonnet-20240620
   max_num_frames: 8
-  api_url: https://api.claudeshop.top/v1/chat/completions 
+  api_url: https://api.claudeshop.top/v1/chat/completions
+  api_key: sk-zfsUvtOALY4YpXG4IRLGNrSRjSuMAtMWKLxV8UlMw7gEclli
 
 generate_kwargs:
   top_p: 1
   top_k: None
   temperature: 0
-  max_new_tokens: 1024
+  max_new_tokens: 256

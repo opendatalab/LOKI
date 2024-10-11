@@ -6,6 +6,6 @@ init_kwargs:
 
 generate_kwargs:
   top_p: 1
-  top_k: None
+  top_k: 0
   temperature: 0
   max_new_tokens: 1024

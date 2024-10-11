@@ -92,7 +92,6 @@ class Llama3Vision(LMM):
 
         self._tokenizer = self._processor.tokenizer
         
-        self._processor.chat_template = self.default_chat_template
 
         self._config = self._model.config
         self.model.eval()
@@ -247,18 +246,33 @@ class Llama3Vision(LMM):
         
         video_idx = 0
         
+        messages = [
+            {
+                "role": "user", 
+                "content": [
+                    {"type": "text", "text": "If I had to write a haiku for this one, it would be: "}
+                ]
+            }
+        ]
+        
         for context in contexts:
             if context == "<video>":
                 prompt += "<image>\n" * video_frames[video_idx]
+                for _ in range(video_frames[video_idx]):
+                    messages[0]['content'].append({"type": "image"})
                 video_idx += 1
             elif context == "<image>":
                 prompt += "<image>\n"
+                messages[0]['content'].append({"type": "image"})
             else:
                 prompt += "<|begin_of_text|>" + context
+                messages[0]['content'].append({"type": "text", "text": context})
         
         
         gen_kwargs = {"max_new_tokens": 1024}
         # Follow the idefics implementation:            
+        
+        prompt = self._processor.apply_chat_template(messages, add_generation_prompt=True)
         
         inputs = self._processor(images=images if len(images) > 0 else None, text=prompt, return_tensors="pt", truncation=True)
 

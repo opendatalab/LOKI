@@ -3,17 +3,20 @@ import os
 import shutil
 import uuid
 
-MODALITIES = ["audio", "image", "video", "3D"]
-PARENT_DIR = ["/mnt/hwfile/opendatalab/bigdata_rs/datasets/synthbench-audio/data/AudioDataset_wav", '/mnt/hwfile/opendatalab/bigdata_rs/datasets/FakeImage_dataset', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset']
-FILES_TARGET_DIR = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/boyue_for_all_labeling"
+# MODALITIES = ["audio", "image", "video", "3D"]
+# PARENT_DIR = ["/mnt/hwfile/opendatalab/bigdata_rs/datasets/synthbench-audio/data/AudioDataset_wav", '/mnt/hwfile/opendatalab/bigdata_rs/datasets/FakeImage_dataset', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc', '/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/3Dpair_dataset']
+MODALITIES = ["video"]
+PARENT_DIR = ['/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/VideoDataset_zbc']
+
+FILES_TARGET_DIR = "/mnt/hwfile/opendatalab/bigdata_rs/datasets/Synthbench/boyue_for_all_labeling_extra"
 
 os.makedirs(FILES_TARGET_DIR, exist_ok=True)
 
 for i, modality in enumerate(MODALITIES):
-    if i < 3:
-        continue
+    # if i < 3:
+    #     continue
     print(modality)
-    with open(os.path.join('/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/', modality, 'tf_file_path_all.txt'), 'r') as file:
+    with open(os.path.join('/mnt/petrelfs/zhoubaichuan/projects/synthbench/data/for_labeling/', modality, 'tf_file_path_lumiere.txt'), 'r') as file:
         os.makedirs(os.path.join(FILES_TARGET_DIR, modality), exist_ok=True)
         file_mappings = {}
         with open(os.path.join(FILES_TARGET_DIR, modality, "file_path_list.txt"), "w") as file_path_list:

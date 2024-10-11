@@ -1,0 +1,4 @@
+bash scripts/run_evals.sh "configs/models/llava_ov_72b_config.yaml,configs/models/qwen2_vl_72b_config.yaml" "configs/tasks/image/image_mc_test.yaml,configs/tasks/image/image_mc_val.yaml,configs/tasks/image/image_tf_test.yaml,configs/tasks/image/image_tf_val.yaml" INFO 1 1
+bash scripts/run_evals.sh "configs/models/llava_ov_72b_config.yaml,configs/models/qwen2_vl_72b_config.yaml" "configs/tasks/video/video_mc_test.yaml,configs/tasks/video/video_mc_val.yaml,configs/tasks/video/video_tf_test.yaml,configs/tasks/video/video_tf_val.yaml" INFO 1 1
+bash scripts/run_evals.sh "configs/models/llava_ov_72b_config.yaml,configs/models/qwen2_vl_72b_config.yaml" "configs/tasks/text/text_mc.yaml,configs/tasks/text/text_tf.yaml" INFO 1 1
+bash scripts/run_evals.sh "configs/models/llava_ov_72b_config.yaml,configs/models/qwen2_vl_72b_config.yaml" "configs/tasks/3D/3D_mc_test.yaml,configs/tasks/3D/3D_mc_val.yaml,configs/tasks/3D/3D_tf_test.yaml,configs/tasks/3D/3D_tf_val.yaml" INFO 1 1

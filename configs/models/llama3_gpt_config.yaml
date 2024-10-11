@@ -3,7 +3,8 @@ model_type: gpt-4o
 init_kwargs:
   model_version: llama-3.1-405b
   max_num_frames: 0
-  api_url: https://api.claudeshop.top/v1/chat/completions 
+  api_url: https://us.claudeshop.top/v1/chat/completions
+  api_key: sk-zfsUvtOALY4YpXG4IRLGNrSRjSuMAtMWKLxV8UlMw7gEclli
 
 generate_kwargs:
   top_p: 1
