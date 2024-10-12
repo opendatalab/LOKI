@@ -99,10 +99,10 @@
                     </div> -->
                     <p style="color: #FFF7D4">
                         <em><strong style="color: #ffe099">Authors:</strong></em>
-                        <a href="https://yejy53.github.io/" class="author-link SYSU-author AILAB-author" target="_blank">Junyan Ye <sup>1,2</sup></a>, 
-                        <a href="https://baichuanzhou.github.io/" class="author-link AILAB-author" target="_blank"> Baichuan Zhou <sup>2</sup></a>, 
-                        <a href="https://github.com/LongHZ140516" class="author-link SYSU-author" target="_blank"> Zilong Huang <sup>1</sup></a>, 
-                        <a href="" class="author-link CUHK-SZ-author" target="_blank"> Junan Zhang <sup>5</sup></a>, <br>
+                        <a href="https://yejy53.github.io/" class="author-link SYSU-author AILAB-author" target="_blank">Junyan Ye <sup>1,2*</sup></a>, 
+                        <a href="https://baichuanzhou.github.io/" class="author-link AILAB-author" target="_blank"> Baichuan Zhou <sup>2*</sup></a>, 
+                        <a href="https://github.com/LongHZ140516" class="author-link SYSU-author" target="_blank"> Zilong Huang <sup>1*</sup></a>, 
+                        <a href="" class="author-link CUHK-SZ-author" target="_blank"> Junan Zhang <sup>5*</sup></a>, <br>
                         <a href="https://beccabai.github.io/" class="author-link AILAB-author" target="_blank"> Tianyi Bai <sup>2</sup></a>, 
                         <a href="" class="author-link AILAB-author" target="_blank"> Hengrui Kang <sup>2</sup></a>, 
                         <a href="https://github.com/RedShallot" class="author-link SYSU-author" target="_blank"> Jun He <sup>1</sup></a>, 
@@ -112,8 +112,8 @@
                         <a href="https://drwuz.com/" class="author-link CUHK-SZ-author" target="_blank"> Zhizheng Wu <sup>5</sup></a>, 
                         <a href="https://ting-devin-han.github.io/Epingpages.github.io/" class="author-link SYSU-author" target="_blank"> Yiping Chen <sup>1</sup></a>, 
                         <a href="http://dahua.site/" class="author-link AILAB-author" target="_blank"> Dahua Lin <sup>2</sup></a>,
-                        <a href="https://conghui.github.io/" class="author-link SenseTime-author AILAB-author" target="_blank"> Conghui He <sup>2,3</sup></a>,
-                        <a href="https://liweijia.github.io/" class="author-link SYSU-author" target="_blank"> Weijia Li <sup>1</sup></a>
+                        <a href="https://conghui.github.io/" class="author-link SenseTime-author AILAB-author" target="_blank"> Conghui He <sup>2,3†</sup></a>,
+                        <a href="https://liweijia.github.io/" class="author-link SYSU-author" target="_blank"> Weijia Li <sup>1†</sup></a>
                     </p>
                     <p style="color: #FFF7D4">
                         <em><strong style="color: #ffe099">Affiliations:</strong></em>
@@ -122,6 +122,9 @@
                         <span id="SenseTime" class="affiliation" data-affiliation="SenseTime"><sup>3</sup>SenseTime Research</span>,
                         <span id="CUHK" class="affiliation" data-affiliation="CUHK"><sup>4</sup>The Chinese University of Hong Kong</span>,
                         <span id="CUHK-SZ" class="affiliation" data-affiliation="CUHK-SZ"><sup>5</sup>The Chinese University of Hong Kong (Shenzhen)</span>
+                    </p>
+                    <p style="color: #FFF7D4">
+                        * Equal Contribution, † Corresponding Authors
                     </p>
                     <div class="button-container">
                         <a href="" class="button paper-link" target="_blank">
@@ -142,7 +145,7 @@
                             </span>
                             <span>Dataset</span>
                         </a>
-                        <a href="" class="button" target="_blank">
+                        <a href="https://github.com/opendatalab/LOKI" class="button" target="_blank">
                             <span class="icon is-small">
                                 <i class="fab fa-github"></i>
                             </span>
@@ -271,20 +274,17 @@
             <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span>, 
             <span style="color:rgba(41, 208, 108, 1); font-weight: bold;">3D</span>, 
             <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span>,
-            <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>, while ensuring
-            paired real samples from the same domain. <br>
-            • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as professional <img style="height: 35px;" src="static/img/icons/satellite.png">statellite images, 
-            <img style="height: 35px;" src="static/img/icons/medical.png">medical images, <img style="height: 35px;" src="static/img/icons/philosophy.png">philosophical and
-            <img style="height: 35px;" src="static/img/icons/ancient-literature.png">ancient chinese text, as well as <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span> data like 
-            <img style="height: 35px;" src="static/img/icons/singing.png">singing voice and <img style="height: 35px;" src="static/img/icons/music.png">music. <br>
-            • <strong>Multi-level tasks:</strong> Our benchmark includes basic true/false labels for tasks such as <img style="height: 30px;" src="static/img/icons/judgement.png"> judgment
-            and <img style="height: 30px;" src="static/img/icons/selection.png"> multiple-choice questions. Additionally, it features fine-grained abnormality annotations for explanation-based questions, aimed at exploring the capabilities of large multimodal models (LMMs) in Transparent Defake detection. <br>
-            • <strong>Multimodal synthetic data evaluation framework:</strong> We propose a comprehensive multimodal
-            evaluation framework that supports the input of various data formats, including <span style="color:#ffb60dde; font-weight: bold;">video</span>, 
-            <span style="color:rgba(83, 164, 251, 1); font-weight: bold;">image</span>, 
-            <span style="color:rgb(166, 72, 255); font-weight: bold;">text</span>, 
-            <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>, and 
-            <span style="color:rgba(116, 116, 116, 0.765); font-weight: bold;">point cloud</span>, into mainstream multimodal models.
+            <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span>.<br>
+            • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as specialized <img style="height: 35px;" src="static/img/icons/satellite.png">statellite and 
+            <img style="height: 35px;" src="static/img/icons/medical.png">medical images; text like <img style="height: 35px;" src="static/img/icons/philosophy.png">philosophy and
+            <img style="height: 35px;" src="static/img/icons/ancient-literature.png">ancient chinese;  and <span style="color:rgb(255, 58, 58); font-weight: bold;">audio</span> data like 
+            <img style="height: 35px;" src="static/img/icons/singing.png">singing voice, <img style="height: 35px;" src="static/img/icons/audio2.png">environmental sound and <img style="height: 35px;" src="static/img/icons/music.png">music. <br>
+            • <strong>Multi-level tasks:</strong> LOKI includes basic ”Synthetic or Real” labels, suitable for fundamental
+            question settings <img style="height: 30px;" src="static/img/icons/judgement.png"> like true/false and <img style="height: 30px;" src="static/img/icons/selection.png"> multiple-choice questions. It also incorporates fine-grained
+            anomalies for inferential explanations, , enabling tasks like <img style="height: 30px;" src="static/img/icons/details-selection.png"> abnormal detail selection and <img style="height: 30px;" src="static/img/icons/explanation.png"> abnormal
+            explanation, to explore LMMs’ capabilities in explainable synthetic data detection.<br>
+            • <strong>Multimodal synthetic data evaluation framework:</strong>  We propose a comprehensive evaluation framework
+            that supports inputs of various data formats and over <strong>25</strong> mainstream multimodal models.
         </p>
         <!-- 摘要文字 -->
         <h2 class="text"><br>Abstract</h2>
