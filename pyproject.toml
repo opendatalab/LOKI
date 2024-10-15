@@ -1,0 +1,137 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[tomli]>=6.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lm_evaluate"
+version = "0.0.1"
+authors = [
+    { name = "Baichuan Zhou", email = "zhoubaichuan@pjlab.org.cn" },
+]
+description = "An evaluation framework for synthetic multimodal data detection"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+
+[project.urls]
+Homepage = "https://opendatalab.github.io/LOKI/"
+Repository = "https://github.com/opendatalab/LOKI"
+
+requires-python = ">=3.9"
+
+license = { text = "MIT" }
+
+
+dependencies = [
+    "accelerate>=0.29.1",
+    "black==24.1.0",
+    "isort==5.13.2",
+    "datasets==2.16.1",
+    "evaluate>=0.4.0",
+    "httpx==0.23.3",
+    "numexpr",
+    "numpy==1.26.4",
+    "peft>=0.2.0",
+    "pybind11>=2.6.2",
+    "pytablewriter",
+    "scikit-learn>=0.24.1",
+    "sqlitedict==2.1.0",
+    "torch>=2.1.0", # to enable sdpa mode for running 34B model on one 80GB GPU
+    "torchvision>=0.16.0",
+    "timm",
+    "einops",
+    "ftfy",
+    "openai",
+    "opencv-python-headless",
+    "av",
+    "hf_transfer",
+    "sentencepiece==0.1.99",
+    "yt-dlp",
+    "pycocoevalcap",
+    "tqdm-multiprocess",
+    "transformers>=4.39.2",
+    "transformers-stream-generator",
+    "zstandard",
+    "pillow",
+    "pyyaml",
+    "sympy",
+    "mpmath",
+    "Jinja2",
+    "openpyxl",
+    "loguru",
+    "hf_transfer",
+    "tenacity==8.3.0",
+    "tiktoken",
+    "pydantic",
+    "packaging",
+    "decord",
+    "zss",
+    "protobuf==3.20",
+]
+
+[project.optional-dependencies]
+
+metrics = [
+    "pywsd",
+    "spacy",
+    "anls",
+    "rouge",
+    "capture_metric",
+    "Levenshtein",
+]
+gemini = [
+    "google-generativeai",
+]
+
+qwen = [
+    "decord",
+    "qwen_vl_utils",
+]
+
+all = [
+    "gemini",
+    "reka",
+    "metrics",
+    "qwen",
+    "mmsearch"
+]
+
+[tool.setuptools.packages.find]
+include = ["lm_evaluate*"]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+    "logs*",
+]
+
+[tool.wheel]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "notebooks*",
+    "logs*",
+]
+
