@@ -1,7 +1,9 @@
 <h2 align="center"><img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/loki.png">$\LARGE\textbf{\textsf{{\color[rgb]{1.0, 0.7, 0.0}L}{\color[rgb]{1.0, 0.6, 0.0}O}{\color[rgb]{1.0, 0.5, 0.0}K}{\color[rgb]{1.0, 0.4, 0.0}I}}}{\color[rgb]{0,0,0}:}$ 
- A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models<h5 align="center">
+ A Comprehensive Synthetic Data Detection Benchmark using Large Mnultimodal Models</h2>
 
-
+<a href="https://arxiv.org/abs/2410.09732"><img src='https://img.shields.io/badge/arXiv-LOKI-red' alt='Paper PDF'></a>
+<a href='https://opendatalab.github.io/LOKI/'><img src='https://img.shields.io/badge/Project_Page-LOKI-green' alt='Project Page'></a>
+<a href='https://huggingface.co/papers/2410.09732'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow'></a>
 
 ## &#x1F389; News
 
