@@ -140,13 +140,6 @@ class Task(ABC):
     
     
     @abstractmethod
-    def process_responses(self, responses: list):
-        """
-            Return a result_dict for logging
-        """
-        pass
-    
-    @abstractmethod
     def aggregate_results(self, results: list):
         pass
     
@@ -287,6 +280,49 @@ class Task(ABC):
 
         return results, accuracies
     
+    
+    def process_responses(self, docs: list, responses: list, rank=0):
+        """
+        Process the LMM's responses.
+        1. Parse the response according to the doc
+        2. Select metric for the response
+        3. Compute accuracy
+        4. Return a result_dict, which contains information for logging
+
+        Args:
+            docs: the original dataset
+            responses: LMM's responses
+        """
+
+        results = []
+        
+        pbar = tqdm(total=len(docs), desc="Processing Results", disable=rank != 0)
+        
+        for response, doc in zip(responses, docs):
+            
+            target = self.doc_to_target(doc)
+            
+            parsed_response = self.parse_response(doc, response)
+            accuracy = self.metric(doc, parsed_response, target)
+            
+            
+            result = {
+                "parsed_response": parsed_response, "accuracy": accuracy, "contexts": self.doc_to_text(doc),
+                "response": response, "metric": doc["metric"], "target": target, "question_type": doc["question_type"],
+                "doc": doc
+            }
+            
+            if doc["modality"] != 'text-only':
+                if 'image_path' in doc:
+                    result["media_path"] = doc["image_path"]
+                elif 'video_path' in doc:
+                    result['media_path'] = doc['video_path']
+                elif 'point_path' in doc:
+                    result['media_path'] = doc['point_path']
+            results.append(result)
+            pbar.update(1)
+            
+        return results
     
     
     def evaluate(
