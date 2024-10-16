@@ -348,9 +348,11 @@ class Task(ABC):
             contexts = self.doc_to_text(doc)
             
             inputs = {"contexts": contexts}
-            if self.modality == 'image' or self.modality == 'video' or self.modality == '3D':
+            if self.task_modality == 'image' or self.task_modality == 'video' or self.task_modality == '3D':
                 visuals = self.doc_to_visual(doc)
                 inputs["visuals"] = visuals
+            else:
+                inputs["visuals"] = []
             
             inputs.update(model_kwargs)
             response = model.generate(**inputs)

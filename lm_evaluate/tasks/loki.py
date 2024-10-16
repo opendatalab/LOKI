@@ -154,7 +154,7 @@ class Loki(Task):
     
     
     @classmethod
-    def parse_multi_choice_response(response, all_choices, index2ans, doc):
+    def parse_multi_choice_response(self, response, all_choices, index2ans, doc):
         """
         Parse the prediction from the generated response.
         Return the predicted index e.g., A, B, C, D.
@@ -232,7 +232,7 @@ class Loki(Task):
     
     
     @classmethod
-    def parse_multi_choice_info(options):
+    def parse_multi_choice_info(self, options):
         """
         Given the list of options for multiple choice question
         Return the index2ans and all_choices
@@ -251,7 +251,7 @@ class Loki(Task):
         return index2ans, all_choices
     
     @classmethod
-    def parse_true_or_false(pred_ans):
+    def parse_true_or_false(self, pred_ans):
         """Brought from Otter Eval"""
         pred_ans = pred_ans.lower().strip().replace(".", "")
         pred_label = None
@@ -276,7 +276,7 @@ class Loki(Task):
     
     
     @classmethod
-    def eval_multi_choice(gold_i, pred_i):
+    def eval_multi_choice(self, gold_i, pred_i):
         """
         Evaluate a multiple choice instance.
         https://github.com/MMMU-Benchmark/MMMU/blob/51ce7f3e829c16bb44bc5445782686b4c3508794/eval/eval_utils.py#L175
@@ -295,7 +295,7 @@ class Loki(Task):
     
     
     @classmethod
-    def eval_open(gold_i, pred_i):
+    def eval_open(self, gold_i, pred_i):
         """
         Evaluate an open question instance
         https://github.com/MMMU-Benchmark/MMMU/blob/51ce7f3e829c16bb44bc5445782686b4c3508794/eval/eval_utils.py#L191
@@ -465,8 +465,8 @@ class Loki(Task):
         
         circular_results = []
         for result in results:
-            question_type = result['question_type']
-            metric = result['metric']
+            question_type = result['doc']['question_type']
+            metric = result['doc']['metric']
             
             if "model-as-judge" in metric:
                 result_accuracy = result['accuracy']
