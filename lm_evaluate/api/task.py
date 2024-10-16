@@ -21,15 +21,12 @@ class Task(ABC):
     """
         Abstract implementation of LMM's Task.
     """
-    supported_modalities = []
     def __init__(
         self,
         task_name: str,
+        task_modality: str,
         dataset_path: str,
         dataset_name: str = None,
-        split: str = 'test',
-        num_shot: int = 0,
-        batch_size: int = 1,
     ):
         """
         Args:
@@ -44,9 +41,7 @@ class Task(ABC):
         self.task_name = task_name
         self.dataset_path = dataset_path
         self.dataset_name = dataset_name
-        self.split = split
-        self.num_shot = num_shot
-        self.batch_size = batch_size
+        self.task_modality = task_modality
         
         self.dataset = self.load_dataset()
     
@@ -108,6 +103,7 @@ class Task(ABC):
         """
         pass
     
+    
     def build_docs(self, limit=None, rank=None, world_size=None) -> None:
         
         eval_logger.info(f"Building docs for task {self.task_name} on rank {rank}")
@@ -166,6 +162,46 @@ class Task(ABC):
         self.print_pretty_accuracy(accuracies)
         
         return results, accuracies
+    
+    
+    def process_responses(self, docs: list, responses: list, rank=0):
+        """
+        Process the LMM's responses.
+        1. Parse the response according to the doc
+        2. Select metric for the response
+        3. Compute accuracy
+        4. Return a result_dict, which contains information for logging
+
+        Args:
+            docs: the original dataset
+            responses: LMM's responses
+        """
+
+        results = []
+        
+        pbar = tqdm(total=len(docs), desc="Processing Results", disable=rank != 0)
+        
+        for response, doc in zip(responses, docs):
+            
+            target = self.doc_to_target(doc)
+            
+            parsed_response = self.parse_response(doc, response)
+            accuracy = self.metric(doc, parsed_response, target)
+            
+            
+            result = {
+                "parsed_response": parsed_response, 
+                "accuracy": accuracy, 
+                "contexts": self.doc_to_text(doc),
+                "response": response, 
+                "target": target, 
+                "doc": doc
+            }
+            
+            results.append(result)
+            pbar.update(1)
+            
+        return results
     
     
     def batch_evaluate(
@@ -281,50 +317,6 @@ class Task(ABC):
         return results, accuracies
     
     
-    def process_responses(self, docs: list, responses: list, rank=0):
-        """
-        Process the LMM's responses.
-        1. Parse the response according to the doc
-        2. Select metric for the response
-        3. Compute accuracy
-        4. Return a result_dict, which contains information for logging
-
-        Args:
-            docs: the original dataset
-            responses: LMM's responses
-        """
-
-        results = []
-        
-        pbar = tqdm(total=len(docs), desc="Processing Results", disable=rank != 0)
-        
-        for response, doc in zip(responses, docs):
-            
-            target = self.doc_to_target(doc)
-            
-            parsed_response = self.parse_response(doc, response)
-            accuracy = self.metric(doc, parsed_response, target)
-            
-            
-            result = {
-                "parsed_response": parsed_response, "accuracy": accuracy, "contexts": self.doc_to_text(doc),
-                "response": response, "metric": doc["metric"], "target": target, "question_type": doc["question_type"],
-                "doc": doc
-            }
-            
-            if doc["modality"] != 'text-only':
-                if 'image_path' in doc:
-                    result["media_path"] = doc["image_path"]
-                elif 'video_path' in doc:
-                    result['media_path'] = doc['video_path']
-                elif 'point_path' in doc:
-                    result['media_path'] = doc['point_path']
-            results.append(result)
-            pbar.update(1)
-            
-        return results
-    
-    
     def evaluate(
         self, 
         model: LMM,
@@ -354,14 +346,14 @@ class Task(ABC):
         doc_ids = []
         for doc in docs:
             contexts = self.doc_to_text(doc)
-            visuals = self.doc_to_visual(doc)
-            if "text-only" in model.supported_modalities and len(model.supported_modalities) == 1:
-                visuals = []
-            response = model.generate(
-                visuals=visuals,
-                contexts=contexts,
-                **model_kwargs
-            )
+            
+            inputs = {"contexts": contexts}
+            if self.modality == 'image' or self.modality == 'video' or self.modality == '3D':
+                visuals = self.doc_to_visual(doc)
+                inputs["visuals"] = visuals
+            
+            inputs.update(model_kwargs)
+            response = model.generate(**inputs)
             
             doc_ids.append(doc["doc_id"])
             eval_logger.debug(f"Model response: {response}")

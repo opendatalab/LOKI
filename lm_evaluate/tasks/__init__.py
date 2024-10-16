@@ -1,1 +1,1 @@
-from lm_evaluate.tasks.synthbench import Loki
+from lm_evaluate.tasks.loki import Loki
