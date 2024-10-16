@@ -66,7 +66,7 @@ def init_model(model_path, torch_dtype):
 
 @register_model("point-llm")
 class PointLLM(LMM):
-    supported_modalities = ["point-text", "text-only"]
+    supported_modalities = ['point', 'text']
     support_batching = True
     def __init__(
         self,
@@ -180,15 +180,15 @@ class PointLLM(LMM):
     
     def generate(
         self, 
-        visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
+        point_reps,
         contexts: str,
         **kwargs
     ) -> str:
         """
-            Call pointllm for response with visuals and contexts. Visuals can be a list of strings(representing video paths), or a list of PIL.Image.Image or a combination of both. Returns a piece of response text.
+            Call pointllm for response with point_reps and contexts. Visuals can be a list of strings(representing video paths), or a list of PIL.Image.Image or a combination of both. Returns a piece of response text.
             
             Args:
-                visuals: Media objects. Visuals can be one image, one video path, or a list of them. 
+                point_reps: Media objects. Visuals can be one image, one video path, or a list of them. 
                 contexts: Prompt text.
                 kwargs: Generation kwargs. Currently we only support greedy decoding. # TODO: Support diverse decoding strategy.
             Return:
@@ -196,11 +196,11 @@ class PointLLM(LMM):
         """
         
         # two scenarios:
-        # visuals is None
-        # if visuals is not None, it must be a numpy array of shape (N, 6)
-        if visuals is not None:
-            assert len(visuals) == 1
-            point_clouds = torch.from_numpy(visuals[0]).unsqueeze_(0).to(self.dtype).cuda()
+        # point_reps is None
+        # if point_reps is not None, it must be a numpy array of shape (N, 6)
+        if point_reps is not None:
+            assert len(point_reps) == 1
+            point_clouds = torch.from_numpy(point_reps[0]).unsqueeze_(0).to(self.dtype).cuda()
             eval_logger.debug(point_clouds.size())
         
         if self.mm_use_point_start_end:

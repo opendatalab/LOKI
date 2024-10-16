@@ -36,7 +36,7 @@ if version.parse(transformers.__version__) < version.parse("4.43.0"):
 
 @register_model("qwen2-vl")
 class Qwen2VL(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     support_batching = True
     def __init__(
         self,

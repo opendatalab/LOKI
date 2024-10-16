@@ -42,7 +42,7 @@ NUM_SECONDS_TO_SLEEP = 30
 
 @register_model("mistral-api")
 class MistralAPI(LMM):
-    supported_modalities = ["text-only"]
+    supported_modalities = ['text']
     def __init__(
         self,
         model_version: str = "mistral-large",

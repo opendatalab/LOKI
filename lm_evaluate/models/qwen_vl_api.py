@@ -41,7 +41,7 @@ NUM_SECONDS_TO_SLEEP = 30
 
 @register_model("qwen-vl-api")
 class QwenVLAPI(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "qwen-vl-max-0809",
@@ -59,7 +59,7 @@ class QwenVLAPI(LMM):
     
     def prepare_model(self):
         if "vl" not in self.model_version:
-            self.supported_modalities = ["text_only"]
+            self.supported_modalities = ["text"]
             
         self.prepared = True
         eval_logger.info(f"Qwen-VL-API activated. API_URL: {self.api_url}. MODEL_VERSION: {self.model_version}")

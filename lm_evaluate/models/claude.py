@@ -35,7 +35,7 @@ NUM_SECONDS_TO_SLEEP = 30
 
 @register_model("claude")
 class Claude(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "claude-3-5-sonnet-20240620",

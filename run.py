@@ -6,7 +6,6 @@ import argparse
 import sys
 
 from loguru import logger as eval_logger
-from tqdm import tqdm
 
 from lm_evaluate.models import *
 from lm_evaluate.tasks import *
@@ -15,7 +14,7 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
 
 """
     TODO: Set verbosity -- DONE
-    TODO: Allow multi-gpu inference
+    TODO: Allow multi-gpu inference -- DONE
     TODO: More intricate evaluation results, i.e., we should print a pretty table at the end. -- DONE
     TODO: Add more metrics for synthbench. We need to calculate which generate model the LMM can predict correctly the most. -- DONE
     TODO: Add LLaVA-NeXT-Video -- DONE
@@ -23,10 +22,12 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
     TODO: Add VILA -- DONE
     TODO: Add internvl2 -- DONE
     TODO: Add MPlug-Owl3 -- DONE
-    TODO: Add mistral api
+    TODO: Add mistral api -- DONE
     TODO: Add datetime to log file -- DONE
     TODO: Add generation config for each model
     TODO: Rewrite config logic -- DONE
+    TODO: Aggregate batch_generate and generate
+    TODO: Split LOKI into subtasks
 """
 
 
@@ -92,6 +93,10 @@ def main(args):
             model_generate_kwargs = model_config["generate_kwargs"]
             
             model.accelerator.wait_for_everyone()
+            
+            if task.task_modality not in model.supported_modalities:
+                eval_logger.error(f"Task: {task.task_name} is in {task.task_modality}. But Model: {model.model_version} only supports: {model.supported_modalities}.")
+                sys.exit(-1)
             
             # FIXME: This is a temporary hack for batching
             if args.batch_size > 1:
