@@ -1,5 +1,5 @@
 <div align="center">
-<h2 align="center"><img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/loki.png"> $\LARGE\textbf{\textsf{{\color[rgb]{1.0, 0.7, 0.0}L}{\color[rgb]{1.0, 0.6, 0.0}O}{\color[rgb]{1.0, 0.5, 0.0}K}{\color[rgb]{1.0, 0.4, 0.0}I}}}{\color[rgb]{0,0,0}}$ 
+<h2 align="center"><img style="height: 40px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/loki.png"> $\LARGE\textbf{\textsf{{\color[rgb]{1.0, 0.7, 0.0}L}{\color[rgb]{1.0, 0.6, 0.0}O}{\color[rgb]{1.0, 0.5, 0.0}K}{\color[rgb]{1.0, 0.4, 0.0}I}}}{\color[rgb]{0,0,0}}$ 
  <br>A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models</h2>
 
 <a href="https://arxiv.org/abs/2410.09732" target="_blank"><img src="https://img.shields.io/badge/arXiv-LOKI-red?style=badge&logo=arXiv" alt="Paper PDF" height="25"></a>
