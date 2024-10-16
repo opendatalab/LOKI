@@ -55,7 +55,7 @@ def read_video_pyav(container, indices):
 
 @register_model("llava-next-video-hf")
 class LLaVANeXTVideoHF(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "llava-hf/LLaVA-NeXT-Video-7B-hf",

@@ -32,7 +32,7 @@ DEFAULT_IMAGE_TOKEN = "<image>"
 
 @register_model("idefics")
 class Idefics(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "HuggingFaceM4/idefics2-8b",

@@ -45,7 +45,7 @@ NUM_SECONDS_TO_SLEEP = 30
 
 @register_model("gemini")
 class Gemini(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "gemini-1.5-flash-latest",

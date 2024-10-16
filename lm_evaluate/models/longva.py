@@ -34,7 +34,7 @@ except Exception as e:
 
 @register_model("longva")
 class LongVA(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "lmms-lab/LongVA-7B",

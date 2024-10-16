@@ -34,7 +34,7 @@ except Exception as e:
 
 @register_model("llava-next")
 class LLaVANeXT(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     support_batching = True
     def __init__(
         self,

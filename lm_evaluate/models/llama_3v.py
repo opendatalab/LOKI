@@ -32,7 +32,7 @@ DEFAULT_IMAGE_TOKEN = "<image>"
 
 @register_model("llama3-vision")
 class Llama3Vision(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "meta-llama/Llama-3.2-11B-Vision",

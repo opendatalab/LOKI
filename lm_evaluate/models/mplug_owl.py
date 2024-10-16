@@ -23,7 +23,7 @@ from PIL import Image
 
 @register_model("mplug-owl")
 class MPlugOwl(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "mPLUG/mPLUG-Owl3-7B-240728",

@@ -40,7 +40,7 @@ DEFAULT_IMAGE_TOKEN = "<image>"
 
 @register_model("mantis")
 class Mantis(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "TIGER-Lab/Mantis-8B-Idefics2",

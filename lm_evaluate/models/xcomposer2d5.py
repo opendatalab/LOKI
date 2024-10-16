@@ -24,7 +24,7 @@ from PIL import Image
 
 @register_model("xcomposer-2d5")
 class XComposer2D5(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "internlm/internlm-xcomposer2d5-7b",

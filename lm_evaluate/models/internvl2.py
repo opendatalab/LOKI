@@ -165,7 +165,7 @@ def split_model(model_name):
 
 @register_model("internvl2")
 class InternVL2(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "OpenGVLab/InternVL2-8B",

@@ -35,7 +35,7 @@ except Exception as e:
 
 @register_model("vila")
 class VILA(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "Efficient-Large-Model/VILA1.5-13b",

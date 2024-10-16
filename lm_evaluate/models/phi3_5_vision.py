@@ -29,7 +29,7 @@ if version.parse(transformers.__version__) < version.parse("4.43.0"):
 
 @register_model("phi-3.5-vision")
 class Phi3_5Vision(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "microsoft/Phi-3.5-vision-instruct",

@@ -27,7 +27,7 @@ from PIL import Image
 
 @register_model("minicpm-v2.6")
 class MiniCPM(LMM):
-    supported_modalities = ["video-text", "image-text", "text-only"]
+    supported_modalities = ["video", "image", "text"]
     def __init__(
         self,
         model_version: str = "openbmb/MiniCPM-V-2_6",
