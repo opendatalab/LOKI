@@ -22,16 +22,8 @@ def create_iterator(raw_iterator, rank, world_size, limit=None):
 
 def make_table(result_dict, all_headers=["Type", "Num", "Accuracy"]):
     """Generate table of results."""
-    """
-    for subset, subset_result in evaluation_result.items():
-        printable_results[subset] = {
-            "num": int(subset_result["num_example"]),
-            "acc": round(subset_result["acc"], 5),
-        }
-    """
-    from pytablewriter import MarkdownTableWriter, LatexTableWriter
-
     
+    from pytablewriter import MarkdownTableWriter, LatexTableWriter
 
     md_writer = MarkdownTableWriter()
     latex_writer = LatexTableWriter()

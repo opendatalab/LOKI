@@ -76,7 +76,7 @@ def parse_options(options):
     return choices_str
 
 
-TRUE_OR_FALSE_POST_PROMPT = "Answer with strictly Yes or No."
+TRUE_OR_FALSE_POST_PROMPT = "Answer with yes or no."
 MULTI_CHOICE_POST_PROMPT = "Answer with the option letter."
 
 
@@ -265,7 +265,7 @@ class Loki(Task):
             else:
                 pred_label = "other"
         else:
-            prefix_pred_ans = pred_ans
+            prefix_pred_ans = pred_ans[:4]
             if "yes" in prefix_pred_ans:
                 pred_label = "yes"
             elif "no" in prefix_pred_ans:
@@ -452,6 +452,67 @@ class Loki(Task):
         json.dump(results, open(log_file, 'w'), indent=4, ensure_ascii=False)
         
         
+    # def aggregate_results(self, results: list):
+    #     """
+    #     We calculate accuracy at two levels: Per metric accuracy and Per question type accuracy
+    #     """
+    #     per_metric_accuracy = defaultdict(list)
+    #     per_question_type_accuracy = defaultdict(list)
+        
+    #     accuracy = []
+        
+    #     pbar = tqdm(total=len(self.dataset), desc="Aggregating Results")
+        
+    #     circular_results = []
+    #     for result in results:
+    #         question_type = result['doc']['question_type']
+    #         metric = result['doc']['metric']
+            
+    #         if "model-as-judge" in metric:
+    #             result_accuracy = result['accuracy']
+    #             for key in result_accuracy:
+    #                 per_metric_accuracy[key].append(result_accuracy[key]['score'])
+    #             complete_score = sum([result_accuracy[key]['score'] for key in result_accuracy.keys()])
+    #             accuracy.append(complete_score)
+    #         else:            
+    #             per_metric_accuracy[metric].append(result['accuracy'])
+    #             per_question_type_accuracy[question_type].append(result['accuracy'])
+    #             accuracy.append(result['accuracy'])
+            
+    #         if "circular_marker" in result["doc"].keys():
+    #             circular_results.append(result)
+                
+    #         pbar.update(1)
+        
+    #     if len(circular_results) > 0:
+    #         eval_logger.info(f"Performing circular eval: {self.task_name}")
+            
+    #         circular_table = defaultdict(list)
+            
+    #         # log circular results
+    #         for result in circular_results:
+    #             result_accuracy = result["accuracy"]
+    #             marker = result["doc"]["circular_marker"]
+                
+    #             circular_table[marker].append(result_accuracy)
+            
+    #         # compute circular accuracy
+    #         for key, value in circular_table.items():
+    #             question_type = "_".join(key.split("_")[:-1]) + "_circular"
+    #             per_question_type_accuracy[question_type].append(sum(value) == len(value))
+        
+    #     for metric in per_metric_accuracy.keys():
+    #         per_metric_accuracy[metric] = {'accuracy': sum(per_metric_accuracy[metric]) / len(per_metric_accuracy[metric]), 'num': len(per_metric_accuracy[metric])}
+        
+    #     for question_type in per_question_type_accuracy.keys():
+    #         per_question_type_accuracy[question_type] = {'accuracy': sum(per_question_type_accuracy[question_type]) / len(per_question_type_accuracy[question_type]), 'num': len(per_question_type_accuracy[question_type])}
+            
+    #     return {
+    #         "total_accuracy": {"accuracy": sum(accuracy) / len(accuracy), "num": len(accuracy)}, 
+    #         "per_metric_accuracy": per_metric_accuracy, 
+    #         "per_question_type_accuracy": per_question_type_accuracy
+    #     }
+        
     def aggregate_results(self, results: list):
         """
         We calculate accuracy at two levels: Per metric accuracy and Per question type accuracy
@@ -461,12 +522,15 @@ class Loki(Task):
         
         accuracy = []
         
+        fake_type_accuracy = defaultdict(list)
+        real_type_accuracy = defaultdict(list)
+        
         pbar = tqdm(total=len(self.dataset), desc="Aggregating Results")
         
-        circular_results = []
         for result in results:
             question_type = result['doc']['question_type']
             metric = result['doc']['metric']
+            modality = result['doc']['modality']
             
             if "model-as-judge" in metric:
                 result_accuracy = result['accuracy']
@@ -474,43 +538,116 @@ class Loki(Task):
                     per_metric_accuracy[key].append(result_accuracy[key]['score'])
                 complete_score = sum([result_accuracy[key]['score'] for key in result_accuracy.keys()])
                 accuracy.append(complete_score)
+            
+            elif '_tf_' in question_type:
+                result_accuracy = result['accuracy']
+                
+                if 'fake_ask' in question_type:
+                    # it is a question about fake stuff
+                    fake_type = question_type.split('_')[-1] if modality != 'text-only' else question_type.split('_')[-2]
+                    fake_type_accuracy[fake_type].append(result_accuracy)
+                elif 'real_ask' in question_type:
+                    real_type = question_type.split("_")[-1]
+                    real_type_accuracy[real_type].append(result_accuracy)
+                # else:
+                #     print(question_type)
+            
+            elif '_mc_' in question_type:
+                result_accuracy = result['accuracy']
+                
+                if 'fake_from' in question_type:
+                    # it is a question about fake stuff
+                    fake_type = question_type.split('_')[-1]
+                    fake_type_accuracy[fake_type].append(result_accuracy)
+                
+                
+                if "real_from" in question_type:
+                    real_type = question_type.split("_")[-1]
+                    real_type_accuracy[real_type].append(result_accuracy)
+                
             else:            
                 per_metric_accuracy[metric].append(result['accuracy'])
                 per_question_type_accuracy[question_type].append(result['accuracy'])
                 accuracy.append(result['accuracy'])
-            
-            if "circular_marker" in result["doc"].keys():
-                circular_results.append(result)
                 
             pbar.update(1)
         
-        if len(circular_results) > 0:
-            eval_logger.info(f"Performing circular eval: {self.task_name}")
-            
-            circular_table = defaultdict(list)
-            
-            # log circular results
-            for result in circular_results:
-                result_accuracy = result["accuracy"]
-                marker = result["doc"]["circular_marker"]
+        
+        # 3D real_accuracy has only one key: real
+        
+        if len(real_type_accuracy.keys()) > 0:
+            if len(real_type_accuracy.keys()) == 1:
+                real_type_key = list(real_type_accuracy.keys())[0]
+                real_accuracy = sum(real_type_accuracy[real_type_key]) / len(real_type_accuracy[real_type_key])
+                total_real_num = len(real_type_accuracy[real_type_key])
                 
-                circular_table[marker].append(result_accuracy)
+                total_accuracy = 0
+                total_fake_num = 0
+                
+                for key, value in fake_type_accuracy.items():
+                    fake_accuracy = sum(value) / len(value)
+                    fake_num = len(value) 
+                    
+                    per_metric_accuracy[key] = {'accuracy': (fake_accuracy + real_accuracy) / 2, f'num': fake_num}
+                    
+                    total_accuracy += fake_num * (fake_accuracy + real_accuracy) / 2
+                    total_fake_num += fake_num
+                    
             
-            # compute circular accuracy
-            for key, value in circular_table.items():
-                question_type = "_".join(key.split("_")[:-1]) + "_circular"
-                per_question_type_accuracy[question_type].append(sum(value) == len(value))
+                total_accuracy /= total_fake_num
+                total_num = total_real_num + total_fake_num
+                
+            
+            else:
+                total_real_num = 0
+                total_fake_num = 0
+                
+                total_accuracy = 0
+                
+                for fake_key, fake_value in fake_type_accuracy.items():
+                    
+                    eval_logger.info(f"Type: {fake_key}")
+                    
+                    
+                    
+                    fake_accuracy = sum(fake_value) / len(fake_value)
+                    fake_num = len(fake_value)
+                    
+                    if fake_key not in real_type_accuracy.keys():
+                        eval_logger.info(f"Type: {fake_key} has no real data")
+                        real_num = 0
+                        real_accuracy = fake_accuracy
+                    
+                    else:
+                        real_value = real_type_accuracy[fake_key]
+
+                        real_accuracy = sum(real_value) / len(real_value) 
+                        real_num = len(real_value)
+                    
+                    eval_logger.info(f"Real Num: {real_num}")
+                    eval_logger.info(f"Fake Num: {fake_num}")
+                    
+                    eval_logger.info(f"Real Acc: {real_accuracy}")
+                    eval_logger.info(f"Fake Acc: {fake_accuracy}")
+                    
+                    total_real_num += real_num
+                    total_fake_num += fake_num
+                    
+                    per_metric_accuracy[fake_key] = {'accuracy': (fake_accuracy + real_accuracy) / 2, f'num': fake_num + real_num}
+                    
+                    total_accuracy += fake_num * (fake_accuracy + real_accuracy) / 2
+                    
+                total_accuracy /= total_fake_num
+                total_num = total_real_num + total_fake_num
+                
+            total_accuracy_dict = {"accuracy": total_accuracy, "num": total_num}
         
-        for metric in per_metric_accuracy.keys():
-            per_metric_accuracy[metric] = {'accuracy': sum(per_metric_accuracy[metric]) / len(per_metric_accuracy[metric]), 'num': len(per_metric_accuracy[metric])}
-        
-        for question_type in per_question_type_accuracy.keys():
-            per_question_type_accuracy[question_type] = {'accuracy': sum(per_question_type_accuracy[question_type]) / len(per_question_type_accuracy[question_type]), 'num': len(per_question_type_accuracy[question_type])}
+        else:
+            total_accuracy_dict = {"accuracy": sum(accuracy) / len(accuracy), "num": len(accuracy)}
             
         return {
-            "total_accuracy": {"accuracy": sum(accuracy) / len(accuracy), "num": len(accuracy)}, 
-            "per_metric_accuracy": per_metric_accuracy, 
-            "per_question_type_accuracy": per_question_type_accuracy
+            "total_accuracy": total_accuracy_dict, 
+            "per_metric_accuracy": per_metric_accuracy
         }
     
     def print_pretty_accuracy(self, accuracies):
