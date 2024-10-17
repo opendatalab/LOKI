@@ -11,3 +11,5 @@ tools/
 /*.egg-info
 /configs
 /clean_data
+/media_data
+requirements.txt
