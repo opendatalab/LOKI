@@ -93,6 +93,9 @@ For example, to evaluate Phi-3.5-Vision model on the LOKI's image judgement task
 accelerate launch  --num_processes=4 --main_process_port=12005 run.py --model_config_path configs/models/phi_3.5_vision_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1 
 ```
 
+## Acknowledgement
+
+Some of the design philosophy of our framework is adopted from  [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval).
 
 
 ## Citations

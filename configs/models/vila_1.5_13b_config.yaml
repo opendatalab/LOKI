@@ -1,0 +1,12 @@
+model_type: vila
+
+init_kwargs:
+  model_version: Efficient-Large-Model/VILA1.5-13b
+  max_num_frames: 8
+  conv_template: v1
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

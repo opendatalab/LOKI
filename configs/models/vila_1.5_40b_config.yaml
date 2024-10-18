@@ -1,0 +1,13 @@
+model_type: vila
+
+init_kwargs:
+  model_version: Efficient-Large-Model/VILA1.5-40b
+  max_num_frames: 8
+  conv_template: hermes-2
+  device_map: auto
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

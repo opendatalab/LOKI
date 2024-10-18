@@ -1,0 +1,6 @@
+task_type: loki
+
+init_kwargs:
+  dataset_path: data_json/video/multi_choice.json
+  task_name: loki-video-mc
+  task_modality: video

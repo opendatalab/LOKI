@@ -1,0 +1,6 @@
+task_type: loki
+
+init_kwargs:
+  dataset_path: data_json/text/true_or_false.json
+  task_name: loki-text-tf
+  task_modality: text

@@ -1,0 +1,6 @@
+task_type: loki
+
+init_kwargs:
+  dataset_path: data_json/image/true_or_false.json
+  task_name: loki-image-true-or-false
+  task_modality: image

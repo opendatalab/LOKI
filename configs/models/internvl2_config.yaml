@@ -1,0 +1,11 @@
+model_type: internvl2
+
+init_kwargs:
+  model_version: OpenGVLab/InternVL2-8B
+  max_num_frames: 8
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 1024

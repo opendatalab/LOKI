@@ -1,0 +1,6 @@
+task_type: loki
+
+init_kwargs:
+  dataset_path: data_json/video/true_or_false.json
+  task_name: loki-video-tf
+  task_modality: video

@@ -1,0 +1,6 @@
+task_type: loki
+
+init_kwargs:
+  dataset_path: data_json/3D/true_or_false.json
+  task_name: loki-3D-tf
+  task_modality: image
