@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/video/video_detection_0917.json
-  task_name: video-detection

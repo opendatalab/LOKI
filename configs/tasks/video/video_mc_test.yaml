@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/video/video_mc_test_0929.json
-  task_name: video-mc-test

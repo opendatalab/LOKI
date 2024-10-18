@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/3D/3D_tf_test_0923.json
-  task_name: 3D-tf-test

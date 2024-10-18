@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/image/image_tf_0930.json
-  task_name: image-tf

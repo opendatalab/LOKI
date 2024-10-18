@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/image/image_open_ended_vqa_mini.json
-  task_name: image-open-ended-gpt-as-judge

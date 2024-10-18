@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/video/synthbench_video_multi_choice.json
-  task_name: video-multi-choice

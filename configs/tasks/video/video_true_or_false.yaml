@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/video/video_true_or_false.json
-  task_name: video-true-or-false

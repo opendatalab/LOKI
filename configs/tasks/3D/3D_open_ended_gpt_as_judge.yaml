@@ -1,5 +1,0 @@
-task_type: synthbench-visual
-
-init_kwargs:
-  dataset_path: ./data/3D/3D_open_ended_qa.json
-  task_name: 3D-open-ended-gpt-as-judge
