@@ -38,3 +38,72 @@ that supports inputs of various data formats and over <strong>25</strong> mainst
 - [🎉 News](#-news)
 - [🔥 Takeaways](#-takeaways)
 - [📚 Contents](#-contents)
+- [Installation](#installation)
+- [Data Preparation](#data-preparation)
+- [Model Preparation](#model-preparation)
+- [Evaluation](#evaluation)
+- [Citations](#citations)
+
+## Installation
+Please clone our repository and change to that folder
+```bash
+git clone https://github.com/opendatalab/LOKI.git
+cd LOKI
+```
+
+Change to the dev branch and install relevant requirements
+```bash
+git checkout dev
+pip install -e .
+```
+
+## Data Preparation
+LOKI contains media data across 5 modalities: video, image, 3D, text and audio. 
+
+To examine the performance of LMMs on each modality, you need to **first download** the data from [huggingface](https://huggingface.co/datasets/bczhou/LOKI).
+
+Then, **unzip the dataset** and put it **under the current folder**.
+
+Your **media_data** folder should look like:
+```
+├── 3D
+│   
+├── image
+│   
+├── video
+```
+
+
+## Model Preparation
+
+Our evaluation framework supports over 20+ mainstream foundation models. Please see [here](https://github.com/opendatalab/LOKI/tree/dev/lm_evaluate/models) for full model list.
+
+Most of our models can be run off-the-shelf with our framework, for models that require special environment setup, we refer readers to here for more information.
+
+
+## Evaluation
+
+Now, start evaluating!
+
+The `configs` folder contains configurations for the models and LOKI tasks, which are then read and used by `run.py`
+
+For example, to evaluate Phi-3.5-Vision model on the LOKI's image judgement task, your command should be:
+
+```bash
+accelerate launch  --num_processes=4 --main_process_port=12005 run.py --model_config_path configs/models/phi_3.5_vision_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1 
+```
+
+
+
+## Citations
+```shell
+@article{ye2024loki,
+  title={LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models},
+  author={Ye, Junyan and Zhou, Baichuan and Huang, Zilong and Zhang, Junan and Bai, Tianyi and Kang, Hengrui and He, Jun and Lin, Honglin and Wang, Zihao and Wu, Tong and others},
+  journal={arXiv preprint arXiv:2410.09732},
+  year={2024}
+}
+```
+
+
+
