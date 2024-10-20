@@ -51,9 +51,11 @@ git clone https://github.com/opendatalab/LOKI.git
 cd LOKI
 ```
 
-Change to the dev branch and install relevant requirements
+Change to the dev branch, create a new python environment and install relevant requirements
 ```bash
 git checkout dev
+conda create -n loki python=3.10
+conda activate loki
 pip install -e .
 ```
 
