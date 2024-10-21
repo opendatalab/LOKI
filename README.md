@@ -4,7 +4,7 @@
 
 <a href="https://arxiv.org/abs/2410.09732" target="_blank"><img src="https://img.shields.io/badge/arXiv-LOKI-red?style=badge&logo=arXiv" alt="Paper PDF" height="25"></a>
 <a href="https://opendatalab.github.io/LOKI/" target="_blank"><img alt="Website" src="https://img.shields.io/badge/🌎_Project Page-LOKI-blue.svg" height="25" /></a>
-<a href='https://huggingface.co/papers/2410.09732'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow' height="25"></a>
+<a href='https://huggingface.co/datasets/bczhou/LOKI'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow' height="25"></a>
 <a href="https://label.lvuslf.top/Login" target="_blank"><img alt="Website" src="https://img.shields.io/badge/💬_Quiz-LOKI-green.svg" height="25" /></a>
 <p>
     <img src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/main-image.jpg" alt="LOKI" width="700" height="auto">
