@@ -1,13 +1,15 @@
 <div align="center">
-<h2 align="center"><img style="height: 40px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/loki.png"> $\LARGE\textbf{\textsf{{\color[rgb]{1.0, 0.7, 0.0}L}{\color[rgb]{1.0, 0.6, 0.0}O}{\color[rgb]{1.0, 0.5, 0.0}K}{\color[rgb]{1.0, 0.4, 0.0}I}}}{\color[rgb]{0,0,0}}$ 
- <br>A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models</h2>
+<img style="width: 50%;" src="assets/head-image.png">
+<!-- <h2 align="center"><img style="height: 40px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/loki.png"> $\LARGE\textbf{\textsf{{\color[rgb]{1.0, 0.7, 0.0}L}{\color[rgb]{1.0, 0.6, 0.0}O}{\color[rgb]{1.0, 0.5, 0.0}K}{\color[rgb]{1.0, 0.4, 0.0}I}}}{\color[rgb]{0,0,0}}$ 
+ A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models</h2> -->
+ <h2 align="center">LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models</h2>
 
 <a href="https://arxiv.org/abs/2410.09732" target="_blank"><img src="https://img.shields.io/badge/arXiv-LOKI-red?style=badge&logo=arXiv" alt="Paper PDF" height="25"></a>
 <a href="https://opendatalab.github.io/LOKI/" target="_blank"><img alt="Website" src="https://img.shields.io/badge/🌎_Project Page-LOKI-blue.svg" height="25" /></a>
 <a href='https://huggingface.co/datasets/bczhou/LOKI'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow' height="25"></a>
 <a href="https://label.lvuslf.top/Login" target="_blank"><img alt="Website" src="https://img.shields.io/badge/💬_Quiz-LOKI-green.svg" height="25" /></a>
 <p>
-    <img src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/main-image.jpg" alt="LOKI" width="700" height="auto">
+    <img src="assets/main-image.jpg" alt="LOKI" width="700" height="auto">
 </p>
 </div>
 
@@ -22,13 +24,13 @@
             $\color{rgba(41, 208, 108, 1)}{\textbf{3D}}$,
             $\color{rgb(166, 72, 255)}{\textbf{text}}$,
             $\color{rgb(255, 58, 58)}{\textbf{audio}}$. <br>
-            • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as specialized <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/satellite.png">statellite and 
-            <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/medical.png">medical images;  texts like <img style="height: 35px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/philosophy.png">philosophy and
-            <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/ancient-literature.png">ancient chinese; and $\color{rgb(255, 58, 58)}{\textbf{audio}}$ data like 
-            <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/singing.png">singing voices, <img style="height: 25px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/audio2.png">enviromental sound and <img style="height: 30px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/music.png">music. <br>
-            • <strong>Multi-level tasks:</strong> LOKI includes basic ”Synthetic or Real” labels, suitable for fundamental question settings like <img style="height: 25px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/judgement.png">true/false and <img style="height: 25px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/selection.png">multiple-choice questions. It also incorporates fine-grained
-anomalies for inferential explanations, enabling tasks like <img style="height: 25px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/details-selection.png">abnormal detail selection and <img style="height: 25px;" src="https://github.com/opendatalab/LOKI/blob/27f9fa838ee344798e210ee00fa70ab1b32ef6ae/static/img/icons/explanation.png">abnormal
-explanation, to explore LMMs’ capabilities in explainable synthetic data detection. <br>
+            • <strong>Heterogeneous category:</strong> Our collected dataset includes <strong>26</strong> detailed categories across different modalities, such as specialized <img style="height: 22px;" src="assets/icons/satellite.png">  <i>statellite</i> and 
+            <img style="height: 25px;" src="assets/icons/medical.png"> <i>medical</i> images;  texts like <img style="height: 25px;" src="assets/icons/philosophy.png"> <i>philosophu</i> and
+            <img style="height: 25px;" src="assets/icons/ancient-literature.png"> <i>ancient chinese</i>; and $\color{rgb(255, 58, 58)}{\textbf{audio}}$ data like 
+            <img style="height: 25px;" src="assets/icons/singing.png"> <i>singing voices</i>, <img style="height: 25px;" src="assets/icons/audio2.png"> <i>enviromental sound</i> and <img style="height: 25px;" src="assets/icons/music.png"> <i>music</i>. <br>
+            • <strong>Multi-level tasks:</strong> LOKI includes basic ”Synthetic or Real” labels, suitable for fundamental question settings like <img style="height: 25px;" src="assets/icons/judgement.png"> <i>true/false</i> and <img style="height: 22px;" src="assets/icons/selection.png"> <i>multiple-choice questions</i>. It also incorporates fine-grained
+anomalies for inferential explanations, enabling tasks like <img style="height: 22px;" src="assets/icons/details-selection.png"> <i>abnormal detail selection</i> and <img style="height: 22px;" src="assets/icons/explanation.png"> <i>abnormal
+explanation</i>, to explore LMMs’ capabilities in explainable synthetic data detection. <br>
             • <strong>Multimodal synthetic data evaluation framework:</strong> We propose a comprehensive evaluation framework
 that supports inputs of various data formats and over <strong>25</strong> mainstream multimodal models.
 </p>
@@ -38,13 +40,14 @@ that supports inputs of various data formats and over <strong>25</strong> mainst
 - [🎉 News](#-news)
 - [🔥 Takeaways](#-takeaways)
 - [📚 Contents](#-contents)
-- [Installation](#installation)
-- [Data Preparation](#data-preparation)
-- [Model Preparation](#model-preparation)
-- [Evaluation](#evaluation)
-- [Citations](#citations)
+- [🛠️ Installation](#️-installation)
+- [📦 Data Preparation](#-data-preparation)
+- [🤖 Model Preparation](#-model-preparation)
+- [📊 Evaluation](#-evaluation)
+- [😄 Acknowledgement](#-acknowledgement)
+- [📜 Citations](#-citations)
 
-## Installation
+## 🛠️ Installation
 Please clone our repository and change to that folder
 ```bash
 git clone https://github.com/opendatalab/LOKI.git
@@ -59,10 +62,16 @@ conda activate loki
 pip install -e .
 ```
 
-## Data Preparation
-LOKI contains media data across 5 modalities: video, image, 3D, text and audio. 
-
-To examine the performance of LMMs on each modality, you need to **first download** the data from [huggingface](https://huggingface.co/datasets/bczhou/LOKI).
+## 📦 Data Preparation 
+<p class="text">
+  LOKI contains media data across 5 modalities: 
+  $\color{#ffb60dde}{\textbf{video}}$,
+  $\color{rgba(83, 164, 251, 1)}{\textbf{image}}$,
+  $\color{rgba(41, 208, 108, 1)}{\textbf{3D}}$,
+  $\color{rgb(166, 72, 255)}{\textbf{text}}$,
+  $\color{rgb(255, 58, 58)}{\textbf{audio}}$. 
+</p>
+To examine the performance of LMMs on each modality, you need to **first download** the data from 🤗 [huggingface](https://huggingface.co/datasets/bczhou/LOKI).
 
 Then, **unzip the dataset** and put it **under the current folder**.
 
@@ -76,14 +85,14 @@ Your **media_data** folder should look like:
 ```
 
 
-## Model Preparation
+## 🤖 Model Preparation
 
 Our evaluation framework supports over 20+ mainstream foundation models. Please see [here](https://github.com/opendatalab/LOKI/tree/dev/lm_evaluate/models) for full model list.
 
 Most of our models can be run off-the-shelf with our framework, for models that require special environment setup, we refer readers to here for more information.
 
 
-## Evaluation
+## 📊 Evaluation
 
 Now, start evaluating!
 
@@ -95,12 +104,12 @@ For example, to evaluate Phi-3.5-Vision model on the LOKI's image judgement task
 accelerate launch  --num_processes=4 --main_process_port=12005 run.py --model_config_path configs/models/phi_3.5_vision_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1 
 ```
 
-## Acknowledgement
+## 😄 Acknowledgement
 
 Some of the design philosophy of our framework is adopted from  [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval).
 
 
-## Citations
+## 📜 Citations
 ```shell
 @article{ye2024loki,
   title={LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models},
