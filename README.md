@@ -71,7 +71,8 @@ pip install -e .
   $\color{rgb(166, 72, 255)}{\textbf{text}}$,
   $\color{rgb(255, 58, 58)}{\textbf{audio}}$. 
 </p>
-To examine the performance of LMMs on each modality, you need to **first download** the data from 🤗 [huggingface](https://huggingface.co/datasets/bczhou/LOKI).
+
+To examine the performance of LMMs on each modality, you need to **first download** the data from 🤗 [huggingface](https://huggingface.co/datasets/bczhou/LOKI) .
 
 Then, **unzip the dataset** and put it **under the current folder**.
 
