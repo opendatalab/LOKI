@@ -15,6 +15,12 @@
 
 ## &#x1F389; News
 
+## 🧾 TODO List
+
+We will evaluate the performance of the updated large model on LOKI in real time 🌟
+
+- [ ] Deepseek-VL2
+
 
 ## &#x1F525; Takeaways
 <p class="text">
