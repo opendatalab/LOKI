@@ -13,7 +13,10 @@
 </p>
 </div>
 
-## &#x1F389; News
+## 📢 News
+
+- **2025-01-22**: LOKI is accepted to ICLR 2025.
+- **2024-11**: The source code and Datasets are released.
 
 ## 🧾 TODO List
 
