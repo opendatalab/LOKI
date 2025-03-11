@@ -2,7 +2,7 @@
     {
         "image_path": [
             "media_data/image/d9df7eb3-98b4-5478-a667-3ca742dbbcbe.jpg",
-            "media_data/image/f7f5b454-4bfa-5e74-8908-c1b83dba8957.jpg"
+            "media_data/image/f7f5b454-4bfa-5e74-8908-c1b83dba8957.jpg" 
         ],
         "modality": "image-text",
         "metric": "multi-choice",
