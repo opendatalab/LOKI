@@ -124,8 +124,8 @@ Some of the design philosophy of our framework is adopted from  [lmms-eval](http
 @article{ye2024loki,
   title={LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models},
   author={Ye, Junyan and Zhou, Baichuan and Huang, Zilong and Zhang, Junan and Bai, Tianyi and Kang, Hengrui and He, Jun and Lin, Honglin and Wang, Zihao and Wu, Tong and others},
-  journal={arXiv preprint arXiv:2410.09732},
-  year={2024}
+  journal={ICLR},
+  year={2025}
 }
 ```
 
